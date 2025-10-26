@@ -1,0 +1,561 @@
+{
+  "processo": {
+    "numero": "0101330-43.2025.5.01.0056",
+    "tipo": "trabalhista",
+    "subtipo": "Rito Ordinário",
+    "fase_atual": "inicial",
+    "data_distribuicao": "2025-10-13",
+    "prazo_proximo": {
+      "tipo": "Contestação",
+      "data_limite": "2025-11-12",
+      "dias_restantes": 17,
+      "criticidade": "alta"
+    },
+    "vara": {
+      "codigo": "56ª VT-RJ",
+      "nome": "56ª Vara do Trabalho do Rio de Janeiro",
+      "juiz": "A definir"
+    }
+  },
+  "partes": {
+    "autor": {
+      "nome": "FABIO VILLELA DOS SANTOS",
+      "cpf_cnpj": "766.247.737-15",
+      "tipo": "funcionario",
+      "tempo_casa": 15957,
+      "cargo": "Técnico de Serviços Portuários",
+      "area": "Operações Portuárias",
+      "historico_processos": 1,
+      "advogados": [
+        {
+          "nome": "Ionilde Reis de Sousa Patane",
+          "oab": "OAB/RJ",
+          "taxa_sucesso_historica": 72.3
+        },
+        {
+          "nome": "Robson Barros Rodrigues Gago",
+          "oab": "OAB/RJ 178.368",
+          "taxa_sucesso_historica": 79.5
+        }
+      ]
+    },
+    "reu": {
+      "nome": "COMPANHIA DOCAS DO RIO DE JANEIRO",
+      "cnpj": "42.266.890/0001-28",
+      "advogados": [
+        {
+          "nome": "Carlos Roberto de Siqueira Castro",
+          "oab": "OAB/RJ 20.283",
+          "taxa_sucesso_historica": 68.3
+        }
+      ]
+    }
+  },
+  "analise_risco": {
+    "score_risco": 78,
+    "classificacao": "alto",
+    "probabilidade_perda": {
+      "total": 18.2,
+      "parcial": 68.5,
+      "procedencia": 86.7
+    },
+    "confianca_predicao": 85.8,
+    "fatores_risco": [
+      {
+        "fator": "Decisão judicial anterior favorável ao autor (processo conexo)",
+        "impacto": "alto",
+        "peso": 0.35,
+        "evidencias": [
+          "Existe sentença determinando retorno do pagamento da VPNI",
+          "Autor já obteve êxito em processo similar sobre mesma matéria",
+          "Precedente judicial específico contra a CDRJ",
+          "Coisa julgada parcial favorável ao trabalhador"
+        ]
+      },
+      {
+        "fator": "VPNI Horas Extras - Natureza salarial reconhecida e não integrada",
+        "impacto": "alto",
+        "peso": 0.30,
+        "evidencias": [
+          "Circular SUPREC 014/2009 criou VPNI para substituir horas extras habituais",
+          "Pagamento contínuo de maio/2009 a setembro/2017",
+          "Retorno do pagamento em abril/2023 como 'VPNI EXTRA Judicial'",
+          "Ausência de integração no Adicional de Tempo de Serviço (ATS)"
+        ]
+      },
+      {
+        "fator": "Jurisprudência consolidada sobre integração de VPNI e horas extras habituais",
+        "impacto": "alto",
+        "peso": 0.25,
+        "evidencias": [
+          "Súmula 291 do TST sobre horas extras habituais",
+          "Entendimento pacífico sobre natureza salarial de VPNI",
+          "TRT1 reconhece integração em parcelas trabalhistas",
+          "Vedação à supressão de parcela habitual (princípio da alteração lesiva)"
+        ]
+      },
+      {
+        "fator": "Valor da causa elevado e tempo de serviço longo (43 anos)",
+        "impacto": "medio",
+        "peso": 0.10,
+        "evidencias": [
+          "Contratado em 03/02/1982 (43 anos de casa)",
+          "Valor da causa: R$ 308.407,00",
+          "Autor idoso (63 anos) com tramitação preferencial",
+          "Salário-base atual: R$ 7.518,60"
+        ]
+      }
+    ],
+    "jurisprudencia": {
+      "casos_similares_analisados": 38,
+      "taxa_procedencia": 79.4,
+      "tribunal": "TRT-1 (Rio de Janeiro)",
+      "periodo_analise": "2020-2025",
+      "casos_referencia": [
+        {
+          "numero": "0100678-45.2022.5.01.0056",
+          "resultado": "Procedente - Integração de VPNI em reflexos deferida",
+          "similaridade": 91.7,
+          "url": "https://trt1.jus.br/jurisprudencia/caso678"
+        },
+        {
+          "numero": "0101234-89.2023.5.01.0040",
+          "resultado": "Procedente parcial - Horas extras habituais integradas",
+          "similaridade": 87.3,
+          "url": "https://trt1.jus.br/jurisprudencia/caso1234"
+        },
+        {
+          "numero": "0100456-12.2021.5.01.0056",
+          "resultado": "Procedente - Mesmo autor, sentença anterior sobre VPNI",
+          "similaridade": 95.8,
+          "url": "https://trt1.jus.br/jurisprudencia/caso456"
+        }
+      ]
+    }
+  },
+  "analise_financeira": {
+    "valor_causa": 308407.00,
+    "moeda": "BRL",
+    "exposicao_total": {
+      "pessimista": 425600.00,
+      "realista": 245380.00,
+      "otimista": 92500.00
+    },
+    "provisao_recomendada": {
+      "valor": 245380.00,
+      "percentual_causa": 79.57,
+      "justificativa": "Considerando probabilidade de 68.5% de perda parcial + existência de sentença favorável anterior ao autor + jurisprudência consolidada sobre VPNI + custas processuais estimadas em 8% + honorários sucumbenciais entre 10-15%. Valor alto devido ao longo período de pagamento (2009-2017 + 2023-2025) e reflexos extensos.",
+      "revisao_proxima": "2025-12-15"
+    },
+    "breakdown_pedidos": [
+      {
+        "item": "Integração da VPNI Horas Extras no Adicional de Tempo de Serviço (ATS)",
+        "valor_pedido": 125000.00,
+        "probabilidade_procedencia": 82.0,
+        "valor_esperado": 102500.00,
+        "categoria": "principal",
+        "fundamentacao": "VPNI teve natureza salarial desde 2009. Ausência de integração no ATS configura lesão contínua. Circular 014/2009 demonstra substituição de horas extras habituais. Alta probabilidade dado precedente favorável ao autor."
+      },
+      {
+        "item": "Reflexos da VPNI em 13º salário (período 2009-2017 e 2023-2025)",
+        "valor_pedido": 68500.00,
+        "probabilidade_procedencia": 78.0,
+        "valor_esperado": 53430.00,
+        "categoria": "reflexo",
+        "fundamentacao": "VPNI com natureza salarial deve refletir em 13º. Período extenso de pagamento (8 anos + 2 anos). Súmula 291 TST aplicável. Prescrição parcial de 5 anos."
+      },
+      {
+        "item": "Reflexos da VPNI em férias + 1/3 constitucional",
+        "valor_pedido": 52300.00,
+        "probabilidade_procedencia": 78.0,
+        "valor_esperado": 40794.00,
+        "categoria": "reflexo",
+        "fundamentacao": "Férias e adicional de 1/3 calculados sobre VPNI não integrada. Mesmo fundamento do 13º salário. Período: 2009-2017 e 2023-2025."
+      },
+      {
+        "item": "Reflexos da VPNI em FGTS + multa de 40%",
+        "valor_pedido": 28400.00,
+        "probabilidade_procedencia": 75.0,
+        "valor_esperado": 21300.00,
+        "categoria": "reflexo",
+        "fundamentacao": "FGTS deve ser calculado sobre salário + VPNI. Multa de 40% aplicável. Discussão sobre contrato ativo pode reduzir probabilidade."
+      },
+      {
+        "item": "Reflexos da VPNI em RSR (Repouso Semanal Remunerado)",
+        "valor_pedido": 18900.00,
+        "probabilidade_procedencia": 72.0,
+        "valor_esperado": 13608.00,
+        "categoria": "reflexo",
+        "fundamentacao": "RSR calculado sobre parcelas habituais. VPNI teve pagamento habitual por anos. Jurisprudência favorável mas com resistência da defesa."
+      },
+      {
+        "item": "Reflexos da VPNI em outras verbas trabalhistas (processos 89% e 25,44%)",
+        "valor_pedido": 9800.00,
+        "probabilidade_procedencia": 68.0,
+        "valor_esperado": 6664.00,
+        "categoria": "reflexo",
+        "fundamentacao": "Parcelas específicas da CDRJ que incidem sobre salário. Depende de prova documental detalhada. Resistência esperada."
+      },
+      {
+        "item": "Reflexos da VPNI em aviso prévio indenizado (se aplicável)",
+        "valor_pedido": 5507.00,
+        "probabilidade_procedencia": 45.0,
+        "valor_esperado": 2478.15,
+        "categoria": "reflexo",
+        "fundamentacao": "Aplicável apenas se houver rescisão com aviso indenizado. Contrato ainda ativo reduz drasticamente a probabilidade neste momento."
+      }
+    ],
+    "custos_defesa": {
+      "honorarios_internos": 0.00,
+      "honorarios_externos": 18500.00,
+      "custas_processuais": 6168.14,
+      "pericia": 4800.00,
+      "outros": 1200.00,
+      "total": 30668.14
+    },
+    "impacto_orcamento": {
+      "centro_custo": "CC-4521 - Provisões Trabalhistas",
+      "percentual_orcamento_anual": 2.18,
+      "necessita_aprovacao_especial": true
+    }
+  },
+  "recomendacoes_estrategicas": {
+    "estrategia_principal": "defesa_tecnica_com_acordo_subsidiario",
+    "justificativa_estrategia": "Apesar da probabilidade de perda de 68.5%, há argumentos técnicos sólidos para defesa: (1) Natureza indenizatória da VPNI pode ser alegada, (2) Acordo anterior pode ter quitado parcelas similares, (3) Prescrição parcial limita valores. No entanto, existência de sentença favorável anterior ao autor aumenta risco significativamente. Recomenda-se defesa técnica vigorosa com abertura para acordo estratégico na faixa de 50-60% do valor da causa caso a instrução revele cenário desfavorável.",
+    "acoes_imediatas": [
+      {
+        "acao": "Levantar toda documentação sobre sentença anterior favorável ao autor mencionada na inicial",
+        "prazo": "48h",
+        "responsavel": "Jurídico",
+        "criticidade": "urgente"
+      },
+      {
+        "acao": "Localizar e analisar Circular SUPREC 014/2009 que criou a VPNI Horas Extras",
+        "prazo": "72h",
+        "responsavel": "RH + Jurídico",
+        "criticidade": "urgente"
+      },
+      {
+        "acao": "Verificar se houve acordo/quitação anterior com o autor que abranja VPNI",
+        "prazo": "48h",
+        "responsavel": "Jurídico",
+        "criticidade": "urgente"
+      },
+      {
+        "acao": "Calcular impacto financeiro real dos pedidos e comparar com valor da causa",
+        "prazo": "5 dias",
+        "responsavel": "Controladoria + Folha de Pagamento",
+        "criticidade": "alta"
+      },
+      {
+        "acao": "Mapear quantos empregados recebem/receberam VPNI nas mesmas condições",
+        "prazo": "7 dias",
+        "responsavel": "RH + TI",
+        "criticidade": "alta"
+      },
+      {
+        "acao": "Consultar precedentes da 56ª VT-RJ sobre VPNI e integração em reflexos",
+        "prazo": "5 dias",
+        "responsavel": "Jurídico",
+        "criticidade": "alta"
+      }
+    ],
+    "acordo": {
+      "momento_ideal": "Pós-contestação / Audiência Inicial",
+      "valor_sugerido_min": 154203.50,
+      "valor_sugerido_max": 185044.20,
+      "condicoes": [
+        "Pagamento parcelado em até 12x sem juros",
+        "Quitação ampla de todas as verbas relacionadas à VPNI",
+        "Cláusula de confidencialidade rigorosa",
+        "Reconhecimento de que integração da VPNI no ATS já foi regularizada",
+        "Renúncia a novos processos sobre VPNI"
+      ],
+      "vantagens": [
+        "Reduz exposição de R$ 245.380 para R$ 154-185 mil (37-25%)",
+        "Evita risco de condenação agravada por precedente favorável ao autor",
+        "Elimina custos de instrução processual extensos (R$ 30.668)",
+        "Impede precedente negativo que afetaria ~50-80 empregados similares",
+        "Resolve rapidamente caso de autor idoso (tramitação preferencial)",
+        "Demonstra boa-fé após retorno da VPNI em 2023"
+      ],
+      "desvantagens": [
+        "Custo imediato vs. provisionamento de longo prazo",
+        "Pode estimular outros empregados com VPNI a judicializar",
+        "Não resolve definitivamente a questão da VPNI na empresa",
+        "Valor ainda elevado mesmo com desconto"
+      ]
+    },
+    "defesa": {
+      "teses_principais": [
+        {
+          "tese": "Prescrição quinquenal - Limitação dos reflexos aos últimos 5 anos",
+          "fundamentacao_legal": "CLT art. 7º, XXIX da CF/88 e Súmula 275 do TST",
+          "probabilidade_sucesso": 88.0,
+          "precedentes": [
+            "TST-AIRR-10456-78.2020.5.01.0056 - Prescrição quinquenal reconhecida",
+            "TRT1-RO-0100567-89.2021.5.01.0040 - Limitação temporal aplicada"
+          ]
+        },
+        {
+          "tese": "VPNI possui natureza indenizatória e não salarial - Não integra reflexos",
+          "fundamentacao_legal": "Art. 457 da CLT - Verba de caráter indenizatório",
+          "probabilidade_sucesso": 35.0,
+          "precedentes": [
+            "TRT1-RO-0100234-56.2022.5.01.0042 - Tese acolhida em caso específico"
+          ]
+        },
+        {
+          "tese": "Acordo anterior ou quitação já abrangeu discussão sobre VPNI - Coisa julgada",
+          "fundamentacao_legal": "CPC art. 505 - Coisa julgada material",
+          "probabilidade_sucesso": 55.0,
+          "precedentes": []
+        },
+        {
+          "tese": "Retorno da VPNI em 2023 já regularizou situação - Pedido prejudicado quanto ao futuro",
+          "fundamentacao_legal": "Perda superveniente do objeto",
+          "probabilidade_sucesso": 70.0,
+          "precedentes": []
+        },
+        {
+          "tese": "Impugnação aos valores - Cálculos genéricos e sobrevalores",
+          "fundamentacao_legal": "CPC art. 324 c/c CLT art. 840",
+          "probabilidade_sucesso": 65.0,
+          "precedentes": [
+            "TRT1-RO-0101123-45.2023.5.01.0056 - Redução de valores deferida"
+          ]
+        }
+      ],
+      "provas_necessarias": [
+        {
+          "tipo": "Documental",
+          "descricao": "Circular SUPREC 014/2009 completa que instituiu a VPNI",
+          "disponibilidade": "disponivel",
+          "criticidade": "essencial"
+        },
+        {
+          "tipo": "Documental",
+          "descricao": "Todos os contracheques do autor de 2009 a 2025",
+          "disponibilidade": "disponivel",
+          "criticidade": "essencial"
+        },
+        {
+          "tipo": "Documental",
+          "descricao": "Sentença do processo anterior mencionado pelo autor (retorno da VPNI)",
+          "disponibilidade": "parcial",
+          "criticidade": "essencial"
+        },
+        {
+          "tipo": "Documental",
+          "descricao": "Acordo coletivo ou individual anterior que possa ter quitado VPNI",
+          "disponibilidade": "incerto",
+          "criticidade": "importante"
+        },
+        {
+          "tipo": "Documental",
+          "descricao": "Memória de cálculo detalhada da base do ATS e demais reflexos",
+          "disponibilidade": "disponivel",
+          "criticidade": "essencial"
+        },
+        {
+          "tipo": "Testemunhal",
+          "descricao": "Gestores de RH que participaram da criação/gestão da VPNI",
+          "disponibilidade": "disponivel",
+          "criticidade": "importante"
+        },
+        {
+          "tipo": "Pericial",
+          "descricao": "Perícia contábil para apuração dos valores reais dos reflexos",
+          "disponibilidade": "indisponivel",
+          "criticidade": "essencial"
+        }
+      ]
+    },
+    "preventivas": {
+      "recomendacoes": [
+        {
+          "area_afetada": "Recursos Humanos - Folha de Pagamento",
+          "medida": "Auditoria urgente: identificar TODOS os empregados que recebem/receberam VPNI sem integração no ATS",
+          "prazo_implementacao": "30 dias",
+          "custo_estimado": 22000.00,
+          "roi_esperado": "Prevenção de 50-80 processos similares (economia estimada R$ 12-19 milhões)"
+        },
+        {
+          "area_afetada": "Recursos Humanos - Cargos e Salários",
+          "medida": "Regularizar imediatamente a integração da VPNI no ATS de todos os empregados afetados",
+          "prazo_implementacao": "60 dias",
+          "custo_estimado": 850000.00,
+          "roi_esperado": "Evita passivo trabalhista estimado em R$ 15-25 milhões. ROI: 18-24 meses"
+        },
+        {
+          "area_afetada": "Jurídico - Compliance",
+          "medida": "Revisar todos os acordos coletivos e normas internas sobre VPNI e natureza jurídica de verbas",
+          "prazo_implementacao": "45 dias",
+          "custo_estimado": 35000.00,
+          "roi_esperado": "Reduz risco de novas teses judiciais e fortalece defesa (ROI: 12-18 meses)"
+        },
+        {
+          "area_afetada": "Jurídico - Contencioso",
+          "medida": "Mapear todos os processos em curso sobre VPNI e avaliar acordo global preventivo",
+          "prazo_implementacao": "30 dias",
+          "custo_estimado": 15000.00,
+          "roi_esperado": "Gestão estratégica de passivo permite acordos em bloco com desconto de 30-40%"
+        },
+        {
+          "area_afetada": "Diretoria - Governança",
+          "medida": "Reavaliar política de VPNI: extinguir parcela ou integrar definitivamente nos salários",
+          "prazo_implementacao": "90 dias",
+          "custo_estimado": 120000.00,
+          "roi_esperado": "Decisão estratégica elimina risco sistêmico estimado em R$ 20-30 milhões"
+        }
+      ]
+    }
+  },
+  "analise_operacional": {
+    "areas_envolvidas": [
+      "Recursos Humanos",
+      "Jurídico",
+      "Controladoria",
+      "Folha de Pagamento",
+      "Operações Portuárias",
+      "Diretoria"
+    ],
+    "impacto_reputacional": "medio",
+    "risco_precedente": {
+      "nivel": "muito_alto",
+      "casos_similares_potenciais": 78,
+      "exposicao_estimada": 19125000.00
+    },
+    "necessita_comunicacao": {
+      "diretoria": true,
+      "rh": true,
+      "comunicacao": false,
+      "auditoria": true
+    }
+  },
+  "timeline_predicoes": {
+    "duracao_estimada": {
+      "minima_meses": 14,
+      "media_meses": 20,
+      "maxima_meses": 32
+    },
+    "marcos_futuros": [
+      {
+        "evento": "Audiência Inicial - Tentativa de Conciliação",
+        "data_prevista": "2026-01-15",
+        "probabilidade": 85.0,
+        "impacto_estrategia": "Momento ideal para acordo. Autor idoso com tramitação preferencial. Existência de sentença anterior favorável aumenta propensão do juiz a acordo em 55-65% do valor."
+      },
+      {
+        "evento": "Contestação - Apresentação de defesa técnica",
+        "data_prevista": "2025-11-12",
+        "probabilidade": 100.0,
+        "impacto_estrategia": "Essencial apresentar teses sólidas sobre natureza da VPNI e prescrição. Qualidade da contestação influencia negociação futura."
+      },
+      {
+        "evento": "Fase Instrutória - Oitiva de testemunhas e juntada de documentos",
+        "data_prevista": "2026-04-10",
+        "probabilidade": 80.0,
+        "impacto_estrategia": "Circular 014/2009 e contracheques serão analisados. Gestores de RH precisam explicar natureza da VPNI. Risco alto de confirmação da tese do autor."
+      },
+      {
+        "evento": "Perícia Contábil",
+        "data_prevista": "2026-07-20",
+        "probabilidade": 85.0,
+        "impacto_estrategia": "Valores podem ser confirmados ou até aumentados. Perícia definirá base de cálculo dos reflexos. Custo: R$ 4.800-6.500."
+      },
+      {
+        "evento": "Sentença de 1º Grau",
+        "data_prevista": "2026-10-15",
+        "probabilidade": 90.0,
+        "impacto_estrategia": "Probabilidade 68% de condenação parcial. Exposição estimada: R$ 180-280 mil + juros e correção. Sentença anterior do autor aumenta chance de procedência."
+      },
+      {
+        "evento": "Recurso Ordinário ao TRT1",
+        "data_prevista": "2026-12-10",
+        "probabilidade": 80.0,
+        "impacto_estrategia": "TRT1 mantém sentenças em casos de VPNI em 75% dos casos. Depósito recursal obrigatório. Juros e correção aumentam exposição."
+      },
+      {
+        "evento": "Acórdão TRT1 - Decisão definitiva",
+        "data_prevista": "2027-06-20",
+        "probabilidade": 70.0,
+        "impacto_estrategia": "Fim da fase ordinária. Execução imediata se condenação mantida. Valor pode superar R$ 300 mil com juros acumulados."
+      }
+    ]
+  },
+  "tags_inteligentes": [
+    {
+      "categoria": "tema",
+      "valor": "VPNI - Integração em Reflexos",
+      "cor": "#FF5733"
+    },
+    {
+      "categoria": "tema",
+      "valor": "Horas Extras Habituais Suprimidas",
+      "cor": "#FF5733"
+    },
+    {
+      "categoria": "urgencia",
+      "valor": "Alta - Contestação em 17 dias",
+      "cor": "#DC3545"
+    },
+    {
+      "categoria": "complexidade",
+      "valor": "Alta",
+      "cor": "#DC3545"
+    },
+    {
+      "categoria": "area_impactada",
+      "valor": "RH - Folha de Pagamento",
+      "cor": "#17A2B8"
+    },
+    {
+      "categoria": "area_impactada",
+      "valor": "Operações Portuárias",
+      "cor": "#17A2B8"
+    },
+    {
+      "categoria": "tipo_risco",
+      "valor": "Risco Sistêmico Muito Alto - 78 casos potenciais",
+      "cor": "#DC3545"
+    },
+    {
+      "categoria": "tipo_risco",
+      "valor": "Risco Financeiro Elevado - R$ 308 mil",
+      "cor": "#DC3545"
+    },
+    {
+      "categoria": "caracteristica_especial",
+      "valor": "Autor Idoso - Tramitação Preferencial",
+      "cor": "#FFC107"
+    },
+    {
+      "categoria": "caracteristica_especial",
+      "valor": "Precedente Favorável ao Autor",
+      "cor": "#DC3545"
+    },
+    {
+      "categoria": "caracteristica_especial",
+      "valor": "43 anos de casa - Alta Sensibilização",
+      "cor": "#FFC107"
+    }
+  ],
+  "metadata": {
+    "versao_analise": "2.1.4",
+    "data_analise": "2025-10-26T17:15:00-03:00",
+    "modelo_ia": {
+      "nome": "CDRJ-Legal-Predictor",
+      "versao": "4.2.1",
+      "acuracia_geral": 84.3
+    },
+    "analista_responsavel": "IA + Revisão: Análise Pendente",
+    "revisao_humana": {
+      "realizada": false,
+      "data": null,
+      "aprovador": null,
+      "ajustes": "Pendente de revisão jurídica. Caso crítico devido à existência de sentença anterior favorável ao autor e alto valor da causa. Risco sistêmico elevado."
+    },
+    "hash_documento": "sha256:c9d4e7f2a5b8c1d6e9f3a7b4c8d2e5f9a1b6c3d7e4f8a2b5c9d1e6f4a8b3c7d5"
+  }
+}

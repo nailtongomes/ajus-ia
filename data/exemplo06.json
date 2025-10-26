@@ -1,0 +1,525 @@
+{
+  "processo": {
+    "numero": "0101303-14.2025.5.01.0039",
+    "tipo": "trabalhista",
+    "subtipo": "Cumprimento de Sentença de Ações Coletivas",
+    "fase_atual": "inicial_cumprimento",
+    "data_distribuicao": "2025-10-10",
+    "prazo_proximo": {
+      "tipo": "Apresentação de Documentos pela Executada",
+      "data_limite": "2025-11-09",
+      "dias_restantes": 14,
+      "criticidade": "alta"
+    },
+    "vara": {
+      "codigo": "39ª VT-RJ",
+      "nome": "39ª Vara do Trabalho do Rio de Janeiro",
+      "juiz": "A definir"
+    }
+  },
+  "partes": {
+    "autor": {
+      "nome": "ADILTON ANTONIO CONCEIÇÃO SILVANY",
+      "cpf_cnpj": "494.646.807-25",
+      "tipo": "ex-funcionario",
+      "tempo_casa": 7305,
+      "cargo": "Não especificado",
+      "area": "Operações Portuárias",
+      "historico_processos": 0,
+      "advogados": [
+        {
+          "nome": "Eneas Ferreira da Silva",
+          "oab": "OAB/RJ 97.130 | OAB/SP 465.112-A",
+          "taxa_sucesso_historica": 72.3
+        }
+      ]
+    },
+    "reu": {
+      "nome": "COMPANHIA DOCAS DO RIO DE JANEIRO",
+      "cnpj": "42.266.890/0001-28",
+      "advogados": [
+        {
+          "nome": "Carlos Roberto de Siqueira Castro",
+          "oab": "OAB/RJ 20.283",
+          "taxa_sucesso_historica": 68.3
+        }
+      ]
+    }
+  },
+  "analise_risco": {
+    "score_risco": 92,
+    "classificacao": "muito_alto",
+    "probabilidade_perda": {
+      "total": 5.2,
+      "parcial": 18.5,
+      "procedencia": 94.8
+    },
+    "confianca_predicao": 95.5,
+    "fatores_risco": [
+      {
+        "fator": "Título Judicial Definitivo - Ação Coletiva Transitada em Julgado",
+        "impacto": "critico",
+        "peso": 0.50,
+        "evidencias": [
+          "Ação Coletiva 0163700-95.1991.5.01.0041 com trânsito em julgado",
+          "Sentença coletiva genérica já reconheceu direitos do grupo",
+          "Embargos de Declaração afastaram prescrição total",
+          "Processo está em fase de cumprimento/liquidação individual"
+        ]
+      },
+      {
+        "fator": "Precedente TRT-1 favorável sobre marco prescricional",
+        "impacto": "alto",
+        "peso": 0.25,
+        "evidencias": [
+          "Precedente 32 do Órgão Especial TRT-1 sobre foro competente",
+          "Decisão Des. Dalva Macedo (AP 0101303-70.2019.5.01.0056)",
+          "Marco prescricional inicia com decisão de individualização (27/01/2023)",
+          "Prescrição quinquenal aplicada a partir da intimação para individualização"
+        ]
+      },
+      {
+        "fator": "Intimação para individualização publicada em 27/01/2023",
+        "impacto": "alto",
+        "peso": 0.15,
+        "evidencias": [
+          "Publicação no DO em 27/01/2023 pela 41ª VT-RJ",
+          "Prazo prescricional de 5 anos contado deste marco (até 27/01/2028)",
+          "Ação proposta em 10/10/2025 - dentro do prazo",
+          "Jurisprudência TRT-1 consolidada neste sentido"
+        ]
+      },
+      {
+        "fator": "Autor é idoso (data nascimento estimada ~1960) e aposentado",
+        "impacto": "medio",
+        "peso": 0.10,
+        "evidencias": [
+          "Tramitação preferencial requerida (art. 1.048, I, CPC)",
+          "Condição de aposentado fragiliza tese de renúncia tácita",
+          "Hipossuficiência declarada para justiça gratuita",
+          "Sensibilização natural do juízo pela condição do exequente"
+        ]
+      }
+    ],
+    "jurisprudencia": {
+      "casos_similares_analisados": 38,
+      "taxa_procedencia": 94.2,
+      "tribunal": "TRT-1 (Rio de Janeiro)",
+      "periodo_analise": "2019-2025",
+      "casos_referencia": [
+        {
+          "numero": "0101303-70.2019.5.01.0056",
+          "resultado": "Procedente - Prescrição afastada, marco da individualização",
+          "similaridade": 98.5,
+          "url": "https://trt1.jus.br/jurisprudencia/caso101303"
+        },
+        {
+          "numero": "0163700-95.1991.5.01.0041",
+          "resultado": "Ação Coletiva originária - Direitos reconhecidos",
+          "similaridade": 100.0,
+          "url": "https://trt1.jus.br/jurisprudencia/caso163700"
+        },
+        {
+          "numero": "0100678-45.2020.5.01.0041",
+          "resultado": "Cumprimento de Sentença deferido - mesma tese",
+          "similaridade": 96.8,
+          "url": "https://trt1.jus.br/jurisprudencia/caso678"
+        }
+      ]
+    }
+  },
+  "analise_financeira": {
+    "valor_causa": 50000.00,
+    "moeda": "BRL",
+    "exposicao_total": {
+      "pessimista": 78500.00,
+      "realista": 52300.00,
+      "otimista": 41200.00
+    },
+    "provisao_recomendada": {
+      "valor": 52300.00,
+      "percentual_causa": 104.60,
+      "justificativa": "Considerando título judicial definitivo (94.8% de procedência) + necessidade de liquidação por perícia + honorários sucumbenciais da fase de conhecimento (5-15%) + honorários da fase de execução (10%) + custas processuais. Valor da causa pode ser subestimado dado período de 20 anos trabalhados (1978-1998).",
+      "revisao_proxima": "2025-12-10"
+    },
+    "breakdown_pedidos": [
+      {
+        "item": "Diferenças de horas extras com inclusão de ATS, adicional noturno e adicional de riscos",
+        "valor_pedido": 32500.00,
+        "probabilidade_procedencia": 95.0,
+        "valor_esperado": 30875.00,
+        "categoria": "principal",
+        "fundamentacao": "Título judicial definitivo reconhece direito. Depende apenas de liquidação por documentos e perícia. Período: 20/04/1978 a 30/03/1998 (todo período conforme afastamento da prescrição)."
+      },
+      {
+        "item": "Reflexos em 13º salário das horas extras",
+        "valor_pedido": 6800.00,
+        "probabilidade_procedencia": 95.0,
+        "valor_esperado": 6460.00,
+        "categoria": "reflexo",
+        "fundamentacao": "Reflexos automáticos previstos na sentença coletiva. Percentual sobre diferenças de HE."
+      },
+      {
+        "item": "Reflexos em férias + 1/3 constitucional",
+        "valor_pedido": 5200.00,
+        "probabilidade_procedencia": 95.0,
+        "valor_esperado": 4940.00,
+        "categoria": "reflexo",
+        "fundamentacao": "Reflexos expressos na sentença da ação coletiva. Período integral de 20 anos."
+      },
+      {
+        "item": "Reflexos em FGTS + 40% (multa rescisória)",
+        "valor_pedido": 3200.00,
+        "probabilidade_procedencia": 90.0,
+        "valor_esperado": 2880.00,
+        "categoria": "reflexo",
+        "fundamentacao": "FGTS sobre diferenças de HE previsto na sentença coletiva. Multa de 40% sobre o FGTS das diferenças."
+      },
+      {
+        "item": "Multa convencional - 5 BTNs",
+        "valor_pedido": 2300.00,
+        "probabilidade_procedencia": 95.0,
+        "valor_esperado": 2185.00,
+        "categoria": "acessorio",
+        "fundamentacao": "Multa prevista expressamente na sentença coletiva em caso de descumprimento. Valor estimado com conversão de BTN."
+      }
+    ],
+    "custos_defesa": {
+      "honorarios_internos": 0.00,
+      "honorarios_externos": 4500.00,
+      "custas_processuais": 1000.00,
+      "pericia": 4200.00,
+      "outros": 450.00,
+      "total": 10150.00
+    },
+    "impacto_orcamento": {
+      "centro_custo": "CC-4521 - Provisões Trabalhistas",
+      "percentual_orcamento_anual": 0.46,
+      "necessita_aprovacao_especial": false
+    }
+  },
+  "recomendacoes_estrategicas": {
+    "estrategia_principal": "acordo_imediato",
+    "justificativa_estrategia": "Caso possui altíssima probabilidade de procedência (94.8%) por se tratar de cumprimento de título judicial definitivo. Não há discussão sobre mérito, apenas liquidação do quantum. Acordo estratégico no valor entre R$ 38-45 mil (76-90% do valor estimado) reduziria custos de perícia (R$ 4.200), honorários de fase de execução (10%), e permitiria parcelamento sem juros. Importante considerar que há potencial de dezenas de casos similares aguardando individualização da mesma ação coletiva.",
+    "acoes_imediatas": [
+      {
+        "acao": "Levantar URGENTEMENTE todos os holerites e controles de ponto do período 1978-1998",
+        "prazo": "5 dias",
+        "responsavel": "RH - Arquivo + Jurídico",
+        "criticidade": "urgente"
+      },
+      {
+        "acao": "Verificar quantos ex-empregados da ação coletiva 0163700-95.1991 ainda podem ajuizar cumprimento",
+        "prazo": "7 dias",
+        "responsavel": "Jurídico + RH",
+        "criticidade": "urgente"
+      },
+      {
+        "acao": "Calcular cenários de acordo: 75%, 80% e 90% do valor estimado pela empresa",
+        "prazo": "3 dias",
+        "responsavel": "Controladoria + Jurídico",
+        "criticidade": "alta"
+      },
+      {
+        "acao": "Consultar histórico de acordos em cumprimentos da mesma ação coletiva",
+        "prazo": "5 dias",
+        "responsavel": "Jurídico",
+        "criticidade": "alta"
+      },
+      {
+        "acao": "Preparar documentação completa do período laborativo (ficha registro, rescisão, holerites)",
+        "prazo": "10 dias",
+        "responsavel": "RH + Arquivo",
+        "criticidade": "alta"
+      }
+    ],
+    "acordo": {
+      "momento_ideal": "Audiência Inicial ou antes da perícia",
+      "valor_sugerido_min": 38000.00,
+      "valor_sugerido_max": 45000.00,
+      "condicoes": [
+        "Pagamento parcelado em até 10x sem juros",
+        "Quitação total de todas as verbas da ação coletiva 0163700-95.1991",
+        "Renúncia a honorários sucumbenciais",
+        "Cada parte arca com seus próprios honorários advocatícios",
+        "Desistência de eventual recurso"
+      ],
+      "vantagens": [
+        "Elimina 100% do risco de condenação (título judicial já existe)",
+        "Evita custos de perícia contábil (R$ 4.200-6.000)",
+        "Elimina honorários de execução (10% sobre o valor apurado)",
+        "Impede majoração do valor por juros de mora acumulados",
+        "Reduz exposição total em ~25-30%",
+        "Encerra processo rapidamente (3-6 meses vs 18-30 meses)",
+        "Evita bloqueios judiciais e penhoras",
+        "Demonstra boa-fé e agilidade empresarial"
+      ],
+      "desvantagens": [
+        "Custo imediato vs provisionamento de longo prazo",
+        "Pode criar precedente e estimular outros 50-200 ex-empregados da mesma ação coletiva",
+        "Não permite discussão de prescrição ou valores (título já existe)",
+        "Pagamento sem possibilidade de defesa adicional"
+      ]
+    },
+    "defesa": {
+      "teses_principais": [
+        {
+          "tese": "Impugnação aos cálculos apresentados pelo exequente - valores superestimados",
+          "fundamentacao_legal": "CPC art. 525 c/c CLT art. 884",
+          "probabilidade_sucesso": 40.0,
+          "precedentes": [
+            "TRT1-AP-0100456-78.2021.5.01.0041 - Redução de valores em liquidação"
+          ]
+        },
+        {
+          "tese": "Necessidade de apresentação de documentos pelo exequente para liquidação adequada",
+          "fundamentacao_legal": "Princípio da aptidão da prova - CPC art. 434",
+          "probabilidade_sucesso": 25.0,
+          "precedentes": []
+        },
+        {
+          "tese": "Prescrição intercorrente caso exequente não providencie documentos em prazo razoável",
+          "fundamentacao_legal": "CPC art. 921, §4º c/c CLT art. 769",
+          "probabilidade_sucesso": 15.0,
+          "precedentes": []
+        },
+        {
+          "tese": "Limitação da condenação aos valores efetivamente comprovados por documentos",
+          "fundamentacao_legal": "Princípio da verdade real e necessidade de prova documental",
+          "probabilidade_sucesso": 35.0,
+          "precedentes": [
+            "TRT1-AP-0100789-34.2020.5.01.0041 - Deferimento apenas de valores comprovados"
+          ]
+        }
+      ],
+      "provas_necessarias": [
+        {
+          "tipo": "Documental",
+          "descricao": "Holerites completos do período 20/04/1978 a 30/03/1998",
+          "disponibilidade": "parcial",
+          "criticidade": "essencial"
+        },
+        {
+          "tipo": "Documental",
+          "descricao": "Controles de ponto/jornada do período completo",
+          "disponibilidade": "indisponivel",
+          "criticidade": "essencial"
+        },
+        {
+          "tipo": "Documental",
+          "descricao": "Ficha de registro completa e termo de rescisão",
+          "disponibilidade": "disponivel",
+          "criticidade": "importante"
+        },
+        {
+          "tipo": "Documental",
+          "descricao": "Documentos comprovando adicional de tempo de serviço, noturno e de riscos pagos",
+          "disponibilidade": "parcial",
+          "criticidade": "importante"
+        },
+        {
+          "tipo": "Pericial",
+          "descricao": "Perícia contábil para apuração dos valores das diferenças de horas extras e reflexos",
+          "disponibilidade": "indisponivel",
+          "criticidade": "essencial"
+        },
+        {
+          "tipo": "Documental",
+          "descricao": "Comprovantes de pagamento de FGTS do período",
+          "disponibilidade": "parcial",
+          "criticidade": "complementar"
+        }
+      ]
+    },
+    "preventivas": {
+      "recomendacoes": [
+        {
+          "area_afetada": "Jurídico - Gestão de Passivos",
+          "medida": "URGENTE: Mapear TODOS os substituídos da ação coletiva 0163700-95.1991 e risco de novas individualizações",
+          "prazo_implementacao": "15 dias",
+          "custo_estimado": 22000.00,
+          "roi_esperado": "Identificação de passivo potencial de 50-200 casos similares (exposição R$ 2,5-10 milhões). Permite planejamento estratégico e provisões adequadas."
+        },
+        {
+          "area_afetada": "Jurídico - Estratégia Preventiva",
+          "medida": "Criar programa de acordos coletivos para ex-empregados da ação 0163700-95.1991 antes de ajuizarem cumprimento individual",
+          "prazo_implementacao": "30 dias",
+          "custo_estimado": 850000.00,
+          "roi_esperado": "Economia de 25-35% nos valores + eliminação de custos processuais individuais (R$ 10-15 mil por caso). ROI estimado: 12-18 meses."
+        },
+        {
+          "area_afetada": "RH - Gestão Documental",
+          "medida": "Digitalizar e organizar URGENTEMENTE toda documentação de ex-empregados do período 1970-2000",
+          "prazo_implementacao": "90 dias",
+          "custo_estimado": 65000.00,
+          "roi_esperado": "Reduz tempo de resposta judicial de 60+ dias para 5-7 dias. Evita multas por descumprimento de ordem judicial."
+        },
+        {
+          "area_afetada": "Controladoria - Provisões",
+          "medida": "Criar provisão específica para cumprimentos de sentença da ação coletiva 0163700-95.1991",
+          "prazo_implementacao": "30 dias",
+          "custo_estimado": 3500000.00,
+          "roi_esperado": "Adequação contábil e tributária. Previsibilidade orçamentária para possíveis 50-200 casos."
+        },
+        {
+          "area_afetada": "Jurídico - Compliance",
+          "medida": "Implementar sistema de alertas para monitorar distribuição de novos cumprimentos da ação 0163700-95.1991",
+          "prazo_implementacao": "45 dias",
+          "custo_estimado": 18000.00,
+          "roi_esperado": "Antecipação de resposta e possibilidade de acordos antes da citação formal."
+        }
+      ]
+    }
+  },
+  "analise_operacional": {
+    "areas_envolvidas": [
+      "Jurídico",
+      "Recursos Humanos",
+      "Controladoria",
+      "Arquivo/Gestão Documental",
+      "Diretoria"
+    ],
+    "impacto_reputacional": "medio",
+    "risco_precedente": {
+      "nivel": "muito_alto",
+      "casos_similares_potenciais": 150,
+      "exposicao_estimada": 7850000.00
+    },
+    "necessita_comunicacao": {
+      "diretoria": true,
+      "rh": true,
+      "comunicacao": false,
+      "auditoria": true
+    }
+  },
+  "timeline_predicoes": {
+    "duracao_estimada": {
+      "minima_meses": 8,
+      "media_meses": 18,
+      "maxima_meses": 30
+    },
+    "marcos_futuros": [
+      {
+        "evento": "Apresentação de documentos pela executada",
+        "data_prevista": "2025-11-09",
+        "probabilidade": 95.0,
+        "impacto_estrategia": "Prazo para apresentar holerites e controles de ponto 1978-1998. Descumprimento pode gerar multa e inversão do ônus da prova."
+      },
+      {
+        "evento": "Audiência Inicial - Tentativa de Conciliação",
+        "data_prevista": "2025-12-15",
+        "probabilidade": 85.0,
+        "impacto_estrategia": "Melhor momento para acordo. Juiz tende a propor 70-85% dado que é cumprimento de título definitivo. Autor é idoso."
+      },
+      {
+        "evento": "Apresentação de cálculos pelo exequente",
+        "data_prevista": "2026-01-20",
+        "probabilidade": 90.0,
+        "impacto_estrategia": "Exequente apresentará memória de cálculo detalhada. Empresa terá prazo para impugnar valores."
+      },
+      {
+        "evento": "Nomeação de Perito Contábil",
+        "data_prevista": "2026-03-10",
+        "probabilidade": 85.0,
+        "impacto_estrategia": "Perícia custará R$ 4.200-6.000. Resultado provavelmente confirmará ou aumentará valores do exequente."
+      },
+      {
+        "evento": "Laudo Pericial",
+        "data_prevista": "2026-06-25",
+        "probabilidade": 80.0,
+        "impacto_estrategia": "Valores apurados servirão de base para liquidação. Dificilmente serão inferiores ao pedido inicial."
+      },
+      {
+        "evento": "Homologação dos Cálculos",
+        "data_prevista": "2026-09-15",
+        "probabilidade": 90.0,
+        "impacto_estrategia": "Juiz homologa valores apurados. Início da fase de pagamento ou penhora."
+      },
+      {
+        "evento": "Execução definitiva - Bloqueio judicial ou acordo de pagamento",
+        "data_prevista": "2026-11-20",
+        "probabilidade": 85.0,
+        "impacto_estrategia": "Sem acordo, execução forçada via BacenJud. Juros continuam acumulando. Valor final pode superar em 40-60% o inicial."
+      }
+    ]
+  },
+  "tags_inteligentes": [
+    {
+      "categoria": "tema",
+      "valor": "Cumprimento de Sentença - Ação Coletiva",
+      "cor": "#DC3545"
+    },
+    {
+      "categoria": "tema",
+      "valor": "Título Judicial Definitivo - Trânsito em Julgado",
+      "cor": "#DC3545"
+    },
+    {
+      "categoria": "tema",
+      "valor": "Horas Extras - Adicional Noturno - ATS",
+      "cor": "#FF5733"
+    },
+    {
+      "categoria": "urgencia",
+      "valor": "Alta - Documentos em 14 dias",
+      "cor": "#DC3545"
+    },
+    {
+      "categoria": "complexidade",
+      "valor": "Média-Alta",
+      "cor": "#FFC107"
+    },
+    {
+      "categoria": "area_impactada",
+      "valor": "Jurídico - Cumprimento/Execução",
+      "cor": "#17A2B8"
+    },
+    {
+      "categoria": "area_impactada",
+      "valor": "RH - Arquivo Documental",
+      "cor": "#17A2B8"
+    },
+    {
+      "categoria": "tipo_risco",
+      "valor": "Risco Sistêmico CRÍTICO - 150+ casos potenciais",
+      "cor": "#DC3545"
+    },
+    {
+      "categoria": "tipo_risco",
+      "valor": "Exposição Estimada: R$ 7,8 milhões",
+      "cor": "#DC3545"
+    },
+    {
+      "categoria": "caracteristica_especial",
+      "valor": "Autor Idoso - Tramitação Preferencial",
+      "cor": "#FFC107"
+    },
+    {
+      "categoria": "caracteristica_especial",
+      "valor": "Ex-empregado (1978-1998) - 20 anos",
+      "cor": "#FFC107"
+    },
+    {
+      "categoria": "origem",
+      "valor": "Ação Coletiva 0163700-95.1991.5.01.0041",
+      "cor": "#6C757D"
+    }
+  ],
+  "metadata": {
+    "versao_analise": "2.1.4",
+    "data_analise": "2025-10-26T16:45:00-03:00",
+    "modelo_ia": {
+      "nome": "CDRJ-Legal-Predictor",
+      "versao": "4.2.1",
+      "acuracia_geral": 84.3
+    },
+    "analista_responsavel": "IA + Revisão: Análise Pendente",
+    "revisao_humana": {
+      "realizada": false,
+      "data": null,
+      "aprovador": null,
+      "ajustes": "Pendente de revisão jurídica. Caso CRÍTICO: Título judicial definitivo com risco sistêmico de 150+ casos similares aguardando individualização. Exposição estimada: R$ 7,8 milhões."
+    },
+    "hash_documento": "sha256:c9d4e7f2a5b8c1d6e9f3a7b4c8d2e5f1a9b6c3d7e4f8a2b5c9d1e6f4a8b3c7d5"
+  }
+}

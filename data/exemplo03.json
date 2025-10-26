@@ -1,0 +1,612 @@
+{
+  "processo": {
+    "numero": "0101293-76.2025.5.01.0036",
+    "tipo": "trabalhista",
+    "subtipo": "Rito Ordinário",
+    "fase_atual": "inicial",
+    "data_distribuicao": "2025-10-13",
+    "prazo_proximo": {
+      "tipo": "Contestação",
+      "data_limite": "2025-11-12",
+      "dias_restantes": 17,
+      "criticidade": "alta"
+    },
+    "vara": {
+      "codigo": "36ª VT-RJ",
+      "nome": "36ª Vara do Trabalho do Rio de Janeiro",
+      "juiz": "A definir"
+    }
+  },
+  "partes": {
+    "autor": {
+      "nome": "CLAUDIO ALCINO DOS SANTOS",
+      "cpf_cnpj": "815.165.927-00",
+      "tipo": "funcionario",
+      "tempo_casa": 13897,
+      "cargo": "Técnico de Serviços Portuários",
+      "area": "Operações Portuárias",
+      "historico_processos": 0,
+      "advogados": [
+        {
+          "nome": "Marina Bordallo Castro",
+          "oab": "OAB/RJ",
+          "taxa_sucesso_historica": 74.5
+        },
+        {
+          "nome": "Mauro Abdon Gabriel",
+          "oab": "OAB/RJ 82.725",
+          "taxa_sucesso_historica": 76.8
+        }
+      ]
+    },
+    "reu": {
+      "nome": "COMPANHIA DOCAS DO RIO DE JANEIRO",
+      "cnpj": "42.266.890/0001-28",
+      "advogados": [
+        {
+          "nome": "Carlos Roberto de Siqueira Castro",
+          "oab": "OAB/RJ 20.283",
+          "taxa_sucesso_historica": 68.3
+        }
+      ]
+    }
+  },
+  "analise_risco": {
+    "score_risco": 88,
+    "classificacao": "muito_alto",
+    "probabilidade_perda": {
+      "total": 9.5,
+      "parcial": 82.3,
+      "procedencia": 91.8
+    },
+    "confianca_predicao": 91.2,
+    "fatores_risco": [
+      {
+        "fator": "Reconhecimento formal do débito pela empresa (Circular Normativa 6/2025)",
+        "impacto": "muito_alto",
+        "peso": 0.40,
+        "evidencias": [
+          "Circular Normativa PORTOSRIO 6/2025/DIRAFI-PORTOSRIO de 27/03/2025",
+          "Empresa reconheceu direito à promoção e determinou retroação a 2020",
+          "Concedeu promoção em folha mas não pagou diferenças retroativas",
+          "Interrupção da prescrição pelo reconhecimento do débito (CC art. 202, VI)"
+        ]
+      },
+      {
+        "fator": "Valor da causa extremamente elevado (R$ 340.848,05) - 2,9x superior à média",
+        "impacto": "muito_alto",
+        "peso": 0.25,
+        "evidencias": [
+          "Valor 2,9x superior ao caso médio de PCES na CDRJ",
+          "Indica múltiplas promoções não concedidas ao longo de anos",
+          "Tempo de casa significativo (38 anos desde 1987)",
+          "Acúmulo expressivo de diferenças salariais + reflexos complexos"
+        ]
+      },
+      {
+        "fator": "Descumprimento sistemático do PCES - Promoções por Antiguidade",
+        "impacto": "alto",
+        "peso": 0.25,
+        "evidencias": [
+          "Empregado com 38 anos de casa (desde 03/08/1987)",
+          "PCES prevê promoção anual por antiguidade (item 7 e 9.11)",
+          "Empresa não concedeu todas as promoções devidas (5+ níveis estimados)",
+          "Dotação orçamentária obrigatória prevista no item 7.3 do PCES"
+        ]
+      },
+      {
+        "fator": "Jurisprudência consolidada favorável + Autor idoso (tramitação preferencial)",
+        "impacto": "alto",
+        "peso": 0.10,
+        "evidencias": [
+          "Súmula 452 do TST sobre prescrição parcial em PCES",
+          "Julgado TST RRAg-0000146-09.2022.5.12.0035 (DEJT 08/07/2025)",
+          "Autor maior de 60 anos (Lei 10.741/2003 art. 71)",
+          "Sensibilização do juízo pela trajetória profissional longa"
+        ]
+      }
+    ],
+    "jurisprudencia": {
+      "casos_similares_analisados": 52,
+      "taxa_procedencia": 86.7,
+      "tribunal": "TRT-1 (Rio de Janeiro)",
+      "periodo_analise": "2020-2025",
+      "casos_referencia": [
+        {
+          "numero": "RRAg-0000146-09.2022.5.12.0035",
+          "resultado": "Procedente - Prescrição parcial aplicada, promoções deferidas",
+          "similaridade": 97.5,
+          "url": "https://tst.jus.br/jurisprudencia/caso146"
+        },
+        {
+          "numero": "0100567-34.2023.5.01.0036",
+          "resultado": "Procedente parcial - Diferenças PCES + reflexos extensos",
+          "similaridade": 94.1,
+          "url": "https://trt1.jus.br/jurisprudencia/caso567"
+        },
+        {
+          "numero": "0101345-89.2022.5.01.0036",
+          "resultado": "Procedente - Mesma tese PCES, valores elevados mantidos",
+          "similaridade": 91.8,
+          "url": "https://trt1.jus.br/jurisprudencia/caso1345"
+        }
+      ]
+    }
+  },
+  "analise_financeira": {
+    "valor_causa": 340848.05,
+    "moeda": "BRL",
+    "exposicao_total": {
+      "pessimista": 548200.00,
+      "realista": 307760.00,
+      "otimista": 102500.00
+    },
+    "provisao_recomendada": {
+      "valor": 307760.00,
+      "percentual_causa": 90.29,
+      "justificativa": "Considerando probabilidade de 82.3% de perda parcial + reconhecimento formal do débito pela empresa em 27/03/2025 + jurisprudência consolidada + valor causa muito elevado indicando múltiplas violações graves ao PCES + custas processuais estimadas em 8% + honorários sucumbenciais entre 10-15%. Caso de altíssimo risco crítico devido à confissão prévia da empresa e valor expressivo.",
+      "revisao_proxima": "2025-12-20"
+    },
+    "breakdown_pedidos": [
+      {
+        "item": "Promoções por antiguidade retroativas múltiplas (outubro/2020 em diante)",
+        "valor_pedido": 198500.00,
+        "probabilidade_procedencia": 92.0,
+        "valor_esperado": 182620.00,
+        "categoria": "principal",
+        "fundamentacao": "Empresa reconheceu formalmente o débito na Circular 6/2025. Valor elevado sugere 5+ promoções não concedidas ao longo dos anos. PCES prevê promoção anual por antiguidade. Probabilidade altíssima devido ao reconhecimento expresso e tempo de casa (38 anos)."
+      },
+      {
+        "item": "Diferenças salariais acumuladas das promoções não concedidas",
+        "valor_pedido": 71200.00,
+        "probabilidade_procedencia": 88.0,
+        "valor_esperado": 62656.00,
+        "categoria": "principal",
+        "fundamentacao": "Diferenças mensais acumuladas desde outubro/2020. Súmula 452 TST garante prescrição parcial. Interrupção da prescrição em 27/03/2025. Valor expressivo indica multiplicidade de níveis não concedidos de forma sistemática."
+      },
+      {
+        "item": "Reflexos em 13º salário",
+        "valor_pedido": 26800.00,
+        "probabilidade_procedencia": 88.0,
+        "valor_esperado": 23584.00,
+        "categoria": "reflexo",
+        "fundamentacao": "Diferenças de promoções refletem no 13º salário desde 2020. Pedido de trato sucessivo com base no PCES. Valor proporcional à base salarial elevada do autor."
+      },
+      {
+        "item": "Reflexos em férias + 1/3 constitucional",
+        "valor_pedido": 23600.00,
+        "probabilidade_procedencia": 88.0,
+        "valor_esperado": 20768.00,
+        "categoria": "reflexo",
+        "fundamentacao": "Férias + adicional de 1/3 sobre as diferenças salariais desde outubro/2020. Múltiplos períodos de férias afetados ao longo de 5 anos."
+      },
+      {
+        "item": "Reflexos em adicional por tempo de serviço",
+        "valor_pedido": 10500.00,
+        "probabilidade_procedencia": 85.0,
+        "valor_esperado": 8925.00,
+        "categoria": "reflexo",
+        "fundamentacao": "ATS calculado sobre o salário base corrigido. Reflexos proporcionais às múltiplas promoções não concedidas. 38 anos de casa geram ATS significativo."
+      },
+      {
+        "item": "Reflexos em horas extras, RSR e adicional noturno",
+        "valor_pedido": 6100.00,
+        "probabilidade_procedencia": 80.0,
+        "valor_esperado": 4880.00,
+        "categoria": "reflexo",
+        "fundamentacao": "Horas extras calculadas sobre novo salário-base após promoções. Documentação extensa em contracheques de 2018-2025."
+      },
+      {
+        "item": "Reflexos em FGTS e multa de 40%",
+        "valor_pedido": 2800.00,
+        "probabilidade_procedencia": 75.0,
+        "valor_esperado": 2100.00,
+        "categoria": "reflexo",
+        "fundamentacao": "FGTS não recolhido sobre diferenças salariais ao longo de anos. Multa de 40% em caso de eventual rescisão."
+      },
+      {
+        "item": "Reflexos em demais verbas trabalhistas e indenizações",
+        "valor_pedido": 1348.05,
+        "probabilidade_procedencia": 70.0,
+        "valor_esperado": 943.64,
+        "categoria": "reflexo",
+        "fundamentacao": "Outras parcelas salariais da CDRJ e possíveis indenizações por descumprimento prolongado do PCES. Depende de prova documental detalhada e perícia."
+      }
+    ],
+    "custos_defesa": {
+      "honorarios_internos": 0.00,
+      "honorarios_externos": 18500.00,
+      "custas_processuais": 6816.00,
+      "pericia": 5200.00,
+      "outros": 1200.00,
+      "total": 31716.00
+    },
+    "impacto_orcamento": {
+      "centro_custo": "CC-4521 - Provisões Trabalhistas",
+      "percentual_orcamento_anual": 2.73,
+      "necessita_aprovacao_especial": true
+    }
+  },
+  "recomendacoes_estrategicas": {
+    "estrategia_principal": "acordo_judicial_prioritario",
+    "justificativa_estrategia": "Caso CRÍTICO DE ALTÍSSIMO RISCO com probabilidade de perda de 82.3% e valor causa extremamente elevado (R$ 340.848,05 - o mais alto já registrado desta tese na CDRJ). Reconhecimento formal do débito pela empresa em 27/03/2025 praticamente elimina todas as defesas de mérito. Acordo estratégico urgente no valor entre R$ 190-240 mil (55-70% do valor causa) reduziria exposição financeira em 30-40%, evitaria custos expressivos de instrução/perícia (R$ 31.716), eliminaria risco de precedente negativo de alto impacto financeiro e resolveria rapidamente caso de autor idoso. O valor causa 2,9x superior à média indica gravidade EXTREMA das violações ao PCES ao longo de anos. Este caso pode criar jurisprudência devastadora para toda a empresa e estimular dezenas de processos similares.",
+    "acoes_imediatas": [
+      {
+        "acao": "URGENTE: Reunião emergencial com Diretoria sobre caso de altíssimo valor e risco sistêmico",
+        "prazo": "24h",
+        "responsavel": "Jurídico + Diretoria + Controladoria",
+        "criticidade": "critica"
+      },
+      {
+        "acao": "Levantar toda documentação da Circular Normativa 6/2025 e evidências do reconhecimento formal",
+        "prazo": "48h",
+        "responsavel": "Jurídico + RH",
+        "criticidade": "urgente"
+      },
+      {
+        "acao": "Análise técnica detalhada: quantas promoções não foram concedidas para gerar valor de R$ 340 mil?",
+        "prazo": "48h",
+        "responsavel": "RH - Cargos e Salários + Controladoria",
+        "criticidade": "urgente"
+      },
+      {
+        "acao": "Calcular cenários de acordo detalhados: 55%, 60%, 65% e 70% do valor da causa",
+        "prazo": "48h",
+        "responsavel": "Controladoria + Jurídico",
+        "criticidade": "urgente"
+      },
+      {
+        "acao": "Mapear todos os documentos do PCES e contracheques completos 2018-2025",
+        "prazo": "72h",
+        "responsavel": "RH - Gestão de Pessoas",
+        "criticidade": "urgente"
+      },
+      {
+        "acao": "Identificar TODOS empregados em situação similar (38+ anos) e estimar exposição total agregada",
+        "prazo": "5 dias",
+        "responsavel": "RH + TI + Jurídico + Controladoria",
+        "criticidade": "alta"
+      },
+      {
+        "acao": "Preparar proposta de acordo pré-audiência com autorização de alçada especial da Diretoria",
+        "prazo": "7 dias",
+        "responsavel": "Jurídico + Diretoria",
+        "criticidade": "alta"
+      }
+    ],
+    "acordo": {
+      "momento_ideal": "PRÉ-AUDIÊNCIA (máxima prioridade) ou Audiência Inicial",
+      "valor_sugerido_min": 190000.00,
+      "valor_sugerido_max": 240000.00,
+      "condicoes": [
+        "Pagamento parcelado em até 12x sem juros (valor elevado justifica parcelamento)",
+        "Quitação total e irrevogável de todas as verbas relacionadas ao PCES",
+        "Cláusula RIGOROSA de confidencialidade (evitar efeito demonstração para outros casos)",
+        "Reconhecimento da regularização definitiva do enquadramento atual no PCES",
+        "Renúncia expressa a qualquer outra ação relacionada ao PCES passado, presente ou futuro",
+        "Quitação ampla geral e irrestrita do contrato de trabalho quanto ao tema PCES"
+      ],
+      "vantagens": [
+        "Elimina risco de condenação em valor muito superior (R$ 307-548 mil + juros e correção)",
+        "Evita custos expressivos de instrução processual completa (R$ 31.716)",
+        "CRÍTICO: Impede criação de precedente negativo de alto valor que pode gerar onda de processos",
+        "Resolve rapidamente caso de autor idoso (tramitação preferencial altamente acelerada)",
+        "Reduz exposição total em 35-45% (economia líquida de R$ 70-150 mil)",
+        "Demonstra boa-fé empresarial mesmo após reconhecimento do débito",
+        "Evita risco reputacional grave de condenação milionária em processo trabalhista",
+        "Permite controle do fluxo de caixa via parcelamento em 12 meses",
+        "Minimiza risco de juros e correção monetária acumulados durante anos de processo",
+        "Reduz impacto emocional em equipe jurídica e RH (caso de alta complexidade)"
+      ],
+      "desvantagens": [
+        "Desembolso imediato significativo (impacto orçamentário de 2,73% - necessita aprovação especial)",
+        "ALTO RISCO: Pode estimular fortemente outros 50-80 empregados em situação similar",
+        "Não resolve problema estrutural CRÍTICO do PCES que está gerando passivo milionário",
+        "Necessita aprovação especial de alçada da Diretoria devido ao valor extraordinário",
+        "Pode ser interpretado como admissão de culpa pela gestão inadequada do PCES"
+      ]
+    },
+    "defesa": {
+      "teses_principais": [
+        {
+          "tese": "Impugnação específica e detalhada aos valores pleiteados - Sobrepreço evidente e cálculos inflacionados",
+          "fundamentacao_legal": "CPC art. 324 c/c CLT art. 840. Valor causa 2,9x superior à média de casos similares evidencia pedidos excessivos e falta de especificação adequada",
+          "probabilidade_sucesso": 65.0,
+          "precedentes": [
+            "TRT1-RO-0100890-23.2023.5.01.0042 - Redução substancial de valores (40%) deferida",
+            "TRT1-RO-0101234-56.2024.5.01.0036 - Impugnação parcialmente acolhida em caso de valor elevado"
+          ]
+        },
+        {
+          "tese": "Prescrição quinquenal rigorosa - Limitação das diferenças aos últimos 5 anos contados de 27/03/2025",
+          "fundamentacao_legal": "CLT art. 7º, XXIX da CF/88. Mesmo com interrupção reconhecida em 27/03/2025, limitar retroação máxima a 5 anos",
+          "probabilidade_sucesso": 75.0,
+          "precedentes": [
+            "TST-AIRR-10234-67.2019.5.01.0036 - Prescrição quinquenal rigorosamente aplicada",
+            "TRT1-RO-0100345-78.2021.5.01.0038 - Limitação temporal de 5 anos mantida"
+          ]
+        },
+        {
+          "tese": "Promoções foram concedidas conforme disponibilidade orçamentária (item 7.3 PCES) - Impossibilidade material",
+          "fundamentacao_legal": "Princípio da razoabilidade, situação econômica da empresa e condicionamento do PCES à dotação orçamentária prévia",
+          "probabilidade_sucesso": 30.0,
+          "precedentes": []
+        },
+        {
+          "tese": "Empresa já regularizou completamente a situação em março/2025 - Pedidos prospectivos prejudicados",
+          "fundamentacao_legal": "Perda superveniente do objeto quanto a pedidos futuros. Manutenção apenas de diferenças pretéritas limitadas",
+          "probabilidade_sucesso": 70.0,
+          "precedentes": []
+        },
+        {
+          "tese": "Pedidos extremamente genéricos e sem especificação individual adequada - Inépcia parcial da inicial",
+          "fundamentacao_legal": "CPC art. 330 c/c CLT art. 840, §1º (reforma trabalhista). Valor elevado exige detalhamento minucioso dos pedidos",
+          "probabilidade_sucesso": 40.0,
+          "precedentes": []
+        }
+      ],
+      "provas_necessarias": [
+        {
+          "tipo": "Documental",
+          "descricao": "Circular Normativa PORTOSRIO 6/2025/DIRAFI-PORTOSRIO completa com TODO o contexto, limitações e deliberações",
+          "disponibilidade": "disponivel",
+          "criticidade": "essencial"
+        },
+        {
+          "tipo": "Documental",
+          "descricao": "PCES completo de 2009, 2015 e 2022 com TODAS as tabelas salariais, critérios e anexos",
+          "disponibilidade": "disponivel",
+          "criticidade": "essencial"
+        },
+        {
+          "tipo": "Documental",
+          "descricao": "TODOS os holerites do autor desde outubro/2020 até atualidade (60+ documentos)",
+          "disponibilidade": "disponivel",
+          "criticidade": "essencial"
+        },
+        {
+          "tipo": "Documental",
+          "descricao": "Ficha de registro completa, histórico DETALHADO de todas promoções, avaliações e justificativas",
+          "disponibilidade": "disponivel",
+          "criticidade": "essencial"
+        },
+        {
+          "tipo": "Documental",
+          "descricao": "Demonstrativos de disponibilidade orçamentária 2020-2025 (item 7.3 PCES) - CRÍTICO para defesa",
+          "disponibilidade": "parcial",
+          "criticidade": "muito_importante"
+        },
+        {
+          "tipo": "Documental",
+          "descricao": "Comparativo salarial completo com outros empregados de mesma função e antiguidade similar",
+          "disponibilidade": "disponivel",
+          "criticidade": "importante"
+        },
+        {
+          "tipo": "Documental",
+          "descricao": "Atas de reuniões do CONSAD e deliberações sobre PCES e política salarial 2020-2025",
+          "disponibilidade": "disponivel",
+          "criticidade": "importante"
+        },
+        {
+          "tipo": "Testemunhal",
+          "descricao": "Gestores de RH responsáveis pelas avaliações de promoção e aplicação do PCES ao longo dos anos",
+          "disponibilidade": "disponivel",
+          "criticidade": "importante"
+        },
+        {
+          "tipo": "Testemunhal",
+          "descricao": "Diretores que participaram das deliberações sobre dotação orçamentária para promoções",
+          "disponibilidade": "disponivel",
+          "criticidade": "importante"
+        },
+        {
+          "tipo": "Pericial",
+          "descricao": "Perícia contábil DETALHADA E COMPLEXA para apuração exata dos valores - ABSOLUTAMENTE CRÍTICA devido ao valor elevado e complexidade",
+          "disponibilidade": "indisponivel",
+          "criticidade": "essencial"
+        }
+      ]
+    },
+    "preventivas": {
+      "recomendacoes": [
+        {
+          "area_afetada": "Diretoria - Governança Corporativa e Compliance",
+          "medida": "URGENTÍSSIMO: Auditoria externa completa e independente do PCES + identificação de TODOS os casos similares de alto risco/valor",
+          "prazo_implementacao": "30 dias",
+          "custo_estimado": 95000.00,
+          "roi_esperado": "Prevenção de 25-40 processos similares de alto valor (economia estimada R$ 4-8 milhões). ROI: 6-12 meses. Essencial para evitar colapso do sistema."
+        },
+        {
+          "area_afetada": "Recursos Humanos - Cargos e Salários",
+          "medida": "CRÍTICO: Executar IMEDIATAMENTE todas as regularizações previstas na Circular 6/2025 para TODOS OS EMPREGADOS elegíveis",
+          "prazo_implementacao": "45 dias",
+          "custo_estimado": 1450000.00,
+          "roi_esperado": "Evita passivo trabalhista catastrófico estimado em R$ 6-12 milhões. Demonstra boa-fé e reduz risco de novos processos em 80%."
+        },
+        {
+          "area_afetada": "Jurídico - Gestão de Riscos",
+          "medida": "Criar task force dedicada exclusivamente a casos de PCES com prioridade máxima para acordos estratégicos",
+          "prazo_implementacao": "15 dias",
+          "custo_estimado": 45000.00,
+          "roi_esperado": "Redução de 40-60% nos custos de litígio e exposição financeira através de acordos preventivos. ROI: 12-18 meses."
+        },
+        {
+          "area_afetada": "Jurídico - Compliance",
+          "medida": "Implementar sistema automatizado de alertas para promoções por antiguidade conforme PCES (Inteligência Artificial/ML)",
+          "prazo_implementacao": "90 dias",
+          "custo_estimado": 85000.00,
+          "roi_esperado": "Automação elimina 95% do risco de novos casos + garante conformidade contínua. ROI: 18-24 meses."
+        },
+        {
+          "area_afetada": "Diretoria - Estratégia",
+          "medida": "Revisar integralmente o PCES com consultoria jurídica e de RH especializadas + adequar à realidade orçamentária e legal",
+          "prazo_implementacao": "120 dias",
+          "custo_estimado": 180000.00,
+          "roi_esperado": "Mitigação de risco sistêmico estimado em R$ 8-15 milhões + adequação regulatória completa. ROI: 24-36 meses."
+        },
+        {
+          "area_afetada": "Controladoria - Planejamento Financeiro",
+          "medida": "Criar reserva orçamentária específica e obrigatória para promoções do PCES conforme item 7.3 (dotação legal)",
+          "prazo_implementacao": "60 dias",
+          "custo_estimado": 850000.00,
+          "roi_esperado": "Cumprimento obrigatório do PCES evita 100% de novos processos por descumprimento + regularização total."
+        },
+        {
+          "area_afetada": "TI - Sistemas de Gestão",
+          "medida": "Desenvolver dashboard executivo de monitoramento em tempo real de elegibilidade de promoções por PCES",
+          "prazo_implementacao": "75 dias",
+          "custo_estimado": 65000.00,
+          "roi_esperado": "Visibilidade total + antecipação de 100% dos casos antes de se tornarem contenciosos. ROI: 12-18 meses."
+        }
+      ]
+    }
+  },
+  "analise_operacional": {
+    "areas_envolvidas": [
+      "Recursos Humanos",
+      "Jurídico",
+      "Controladoria",
+      "Operações Portuárias",
+      "Diretoria Executiva",
+      "Conselho de Administração",
+      "Auditoria Interna"
+    ],
+    "impacto_reputacional": "muito_alto",
+    "risco_precedente": {
+      "nivel": "critico",
+      "casos_similares_potenciais": 78,
+      "exposicao_estimada": 8950000.00
+    },
+    "necessita_comunicacao": {
+      "diretoria": true,
+      "rh": true,
+      "comunicacao": true,
+      "auditoria": true
+    }
+  },
+  "timeline_predicoes": {
+    "duracao_estimada": {
+      "minima_meses": 9,
+      "media_meses": 15,
+      "maxima_meses": 24
+    },
+    "marcos_futuros": [
+      {
+        "evento": "Audiência Inicial - Tentativa de Conciliação",
+        "data_prevista": "2025-12-18",
+        "probabilidade": 92.0,
+        "impacto_estrategia": "Momento CRÍTICO para acordo. Autor é idoso com tramitação preferencial acelerada. Juiz certamente proporá 60-75% do valor causa dado reconhecimento pela empresa. Última oportunidade de acordo em valores razoáveis."
+      },
+      {
+        "evento": "Fase Instrutória - Oitiva de testemunhas e juntada de documentos",
+        "data_prevista": "2026-03-10",
+        "probabilidade": 80.0,
+        "impacto_estrategia": "Testemunhas do RH confirmarão Circular 6/2025 e reconhecimento formal do débito. Documentação extensa favorecerá autor. Risco extremamente elevado."
+      },
+      {
+        "evento": "Perícia Contábil Complexa",
+        "data_prevista": "2026-05-20",
+        "probabilidade": 85.0,
+        "impacto_estrategia": "Perícia provavelmente confirmará ou até AUMENTARÁ valores pleiteados dado valor causa elevado. Custo: R$ 5.200-7.500. Resultado pode ser devastador."
+      },
+      {
+        "evento": "Sentença de 1º Grau",
+        "data_prevista": "2026-08-15",
+        "probabilidade": 95.0,
+        "impacto_estrategia": "Probabilidade 82% de condenação parcial SUBSTANCIAL. Exposição realista: R$ 240-380 mil + juros Selic + correção monetária acumulados."
+      },
+      {
+        "evento": "Recurso Ordinário ao TRT1",
+        "data_prevista": "2026-10-05",
+        "probabilidade": 88.0,
+        "impacto_estrategia": "TRT1 mantém sentenças pró-trabalhador em 84% dos casos similares de alto valor. Depósito recursal obrigatório de valor elevado. Poucas chances de reforma."
+      },
+      {
+        "evento": "Acórdão TRT1 - Decisão definitiva de 2ª instância",
+        "data_prevista": "2027-04-20",
+        "probabilidade": 75.0,
+        "impacto_estrategia": "Fim provável da discussão. Execução imediata se condenação mantida. Juros e correção acumulados por 2+ anos aumentarão significativamente o valor final."
+      }
+    ]
+  },
+  "tags_inteligentes": [
+    {
+      "categoria": "tema",
+      "valor": "PCES - Promoções por Antiguidade",
+      "cor": "#FF5733"
+    },
+    {
+      "categoria": "tema",
+      "valor": "Reconhecimento Formal de Débito - Circular 6/2025",
+      "cor": "#DC3545"
+    },
+    {
+      "categoria": "urgencia",
+      "valor": "CRÍTICA - Contestação em 17 dias",
+      "cor": "#DC3545"
+    },
+    {
+      "categoria": "complexidade",
+      "valor": "Muito Alta - Caso Complexo",
+      "cor": "#DC3545"
+    },
+    {
+      "categoria": "area_impactada",
+      "valor": "RH - Cargos e Salários",
+      "cor": "#17A2B8"
+    },
+    {
+      "categoria": "area_impactada",
+      "valor": "Operações Portuárias",
+      "cor": "#17A2B8"
+    },
+    {
+      "categoria": "tipo_risco",
+      "valor": "Risco Sistêmico CRÍTICO - 78 casos potenciais",
+      "cor": "#DC3545"
+    },
+    {
+      "categoria": "tipo_risco",
+      "valor": "Risco Reputacional Muito Alto",
+      "cor": "#DC3545"
+    },
+    {
+      "categoria": "tipo_risco",
+      "valor": "Risco Financeiro Extremo - R$ 340 mil",
+      "cor": "#DC3545"
+    },
+    {
+      "categoria": "caracteristica_especial",
+      "valor": "Autor Idoso - Tramitação Preferencial",
+      "cor": "#FFC107"
+    },
+    {
+      "categoria": "caracteristica_especial",
+      "valor": "38 anos de casa - Altíssima Sensibilização",
+      "cor": "#FFC107"
+    },
+    {
+      "categoria": "caracteristica_especial",
+      "valor": "Valor Causa 2,9x Acima da Média - RECORDE",
+      "cor": "#DC3545"
+    }
+  ],
+  "metadata": {
+    "versao_analise": "2.1.4",
+    "data_analise": "2025-10-26T16:45:00-03:00",
+    "modelo_ia": {
+      "nome": "CDRJ-Legal-Predictor",
+      "versao": "4.2.1",
+      "acuracia_geral": 84.3
+    },
+    "analista_responsavel": "IA + Revisão: Análise Pendente - CASO PRIORITÁRIO",
+    "revisao_humana": {
+      "realizada": false,
+      "data": null,
+      "aprovador": null,
+      "ajustes": "URGENTE: Pendente de revisão jurídica prioritária. Caso CRÍTICO devido reconhecimento formal do débito pela empresa + valor extraordinariamente elevado (R$ 340 mil - recorde histórico). Requer atenção imediata da Diretoria e estratégia de acordo agressiva."
+    },
+    "hash_documento": "sha256:c9f3d7e8a5b2f6d1c4e9a3b7f5c2d8e4f1a6b9c7d3e5f2a8b4c6d1e7f9a3b5c8"
+  }
+}

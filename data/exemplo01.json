@@ -1,0 +1,520 @@
+{
+  "processo": {
+    "numero": "0101269-36.2025.5.01.0040",
+    "tipo": "trabalhista",
+    "subtipo": "Rito Ordinário",
+    "fase_atual": "contestacao",
+    "data_distribuicao": "2025-10-07",
+    "prazo_proximo": {
+      "tipo": "Contestação",
+      "data_limite": "2025-11-06",
+      "dias_restantes": 11,
+      "criticidade": "alta"
+    },
+    "vara": {
+      "codigo": "40ª VT-RJ",
+      "nome": "40ª Vara do Trabalho do Rio de Janeiro",
+      "juiz": "A definir"
+    }
+  },
+  "partes": {
+    "autor": {
+      "nome": "ROGÉRIO CORRÊA CASTILHO",
+      "cpf_cnpj": "889.210.507-87",
+      "tipo": "funcionario",
+      "tempo_casa": 465,
+      "cargo": "Técnico de Serviços Portuários",
+      "area": "Operações Portuárias",
+      "historico_processos": 0,
+      "advogados": [
+        {
+          "nome": "Gisa Nara Maciel Machado da Silva",
+          "oab": "OAB/RJ 760-B",
+          "taxa_sucesso_historica": 78.5
+        },
+        {
+          "nome": "Marione Vieira Amaral",
+          "oab": "OAB/RJ",
+          "taxa_sucesso_historica": 75.2
+        }
+      ]
+    },
+    "reu": {
+      "nome": "COMPANHIA DOCAS DO RIO DE JANEIRO",
+      "cnpj": "42.266.890/0001-28",
+      "advogados": [
+        {
+          "nome": "Carlos Roberto de Siqueira Castro",
+          "oab": "OAB/RJ 20.283",
+          "taxa_sucesso_historica": 68.3
+        }
+      ]
+    }
+  },
+  "analise_risco": {
+    "score_risco": 82,
+    "classificacao": "alto",
+    "probabilidade_perda": {
+      "total": 15.5,
+      "parcial": 72.8,
+      "procedencia": 84.3
+    },
+    "confianca_predicao": 87.5,
+    "fatores_risco": [
+      {
+        "fator": "Descumprimento do PCES (Plano de Cargos e Salários)",
+        "impacto": "alto",
+        "peso": 0.35,
+        "evidencias": [
+          "Empregado com 37+ anos foi enquadrado em Categoria II (10 anos)",
+          "Deveria estar em Categoria V (25+ anos) conforme PCES item 5.3.16",
+          "Portarias 454/2021 e 434/2023 promoveram colegas mais novos",
+          "Discriminação por antiguidade configurada"
+        ]
+      },
+      {
+        "fator": "Jurisprudência consolidada favorável ao trabalhador",
+        "impacto": "alto",
+        "peso": 0.30,
+        "evidencias": [
+          "TRT1 possui entendimento pacífico em casos idênticos de PCES",
+          "Súmula TST nº 51 aplicável ao caso",
+          "5 precedentes recentes favoráveis ao trabalhador (2023-2025)",
+          "Isonomia salarial é princípio consolidado"
+        ]
+      },
+      {
+        "fator": "Norma interna clara e não cumprida pela CDRJ",
+        "impacto": "alto",
+        "peso": 0.25,
+        "evidencias": [
+          "PCES de 2009 estabelece critérios objetivos",
+          "Item 7 prevê dotação orçamentária para promoções",
+          "Ausência de progressão por mérito e antiguidade",
+          "Violação do próprio regulamento da empresa"
+        ]
+      },
+      {
+        "fator": "Tempo de serviço extremamente longo (38 anos)",
+        "impacto": "medio",
+        "peso": 0.10,
+        "evidencias": [
+          "Contratado em 23/02/1987",
+          "Empregado em atividade (contrato vigente)",
+          "Tempo suficiente para todas as categorias do PCES",
+          "Sensibilização do juízo pela trajetória profissional"
+        ]
+      }
+    ],
+    "jurisprudencia": {
+      "casos_similares_analisados": 47,
+      "taxa_procedencia": 81.2,
+      "tribunal": "TRT-1 (Rio de Janeiro)",
+      "periodo_analise": "2020-2025",
+      "casos_referencia": [
+        {
+          "numero": "0100456-23.2022.5.01.0038",
+          "resultado": "Procedente - Reenquadramento deferido",
+          "similaridade": 94.5,
+          "url": "https://trt1.jus.br/jurisprudencia/caso123"
+        },
+        {
+          "numero": "0101789-12.2023.5.01.0042",
+          "resultado": "Procedente parcial - Diferenças salariais + reflexos",
+          "similaridade": 91.3,
+          "url": "https://trt1.jus.br/jurisprudencia/caso456"
+        },
+        {
+          "numero": "0100234-78.2021.5.01.0040",
+          "resultado": "Procedente - Mesmo advogado do autor",
+          "similaridade": 88.7,
+          "url": "https://trt1.jus.br/jurisprudencia/caso789"
+        }
+      ]
+    }
+  },
+  "analise_financeira": {
+    "valor_causa": 61000.00,
+    "moeda": "BRL",
+    "exposicao_total": {
+      "pessimista": 98500.00,
+      "realista": 52780.00,
+      "otimista": 18300.00
+    },
+    "provisao_recomendada": {
+      "valor": 52780.00,
+      "percentual_causa": 86.52,
+      "justificativa": "Considerando probabilidade de 72.8% de perda parcial + custas processuais estimadas em 8% + honorários sucumbenciais entre 10-15%",
+      "revisao_proxima": "2025-12-15"
+    },
+    "breakdown_pedidos": [
+      {
+        "item": "Reenquadramento no PCES - Categoria V, Referência T-3",
+        "valor_pedido": 1763.00,
+        "probabilidade_procedencia": 85.0,
+        "valor_esperado": 1498.55,
+        "categoria": "principal",
+        "fundamentacao": "Diferença mensal: R$ 6.811,49 (Cat V T-3) - R$ 5.048,57 (salário atual) = R$ 1.762,92/mês. Alta probabilidade dado o descumprimento objetivo do PCES."
+      },
+      {
+        "item": "Diferenças salariais retroativas (5 anos - prescrição parcial)",
+        "valor_pedido": 38200.00,
+        "probabilidade_procedencia": 80.0,
+        "valor_esperado": 30560.00,
+        "categoria": "principal",
+        "fundamentacao": "R$ 1.763 x 12 meses x 5 anos = R$ 105.780. Valor causa indica pedido conservador de ~R$ 38.200. Jurisprudência favorável."
+      },
+      {
+        "item": "Reflexos em 13º salário",
+        "valor_pedido": 8800.00,
+        "probabilidade_procedencia": 80.0,
+        "valor_esperado": 7040.00,
+        "categoria": "reflexo",
+        "fundamentacao": "Diferenças de reenquadramento refletem no 13º. Pedido de trato sucessivo."
+      },
+      {
+        "item": "Reflexos em férias + 1/3 constitucional",
+        "valor_pedido": 7840.00,
+        "probabilidade_procedencia": 80.0,
+        "valor_esperado": 6272.00,
+        "categoria": "reflexo",
+        "fundamentacao": "Férias + adicional de 1/3 sobre as diferenças salariais dos últimos 5 anos."
+      },
+      {
+        "item": "Reflexos em adicional por tempo de serviço",
+        "valor_pedido": 2100.00,
+        "probabilidade_procedencia": 75.0,
+        "valor_esperado": 1575.00,
+        "categoria": "reflexo",
+        "fundamentacao": "ATS calculado sobre o salário base. Reflexos proporcionais ao reenquadramento."
+      },
+      {
+        "item": "Reflexos em horas extras, RSR e adicional noturno",
+        "valor_pedido": 1800.00,
+        "probabilidade_procedencia": 70.0,
+        "valor_esperado": 1260.00,
+        "categoria": "reflexo",
+        "fundamentacao": "Horas extras calculadas sobre novo salário-base. Documentação de HE em perícia."
+      },
+      {
+        "item": "Reflexos em VPNI/Extra e processos 89% e 25,44%",
+        "valor_pedido": 460.00,
+        "probabilidade_procedencia": 65.0,
+        "valor_esperado": 299.00,
+        "categoria": "reflexo",
+        "fundamentacao": "Parcelas específicas da CDRJ com percentuais sobre salário. Depende de prova documental."
+      }
+    ],
+    "custos_defesa": {
+      "honorarios_internos": 0.00,
+      "honorarios_externos": 8500.00,
+      "custas_processuais": 1220.00,
+      "pericia": 2500.00,
+      "outros": 500.00,
+      "total": 12720.00
+    },
+    "impacto_orcamento": {
+      "centro_custo": "CC-4521 - Provisões Trabalhistas",
+      "percentual_orcamento_anual": 0.47,
+      "necessita_aprovacao_especial": false
+    }
+  },
+  "recomendacoes_estrategicas": {
+    "estrategia_principal": "acordo_judicial",
+    "justificativa_estrategia": "Caso possui alta probabilidade de perda (72.8%) com precedentes desfavoráveis consolidados. Acordo estratégico no valor entre R$ 35-45 mil reduziria exposição financeira em ~30%, evitaria custos de instrução/perícia (R$ 2.500+) e precedente negativo para casos futuros similares. Há 12+ casos em andamento com mesma tese.",
+    "acoes_imediatas": [
+      {
+        "acao": "Levantar documentação do PCES e portarias de promoção 454/2021 e 434/2023",
+        "prazo": "48h",
+        "responsavel_sugerido": "Depto. RH - Gestão de Pessoas",
+        "prioridade": "urgente",
+        "complexidade": "simples",
+        "tempo_estimado": "4h"
+      },
+      {
+        "acao": "Mapear TODOS os funcionários com tempo de casa superior a 25 anos enquadrados abaixo da Categoria V",
+        "prazo": "72h",
+        "responsavel_sugerido": "Depto. RH + Jurídico",
+        "prioridade": "urgente",
+        "complexidade": "media",
+        "tempo_estimado": "8h"
+      },
+      {
+        "acao": "Realizar análise de custo-benefício: acordo vs. condenação + casos similares futuros",
+        "prazo": "5 dias",
+        "responsavel_sugerido": "Jurídico + Controladoria",
+        "prioridade": "alta",
+        "complexidade": "media",
+        "tempo_estimado": "12h"
+      },
+      {
+        "acao": "Propor mediação/acordo pré-contestação com faixa de R$ 38-42 mil",
+        "prazo": "7 dias",
+        "responsavel_sugerido": "Advogado externo + Diretoria",
+        "prioridade": "alta",
+        "complexidade": "complexa",
+        "tempo_estimado": "16h"
+      },
+      {
+        "acao": "Se acordo rejeitado: preparar contestação técnica com foco em prescrição e valores",
+        "prazo": "20 dias",
+        "responsavel_sugerido": "Escritório externo",
+        "prioridade": "alta",
+        "complexidade": "complexa",
+        "tempo_estimado": "24h"
+      }
+    ],
+    "acordo": {
+      "recomenda": true,
+      "momento_ideal": "Pré-contestação (próximos 10 dias) ou em audiência inicial",
+      "faixa_valor": {
+        "minimo": 35000.00,
+        "maximo": 45000.00,
+        "ideal": 40000.00
+      },
+      "condicoes_sugeridas": [
+        "Pagamento parcelado em 8x (R$ 5.000/mês) para diluir impacto no fluxo de caixa",
+        "Cláusula de quitação ampla, geral e irrestrita",
+        "Confidencialidade do acordo para evitar efeito cascata",
+        "Sem reconhecimento de culpa ou precedente vinculante",
+        "Desistência de honorários advocatícios sucumbenciais"
+      ],
+      "vantagens": [
+        "Economia de ~R$ 12.780 vs. cenário realista (R$ 52.780 - R$ 40.000)",
+        "Evita custos de perícia técnica (R$ 2.500+) e instrução processual",
+        "Reduz risco de precedente desfavorável para 12+ casos similares pendentes",
+        "Encerra processo em 2-3 meses vs. 18-24 meses até sentença definitiva",
+        "Libera provisão contábil mais rapidamente",
+        "Evita exposição reputacional em eventual sentença condenatória publicada"
+      ],
+      "desvantagens": [
+        "Reconhecimento implícito de fragilidade na defesa",
+        "Pode estimular novos processos de empregados em situação similar",
+        "Valor ainda representa 65% do pedido inicial (sinalização de 'vitória' ao autor)",
+        "Não resolve problema estrutural do PCES na empresa"
+      ]
+    },
+    "defesa": {
+      "teses_principais": [
+        {
+          "tese": "Prescrição quinquenal - Limitação das diferenças aos últimos 5 anos",
+          "fundamentacao_legal": "CLT, art. 7º, XXIX da CF/88 e Súmula 275 do TST",
+          "probabilidade_sucesso": 85.0,
+          "precedentes": [
+            "TST-AIRR-10123-45.2018.5.01.0040 - Prescrição reconhecida",
+            "TRT1-RO-0100234-56.2020.5.01.0038 - Aplicação da prescrição parcial"
+          ]
+        },
+        {
+          "tese": "Impugnação aos valores pleiteados - Sobrevalores e pedidos genéricos",
+          "fundamentacao_legal": "CPC, art. 324 c/c CLT, art. 840",
+          "probabilidade_sucesso": 60.0,
+          "precedentes": [
+            "TRT1-RO-0100789-12.2022.5.01.0042 - Redução de valores deferida"
+          ]
+        },
+        {
+          "tese": "Enquadramento foi realizado conforme critérios objetivos do PCES vigente à época",
+          "fundamentacao_legal": "Súmula 51, II do TST - Regulamento empresarial",
+          "probabilidade_sucesso": 25.0,
+          "precedentes": []
+        },
+        {
+          "tese": "Autor teve ciência do enquadramento há mais de 2 anos - Inércia configura aceitação tácita",
+          "fundamentacao_legal": "Princípio da boa-fé objetiva",
+          "probabilidade_sucesso": 15.0,
+          "precedentes": []
+        }
+      ],
+      "provas_necessarias": [
+        {
+          "tipo": "Documental",
+          "descricao": "PCES completo de 2009 + Anexo I com tabelas de progressão",
+          "disponibilidade": "disponivel",
+          "criticidade": "essencial"
+        },
+        {
+          "tipo": "Documental",
+          "descricao": "Holerites do autor desde a transposição do PCES (2009)",
+          "disponibilidade": "disponivel",
+          "criticidade": "essencial"
+        },
+        {
+          "tipo": "Documental",
+          "descricao": "Portarias 454/2021 e 434/2023 com lista de promovidos",
+          "disponibilidade": "parcial",
+          "criticidade": "importante"
+        },
+        {
+          "tipo": "Testemunhal",
+          "descricao": "Gestores de RH que participaram da transposição do PCES",
+          "disponibilidade": "disponivel",
+          "criticidade": "importante"
+        },
+        {
+          "tipo": "Pericial",
+          "descricao": "Perícia contábil para apuração exata dos valores das diferenças",
+          "disponibilidade": "indisponivel",
+          "criticidade": "complementar"
+        }
+      ]
+    },
+    "preventivas": {
+      "recomendacoes": [
+        {
+          "area_afetada": "Recursos Humanos - Gestão de Pessoas",
+          "medida": "Auditoria completa do PCES: identificar TODOS os empregados com tempo de casa incompatível com enquadramento atual",
+          "prazo_implementacao": "30 dias",
+          "custo_estimado": 15000.00,
+          "roi_esperado": "Prevenção de 12-18 processos similares (economia estimada R$ 450-650 mil)"
+        },
+        {
+          "area_afetada": "Recursos Humanos - Cargos e Salários",
+          "medida": "Revisão e correção preventiva dos enquadramentos inadequados com base no PCES",
+          "prazo_implementacao": "60 dias",
+          "custo_estimado": 180000.00,
+          "roi_esperado": "Regularização que evita passivo trabalhista estimado em R$ 1,2-1,8 milhão"
+        },
+        {
+          "area_afetada": "Jurídico - Compliance",
+          "medida": "Implementar sistema de alertas automáticos para promoções por antiguidade conforme item 7 do PCES",
+          "prazo_implementacao": "90 dias",
+          "custo_estimado": 25000.00,
+          "roi_esperado": "Automação reduz risco de novos casos (ROI: 18-24 meses)"
+        },
+        {
+          "area_afetada": "Diretoria - Governança",
+          "medida": "Revisão integral do PCES com consultoria jurídica especializada para adequação legal",
+          "prazo_implementacao": "120 dias",
+          "custo_estimado": 80000.00,
+          "roi_esperado": "Mitigação de risco sistêmico e adequação regulatória (ROI: 24-36 meses)"
+        }
+      ]
+    }
+  },
+  "analise_operacional": {
+    "areas_envolvidas": [
+      "Recursos Humanos",
+      "Jurídico",
+      "Controladoria",
+      "Operações Portuárias",
+      "Diretoria"
+    ],
+    "impacto_reputacional": "medio",
+    "risco_precedente": {
+      "nivel": "alto",
+      "casos_similares_potenciais": 47,
+      "exposicao_estimada": 2870000.00
+    },
+    "necessita_comunicacao": {
+      "diretoria": true,
+      "rh": true,
+      "comunicacao": false,
+      "auditoria": true
+    }
+  },
+  "timeline_predicoes": {
+    "duracao_estimada": {
+      "minima_meses": 12,
+      "media_meses": 18,
+      "maxima_meses": 30
+    },
+    "marcos_futuros": [
+      {
+        "evento": "Audiência Inicial - Tentativa de Conciliação",
+        "data_prevista": "2025-12-15",
+        "probabilidade": 85.0,
+        "impacto_estrategia": "Momento ideal para acordo. Juiz geralmente propõe 60-70% do valor da causa."
+      },
+      {
+        "evento": "Fase Instrutória - Oitiva de testemunhas",
+        "data_prevista": "2026-03-10",
+        "probabilidade": 70.0,
+        "impacto_estrategia": "Testemunhas do RH podem confirmar inconsistências no PCES. Risco elevado."
+      },
+      {
+        "evento": "Perícia Contábil",
+        "data_prevista": "2026-05-20",
+        "probabilidade": 75.0,
+        "impacto_estrategia": "Valores podem ser maiores que o pedido inicial. Custo: R$ 2.500-3.500."
+      },
+      {
+        "evento": "Sentença de 1º Grau",
+        "data_prevista": "2026-08-15",
+        "probabilidade": 90.0,
+        "impacto_estrategia": "Probabilidade 72% de condenação parcial. Exposição: R$ 45-65 mil."
+      },
+      {
+        "evento": "Recurso Ordinário ao TRT1",
+        "data_prevista": "2026-10-01",
+        "probabilidade": 80.0,
+        "impacto_estrategia": "TRT1 mantém sentenças pró-trabalhador em 78% dos casos similares. Depósito recursal obrigatório."
+      },
+      {
+        "evento": "Acórdão TRT1 - Decisão definitiva",
+        "data_prevista": "2027-04-20",
+        "probabilidade": 70.0,
+        "impacto_estrategia": "Fim da discussão. Execução imediata se condenação mantida."
+      }
+    ]
+  },
+  "tags_inteligentes": [
+    {
+      "categoria": "tema",
+      "valor": "PCES - Reenquadramento",
+      "cor": "#FF5733"
+    },
+    {
+      "categoria": "tema",
+      "valor": "Discriminação Salarial",
+      "cor": "#FF5733"
+    },
+    {
+      "categoria": "urgencia",
+      "valor": "Alta - Contestação em 11 dias",
+      "cor": "#DC3545"
+    },
+    {
+      "categoria": "complexidade",
+      "valor": "Média",
+      "cor": "#FFC107"
+    },
+    {
+      "categoria": "area_impactada",
+      "valor": "RH - Cargos e Salários",
+      "cor": "#17A2B8"
+    },
+    {
+      "categoria": "area_impactada",
+      "valor": "Operações Portuárias",
+      "cor": "#17A2B8"
+    },
+    {
+      "categoria": "tipo_risco",
+      "valor": "Risco Sistêmico - 47 casos potenciais",
+      "cor": "#DC3545"
+    },
+    {
+      "categoria": "tipo_risco",
+      "valor": "Risco Reputacional Moderado",
+      "cor": "#FFC107"
+    }
+  ],
+  "metadata": {
+    "versao_analise": "2.1.4",
+    "data_analise": "2025-10-26T14:32:00-03:00",
+    "modelo_ia": {
+      "nome": "CDRJ-Legal-Predictor",
+      "versao": "4.2.1",
+      "acuracia_geral": 84.3
+    },
+    "analista_responsavel": "IA + Revisão: Dr. Paulo Mendes (OAB/RJ 98.765)",
+    "revisao_humana": {
+      "realizada": true,
+      "data": "2025-10-26T15:45:00-03:00",
+      "aprovador": "Dr. Paulo Mendes",
+      "ajustes": "Validados valores esperados e probabilidades. Confirmada jurisprudência do TRT1. Recomendação de acordo mantida."
+    },
+    "hash_documento": "sha256:a3f5b9c1e7d4f8a2b6c9e1f3a7b5c8d2e9f1a4b7c3d6e8f2a5b9c4d7e1f6a8b3"
+  }
+}
