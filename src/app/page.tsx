@@ -36,20 +36,20 @@ import {
 export default function HomePage() {
   const processos = getAllProcessos();
 
-  // KPIs Principais
   const totalProcessos = processos.length;
   const exposicaoTotal = getTotalExposicaoFinanceira(processos);
   const provisaoTotal = getTotalProvisaoRecomendada(processos);
   const processosPorRisco = getProcessosPorRisco(processos);
   const processosPrazosCriticos = getProcessosComPrazosCriticos(processos);
 
-  // Probabilidade média de perda
-  const probMediaPerda = processos.reduce((acc, p) => acc + p.analise_risco.probabilidade_perda.parcial, 0) / processos.length;
+  const probMediaPerda =
+    totalProcessos > 0
+      ? processos.reduce((acc, p) => acc + p.analise_risco.probabilidade_perda.parcial, 0) / totalProcessos
+      : 0;
 
-  // Score médio de risco
-  const scoreMediaRisco = processos.reduce((acc, p) => acc + p.analise_risco.score_risco, 0) / processos.length;
+  const scoreMediaRisco =
+    totalProcessos > 0 ? processos.reduce((acc, p) => acc + p.analise_risco.score_risco, 0) / totalProcessos : 0;
 
-  // Dados para gráficos
   const riscoData = [
     { name: 'Risco Alto', value: processosPorRisco.alto },
     { name: 'Risco Médio', value: processosPorRisco.medio },
@@ -60,17 +60,19 @@ export default function HomePage() {
     (a, b) => b.analise_financeira.exposicao_total.realista - a.analise_financeira.exposicao_total.realista,
   );
 
-  const exposicaoData = processosOrdenadosPorExposicao
-    .slice(0, 10)
-    .map(p => ({
-      name: p.processo.numero.split('.')[0].slice(-4),
-      value: p.analise_financeira.exposicao_total.realista,
-    }));
-
-  const temasData = getTemasRecorrentes(processos).slice(0, 6).map(t => ({
-    name: t.tema.length > 30 ? t.tema.substring(0, 27) + '...' : t.tema,
-    value: t.count,
+  const exposicaoData = processosOrdenadosPorExposicao.slice(0, 10).map(p => ({
+    name: p.processo.numero.split('.')[0].slice(-4),
+    value: p.analise_financeira.exposicao_total.realista,
   }));
+
+  const temasRecorrentes = getTemasRecorrentes(processos);
+
+  const temasData = temasRecorrentes
+    .slice(0, 6)
+    .map(t => ({
+      name: t.tema.length > 30 ? `${t.tema.substring(0, 27)}...` : t.tema,
+      value: t.count,
+    }));
 
   const areasData = getAreasComMaisProcessos(processos).map(a => ({
     name: a.area,
@@ -90,366 +92,220 @@ export default function HomePage() {
     exposicao: p.analise_financeira.exposicao_total.realista,
   }));
 
-  const percentualAltoRisco = (processosPorRisco.alto / totalProcessos) * 100;
-  const percentualPrazosCriticos = (processosPrazosCriticos.length / totalProcessos) * 100;
-  const temaMaisRecorrente = getTemasRecorrentes(processos)[0];
+  const percentualAltoRisco = totalProcessos > 0 ? (processosPorRisco.alto / totalProcessos) * 100 : 0;
+  const percentualPrazosCriticos = totalProcessos > 0 ? (processosPrazosCriticos.length / totalProcessos) * 100 : 0;
+  const temaMaisRecorrente = temasRecorrentes[0] ?? { tema: 'Sem dados disponíveis', count: 0 };
   const processoMaiorExposicao = processosOrdenadosPorExposicao[0];
+  const versaoModelo = processos[0]?.metadata.modelo_ia.versao ?? '4.2.1';
 
   return (
-    <div className="relative min-h-screen overflow-hidden">
-      <div className="background-grid" />
-      <div className="pointer-events-none absolute -left-32 -top-32 h-[420px] w-[420px] rounded-full bg-blue-400/30 blur-3xl" />
-      <div className="pointer-events-none absolute right-[-160px] top-[18%] h-[520px] w-[520px] rounded-full bg-indigo-400/20 blur-[160px]" />
-      <div className="pointer-events-none absolute left-[12%] bottom-[-200px] h-[420px] w-[420px] rounded-full bg-cyan-300/25 blur-[160px]" />
-      <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/60 to-transparent" />
-
-      {/* Header */}
-      <header className="relative mx-auto max-w-7xl px-4 pt-16 pb-10 sm:px-6 lg:px-8">
-        <div className="relative overflow-hidden rounded-3xl border border-white/50 bg-gradient-to-r from-blue-700 via-blue-800 to-indigo-900 shadow-[0_40px_80px_-40px_rgba(30,64,175,0.65)]">
-          <div className="absolute inset-0 opacity-90">
-            <div className="absolute -left-24 top-1/2 h-64 w-64 -translate-y-1/2 rounded-full bg-blue-400/40 blur-3xl" />
-            <div className="absolute bottom-[-120px] left-1/3 h-56 w-56 rounded-full bg-indigo-500/25 blur-3xl" />
-            <div className="absolute right-[-80px] top-[-80px] h-60 w-60 rounded-full bg-sky-400/30 blur-3xl" />
-          </div>
-
-          <div className="relative z-10 px-6 py-10 sm:px-12">
-            <div className="flex flex-wrap items-center justify-between gap-6">
-              <div className="min-w-[300px] flex-1 space-y-3">
-                <div className="flex items-center gap-4">
-                  <div className="rounded-2xl bg-white/20 p-3 shadow-inner shadow-blue-500/40 backdrop-blur-md">
-                    <BarChart3 className="h-8 w-8 text-white" />
-                  </div>
-                  <div>
-                    <div className="inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.3em] text-blue-100">
-                      <span className="inline-block h-1.5 w-1.5 animate-pulse rounded-full bg-emerald-300" />
-                      Inteligência Jurídica
-                    </div>
-                    <h1 className="mt-3 text-4xl font-extrabold tracking-tight text-white md:text-5xl">
-                      Dashboard Jurídico
-                    </h1>
-                    <div className="mt-3 h-1 w-28 rounded-full bg-gradient-to-r from-blue-300 via-sky-200 to-indigo-300" />
-                  </div>
-                </div>
-                <p className="text-lg font-medium leading-relaxed text-blue-50">
-                  Companhia Docas do Rio de Janeiro
-                </p>
-                <p className="text-sm text-blue-200">
-                  Análise preditiva e monitoramento em tempo real dos processos trabalhistas.
+    <div className="relative min-h-screen bg-slate-50">
+      <div className="pointer-events-none absolute inset-x-0 top-0 h-64 bg-gradient-to-b from-indigo-100/70 via-white to-transparent" />
+      <main className="relative z-10 mx-auto max-w-7xl px-4 pb-16 pt-10 sm:px-6 lg:px-8">
+        <header className="overflow-hidden rounded-3xl bg-gradient-to-br from-slate-900 via-slate-800 to-indigo-900 text-white shadow-xl">
+          <div className="grid gap-10 px-8 py-10 lg:grid-cols-[1.3fr_1fr] lg:px-12">
+            <div className="space-y-6">
+              <span className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-sm font-semibold text-indigo-100">
+                <BarChart3 className="h-4 w-4" />
+                Interface redesenhada com Tailwind 3.4
+              </span>
+              <div className="space-y-3">
+                <h1 className="text-3xl font-semibold tracking-tight sm:text-4xl">Dashboard jurídico orientado por dados</h1>
+                <p className="max-w-2xl text-base text-indigo-100/80 sm:text-lg">
+                  Visualize rapidamente os principais indicadores de risco, exposição financeira e andamento processual para
+                  direcionar estratégias jurídicas com segurança.
                 </p>
               </div>
-
-              <div className="flex min-w-[220px] flex-col gap-3">
-                <div className="rounded-2xl border border-white/20 bg-white/10 px-6 py-4 shadow-lg shadow-blue-900/20 backdrop-blur-lg">
-                  <div className="flex items-center gap-3">
-                    <Clock className="h-5 w-5 text-blue-100" />
-                    <div>
-                      <p className="text-xs font-semibold uppercase tracking-[0.3em] text-blue-100">
-                        Última atualização
-                      </p>
-                      <p className="text-lg font-bold text-white">
-                        {new Date().toLocaleDateString('pt-BR', { day: '2-digit', month: 'long', year: 'numeric' })}
-                      </p>
-                    </div>
-                  </div>
+              <div className="grid gap-4 sm:grid-cols-2">
+                <div className="rounded-2xl bg-white/10 p-4">
+                  <p className="text-sm text-indigo-100/80">Processos monitorados</p>
+                  <p className="text-2xl font-bold">{formatNumber(totalProcessos)}</p>
                 </div>
-
-                <div className="rounded-2xl border border-white/20 bg-white/10 px-6 py-3 shadow-lg shadow-blue-900/10 backdrop-blur-lg">
-                  <div className="flex items-center justify-between gap-4">
-                    <div className="flex items-center gap-2">
-                      <div className="h-2 w-2 animate-pulse rounded-full bg-emerald-300" />
-                      <span className="text-sm font-semibold text-white">Sistema Ativo</span>
-                    </div>
-                    <span className="text-xs font-semibold text-blue-100">{totalProcessos} processos</span>
-                  </div>
+                <div className="rounded-2xl bg-white/10 p-4">
+                  <p className="text-sm text-indigo-100/80">Exposição realista total</p>
+                  <p className="text-2xl font-bold">{formatCurrency(exposicaoTotal)}</p>
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </header>
-
-      {/* Main Content */}
-      <main className="relative z-10 mx-auto -mt-12 max-w-7xl px-4 pb-16 sm:px-6 lg:px-8">
-        <div className="rounded-[32px] border border-white/60 bg-white/80 p-8 shadow-[0_50px_120px_-60px_rgba(15,23,42,0.45)] backdrop-blur-2xl sm:p-12">
-          <div className="space-y-16">
-            {/* KPIs Principais */}
-            <section className="space-y-6">
-              <div className="flex items-center gap-3">
-                <div className="h-10 w-1.5 rounded-full bg-gradient-to-b from-blue-600 to-indigo-600" />
-                <h2 className="flex items-center gap-3 text-3xl font-extrabold text-slate-900">
-                  <BarChart3 className="h-8 w-8 text-blue-600" />
-                  Visão Geral
-                </h2>
+            <div className="rounded-2xl border border-white/20 bg-white/10 p-6 backdrop-blur">
+              <h2 className="text-sm font-semibold uppercase tracking-wide text-indigo-100/70">Resumo de risco</h2>
+              <div className="mt-6 grid grid-cols-3 gap-4 text-center text-sm">
+                <div className="rounded-xl bg-white/10 p-4">
+                  <p className="text-indigo-100/70">Alto</p>
+                  <p className="mt-1 text-2xl font-semibold">{processosPorRisco.alto}</p>
+                </div>
+                <div className="rounded-xl bg-white/10 p-4">
+                  <p className="text-indigo-100/70">Médio</p>
+                  <p className="mt-1 text-2xl font-semibold">{processosPorRisco.medio}</p>
+                </div>
+                <div className="rounded-xl bg-white/10 p-4">
+                  <p className="text-indigo-100/70">Baixo</p>
+                  <p className="mt-1 text-2xl font-semibold">{processosPorRisco.baixo}</p>
+                </div>
               </div>
-              <div className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-4">
-                <KpiCard
-                  title="Total de Processos Ativos"
-                  value={totalProcessos}
-                  icon={FileText}
-                  color="blue"
-                  subtitle="Processos trabalhistas em análise"
-                />
-                <KpiCard
-                  title="Exposição Financeira Total"
-                  value={formatCurrency(exposicaoTotal)}
-                  icon={DollarSign}
-                  color="red"
-                  subtitle="Cenário realista consolidado"
-                />
-                <KpiCard
-                  title="Provisão Recomendada"
-                  value={formatCurrency(provisaoTotal)}
-                  icon={Target}
-                  color="purple"
-                  subtitle="Valor total a provisionar"
-                />
-                <KpiCard
-                  title="Processos de Alto Risco"
-                  value={processosPorRisco.alto}
-                  icon={AlertTriangle}
-                  color="red"
-                  trend={`${formatPercent(percentualAltoRisco)} do total`}
-                />
+              <div className="mt-6 space-y-4 text-sm text-indigo-100/80">
+                <p>
+                  {formatPercent(percentualAltoRisco)} dos casos estão classificados como risco alto. Reavalie estratégias para
+                  estes processos prioritários.
+                </p>
+                <p>
+                  {formatPercent(percentualPrazosCriticos)} possuem prazos críticos em aberto. Garanta resposta ágil para evitar
+                  perdas processuais.
+                </p>
               </div>
-            </section>
-
-            <div className="space-y-16 xl:grid xl:grid-cols-[2fr_1fr] xl:items-start xl:gap-10">
-              <div className="space-y-16">
-                {/* Gráficos - Linha 1 */}
-                <section className="space-y-6">
-                  <div className="flex items-center gap-3">
-                    <div className="h-10 w-1.5 rounded-full bg-gradient-to-b from-red-600 to-orange-500" />
-                    <h2 className="flex items-center gap-3 text-3xl font-extrabold text-slate-900">
-                      <AlertTriangle className="h-8 w-8 text-red-600" />
-                      Análise de Riscos
-                    </h2>
-                  </div>
-                  <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
-                    <DistribuicaoRiscoChart data={riscoData} />
-                    <ProbabilidadePerdaChart data={probabilidadeData} />
-                  </div>
-                </section>
-
-                {/* Gráficos - Linha 2 */}
-                <section className="space-y-6">
-                  <div className="flex items-center gap-3">
-                    <div className="h-10 w-1.5 rounded-full bg-gradient-to-b from-green-600 to-emerald-500" />
-                    <h2 className="flex items-center gap-3 text-3xl font-extrabold text-slate-900">
-                      <DollarSign className="h-8 w-8 text-green-600" />
-                      Análise Financeira
-                    </h2>
-                  </div>
-                  <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
-                    <ExposicaoFinanceiraChart data={exposicaoData} />
-                    <RiscoExposicaoChart data={riscoExposicaoData} />
-                  </div>
-                </section>
-
-                {/* Gráficos - Linha 3 */}
-                <section className="space-y-6">
-                  <div className="flex items-center gap-3">
-                    <div className="h-10 w-1.5 rounded-full bg-gradient-to-b from-indigo-600 to-purple-500" />
-                    <h2 className="flex items-center gap-3 text-3xl font-extrabold text-slate-900">
-                      <FileText className="h-8 w-8 text-indigo-600" />
-                      Análise Operacional
-                    </h2>
-                  </div>
-                  <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
-                    <TemasRecorrentesChart data={temasData} />
-                    <AreasAfetadasChart data={areasData} />
-                  </div>
-                </section>
-
-                {/* Tabela de Processos */}
-                <section className="space-y-6">
-                  <div className="flex items-center gap-3">
-                    <div className="h-10 w-1.5 rounded-full bg-gradient-to-b from-slate-700 to-slate-500" />
-                    <h2 className="flex items-center gap-3 text-3xl font-extrabold text-slate-900">
-                      <FileText className="h-8 w-8 text-slate-700" />
-                      Todos os Processos
-                    </h2>
-                  </div>
-                  <ProcessosTable processos={processos} />
-                </section>
-              </div>
-
-              <aside className="space-y-12">
-                {/* Resumo Executivo */}
-                <section className="space-y-4 rounded-3xl border border-blue-200/70 bg-white/70 p-6 shadow-lg shadow-blue-900/10 backdrop-blur">
-                  <div className="flex items-center gap-3">
-                    <div className="h-12 w-1 rounded-full bg-gradient-to-b from-blue-600 to-indigo-500" />
-                    <div>
-                      <p className="text-xs font-semibold uppercase tracking-[0.3em] text-blue-500">Resumo Executivo</p>
-                      <h3 className="text-2xl font-bold text-slate-900">Prioridades Imediatas</h3>
-                    </div>
-                  </div>
-                  <div className="space-y-4 text-sm text-slate-600">
-                    <div className="rounded-2xl bg-blue-50/80 p-4">
-                      <p className="font-semibold text-blue-900">
-                        {percentualAltoRisco.toFixed(1)}% dos casos estão classificados como alto risco.
-                      </p>
-                      <p className="mt-1 text-xs text-blue-700">
-                        Recomenda-se reunião semanal com as áreas responsáveis para mitigar perdas.
-                      </p>
-                    </div>
-                    {processoMaiorExposicao && (
-                      <div className="rounded-2xl bg-indigo-50/80 p-4">
-                        <p className="font-semibold text-indigo-900">
-                          Maior exposição: processo {processoMaiorExposicao.processo.numero}.
-                        </p>
-                        <p className="mt-1 text-xs text-indigo-700">
-                          Valor potencial de {formatCurrency(processoMaiorExposicao.analise_financeira.exposicao_total.realista)}.
-                        </p>
-                      </div>
-                    )}
-                    {temaMaisRecorrente && (
-                      <div className="rounded-2xl bg-slate-50/90 p-4">
-                        <p className="font-semibold text-slate-900">
-                          Tema recorrente: {temaMaisRecorrente.tema}.
-                        </p>
-                        <p className="mt-1 text-xs text-slate-600">
-                          {temaMaisRecorrente.count} processos relacionados exigem padronização de defesa.
-                        </p>
-                      </div>
-                    )}
-                  </div>
-                </section>
-
-                {/* KPIs Secundários */}
-                <section className="space-y-4">
-                  <div className="flex items-center gap-2 text-sm font-semibold text-slate-500">
-                    <span className="h-2 w-2 rounded-full bg-slate-400" />
-                    Indicadores complementares
-                  </div>
-                  <div className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-1">
-                    <KpiCard
-                      title="Score Médio de Risco"
-                      value={scoreMediaRisco.toFixed(1)}
-                      icon={Shield}
-                      color="yellow"
-                      subtitle="Média ponderada (0-100)"
-                    />
-                    <KpiCard
-                      title="Prob. Média de Perda Parcial"
-                      value={formatPercent(probMediaPerda)}
-                      icon={TrendingUp}
-                      color="yellow"
-                      subtitle="Média de todos os processos"
-                    />
-                    <KpiCard
-                      title="Prazos Críticos"
-                      value={processosPrazosCriticos.length}
-                      icon={Clock}
-                      color="red"
-                      trend={`${formatPercent(percentualPrazosCriticos)} do total`}
-                    />
-                    <KpiCard
-                      title="Exposição Média/Processo"
-                      value={formatCurrency(exposicaoTotal / totalProcessos)}
-                      icon={DollarSign}
-                      color="indigo"
-                      subtitle="Cenário realista"
-                    />
-                  </div>
-                </section>
-
-                {/* Insights e Alertas */}
-                <section className="space-y-6">
-                  <div className="flex items-center gap-3">
-                    <div className="h-10 w-1.5 rounded-full bg-gradient-to-b from-yellow-600 to-red-500" />
-                    <h2 className="flex items-center gap-3 text-2xl font-extrabold text-slate-900">
-                      <AlertTriangle className="h-7 w-7 text-yellow-600" />
-                      Alertas e Insights
-                    </h2>
-                  </div>
-                  <AlertCarousel>
-                    {/* Processos com prazos críticos */}
-                    <div className="rounded-2xl border border-red-200 bg-gradient-to-br from-red-50 to-red-100 p-6 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
-                      <h3 className="mb-4 flex items-center gap-2 text-lg font-bold text-red-900">
-                        <div className="rounded-lg bg-red-500 p-2">
-                          <Clock className="h-5 w-5 text-white" />
-                        </div>
-                        Atenção: Prazos Urgentes
-                      </h3>
-                      <div className="space-y-3">
-                        {processosPrazosCriticos.slice(0, 5).map(p => (
-                          <div key={p.processo.numero} className="rounded-lg border border-red-200 bg-white/70 p-4 backdrop-blur-sm">
-                            <p className="mb-1.5 break-words text-sm font-bold text-red-900">
-                              {p.processo.numero}
-                            </p>
-                            <p className="text-xs font-semibold text-red-700">
-                              {p.processo.prazo_proximo.tipo}: {p.processo.prazo_proximo.dias_restantes} dias
-                            </p>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-
-                    {/* Maiores exposições */}
-                    <div className="rounded-2xl border border-yellow-200 bg-gradient-to-br from-yellow-50 to-yellow-100 p-6 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
-                      <h3 className="mb-4 flex items-center gap-2 text-lg font-bold text-yellow-900">
-                        <div className="rounded-lg bg-yellow-500 p-2">
-                          <DollarSign className="h-5 w-5 text-white" />
-                        </div>
-                        Maiores Exposições
-                      </h3>
-                      <div className="space-y-3">
-                        {processosOrdenadosPorExposicao.slice(0, 5).map(p => (
-                          <div key={p.processo.numero} className="rounded-lg border border-yellow-200 bg-white/70 p-4 backdrop-blur-sm">
-                            <p className="mb-1.5 break-words text-sm font-bold text-yellow-900">
-                              {p.processo.numero}
-                            </p>
-                            <p className="text-xs font-semibold text-yellow-700">
-                              {formatCurrency(p.analise_financeira.exposicao_total.realista)}
-                            </p>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-
-                    {/* Recomendações de acordo */}
-                    <div className="rounded-2xl border border-blue-200 bg-gradient-to-br from-blue-50 to-blue-100 p-6 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
-                      <h3 className="mb-4 flex items-center gap-2 text-lg font-bold text-blue-900">
-                        <div className="rounded-lg bg-blue-500 p-2">
-                          <Target className="h-5 w-5 text-white" />
-                        </div>
-                        Recomendações de Acordo
-                      </h3>
-                      <div className="space-y-3">
-                        {processos
-                          .filter(p => p.recomendacoes_estrategicas.estrategia_principal === 'acordo_judicial')
-                          .slice(0, 5)
-                          .map(p => (
-                            <div key={p.processo.numero} className="rounded-lg border border-blue-200 bg-white/70 p-4 backdrop-blur-sm">
-                              <p className="mb-1.5 break-words text-sm font-bold text-blue-900">
-                                {p.processo.numero}
-                              </p>
-                              <p className="text-xs font-semibold text-blue-700">
-                                Score: {p.analise_risco.score_risco} | {p.analise_risco.classificacao.toUpperCase()}
-                              </p>
-                            </div>
-                          ))}
-                      </div>
-                    </div>
-                  </AlertCarousel>
-                </section>
-              </aside>
             </div>
           </div>
-        </div>
+        </header>
+
+        <section className="mt-12 grid gap-6 lg:grid-cols-4">
+          <KpiCard title="Total de Processos" value={formatNumber(totalProcessos)} icon={FileText} color="blue" />
+          <KpiCard
+            title="Exposição Financeira"
+            value={formatCurrency(exposicaoTotal)}
+            icon={DollarSign}
+            color="purple"
+            subtitle="Cenário realista"
+          />
+          <KpiCard
+            title="Provisão Recomendada"
+            value={formatCurrency(provisaoTotal)}
+            icon={Shield}
+            color="green"
+            subtitle="Sugestão de provisionamento"
+          />
+          <KpiCard
+            title="Probabilidade Média"
+            value={formatPercent(probMediaPerda)}
+            icon={TrendingUp}
+            color="indigo"
+            subtitle="Probabilidade parcial de perda"
+          />
+        </section>
+
+        <section className="mt-12 grid gap-6 lg:grid-cols-[2fr_1fr]">
+          <div className="grid gap-6 lg:grid-cols-2">
+            <div className="rounded-3xl border border-slate-100 bg-white p-6 shadow-sm">
+              <h2 className="flex items-center gap-2 text-lg font-semibold text-slate-900">
+                <AlertTriangle className="h-5 w-5 text-amber-500" />
+                Destaques estratégicos
+              </h2>
+              <div className="mt-6 space-y-5 text-sm text-slate-600">
+                <div className="rounded-2xl border border-slate-100 bg-slate-50/70 p-4">
+                  <p className="text-xs font-semibold uppercase tracking-wide text-slate-500">Tema mais recorrente</p>
+                  <p className="mt-2 text-base font-semibold text-slate-900">{temaMaisRecorrente.tema}</p>
+                  <p className="mt-1 text-sm text-slate-600">{temaMaisRecorrente.count} ocorrências registradas</p>
+                </div>
+                <div className="rounded-2xl border border-slate-100 bg-slate-50/70 p-4">
+                  <p className="text-xs font-semibold uppercase tracking-wide text-slate-500">Maior exposição</p>
+                  {processoMaiorExposicao ? (
+                    <>
+                      <p className="mt-2 text-base font-semibold text-slate-900">{processoMaiorExposicao.processo.numero}</p>
+                      <p className="mt-1 text-sm text-slate-600">
+                        {formatCurrency(processoMaiorExposicao.analise_financeira.exposicao_total.realista)} de exposição realista
+                      </p>
+                    </>
+                  ) : (
+                    <p className="mt-2 text-sm text-slate-600">Nenhum processo disponível</p>
+                  )}
+                </div>
+                <div className="rounded-2xl border border-slate-100 bg-slate-50/70 p-4">
+                  <p className="text-xs font-semibold uppercase tracking-wide text-slate-500">Score médio de risco</p>
+                  <p className="mt-2 text-base font-semibold text-slate-900">{scoreMediaRisco.toFixed(1)}</p>
+                  <p className="mt-1 text-sm text-slate-600">Distribuição equilibrada entre níveis de severidade</p>
+                </div>
+              </div>
+            </div>
+            <div className="rounded-3xl border border-slate-100 bg-white p-6 shadow-sm">
+              <h2 className="flex items-center gap-2 text-lg font-semibold text-slate-900">
+                <Clock className="h-5 w-5 text-sky-500" />
+                Prazos críticos recentes
+              </h2>
+              <AlertCarousel>
+                <div className="rounded-2xl border border-rose-100 bg-rose-50 p-4">
+                  <h3 className="flex items-center gap-2 text-base font-semibold text-rose-900">
+                    <Clock className="h-4 w-4" />
+                    Prazos urgentes
+                  </h3>
+                  <div className="mt-4 space-y-3 text-sm">
+                    {processosPrazosCriticos.slice(0, 5).map(p => (
+                      <div key={p.processo.numero} className="rounded-xl border border-rose-100 bg-white/70 p-3">
+                        <p className="font-semibold text-slate-900">{p.processo.numero}</p>
+                        <p className="text-xs text-slate-600">
+                          {p.processo.prazo_proximo.tipo}: {p.processo.prazo_proximo.dias_restantes} dias restantes
+                        </p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="rounded-2xl border border-amber-100 bg-amber-50 p-4">
+                  <h3 className="flex items-center gap-2 text-base font-semibold text-amber-900">
+                    <DollarSign className="h-4 w-4" />
+                    Maiores exposições
+                  </h3>
+                  <div className="mt-4 space-y-3 text-sm">
+                    {processosOrdenadosPorExposicao.slice(0, 5).map(p => (
+                      <div key={p.processo.numero} className="rounded-xl border border-amber-100 bg-white/70 p-3">
+                        <p className="font-semibold text-slate-900">{p.processo.numero}</p>
+                        <p className="text-xs text-slate-600">{formatCurrency(p.analise_financeira.exposicao_total.realista)}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="rounded-2xl border border-indigo-100 bg-indigo-50 p-4">
+                  <h3 className="flex items-center gap-2 text-base font-semibold text-indigo-900">
+                    <Target className="h-4 w-4" />
+                    Recomendações de acordo
+                  </h3>
+                  <div className="mt-4 space-y-3 text-sm">
+                    {processos
+                      .filter(p => p.recomendacoes_estrategicas.estrategia_principal === 'acordo_judicial')
+                      .slice(0, 5)
+                      .map(p => (
+                        <div key={p.processo.numero} className="rounded-xl border border-indigo-100 bg-white/70 p-3">
+                          <p className="font-semibold text-slate-900">{p.processo.numero}</p>
+                          <p className="text-xs text-slate-600">
+                            Score {p.analise_risco.score_risco} · {p.analise_risco.classificacao.toUpperCase()}
+                          </p>
+                        </div>
+                      ))}
+                  </div>
+                </div>
+              </AlertCarousel>
+            </div>
+          </div>
+
+          <div className="space-y-6">
+            <DistribuicaoRiscoChart data={riscoData} />
+            <AreasAfetadasChart data={areasData} />
+          </div>
+        </section>
+
+        <section className="mt-12 grid gap-6 lg:grid-cols-2">
+          <ExposicaoFinanceiraChart data={exposicaoData} />
+          <TemasRecorrentesChart data={temasData} />
+          <ProbabilidadePerdaChart data={probabilidadeData} />
+          <RiscoExposicaoChart data={riscoExposicaoData} />
+        </section>
+
+        <section className="mt-12 space-y-6">
+          <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+            <h2 className="text-2xl font-semibold text-slate-900">Monitoramento detalhado</h2>
+            <p className="text-sm text-slate-600">
+              Acompanhe cada processo com filtros dinâmicos, ordenação por risco e acesso rápido às informações essenciais.
+            </p>
+          </div>
+          <ProcessosTable processos={processos} />
+        </section>
+
+        <footer className="mt-16 rounded-3xl border border-slate-200 bg-white/90 px-6 py-6 text-sm text-slate-600 shadow-sm">
+          <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+            <p>Dashboard Jurídico CDRJ · Inteligência aplicada à gestão de litígios</p>
+            <p className="font-semibold text-slate-500">Powered by IA Jurídica v{versaoModelo}</p>
+          </div>
+        </footer>
       </main>
-
-      {/* Footer */}
-      <footer className="relative z-10 mx-auto max-w-7xl px-4 pb-12 sm:px-6 lg:px-8">
-        <div className="flex flex-col gap-3 rounded-2xl border border-white/60 bg-white/75 px-6 py-5 text-slate-600 shadow-[0_20px_60px_-40px_rgba(15,23,42,0.35)] backdrop-blur-xl sm:flex-row sm:items-center sm:justify-between">
-          <p className="text-sm font-medium">
-            Dashboard Jurídico CDRJ - Análise Preditiva de Processos Trabalhistas
-          </p>
-          <p className="text-xs font-semibold text-slate-500">
-            Powered by IA Jurídica v{processos[0]?.metadata.modelo_ia.versao || '4.2.1'}
-          </p>
-        </div>
-      </footer>
     </div>
   );
 }
