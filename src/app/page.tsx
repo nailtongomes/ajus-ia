@@ -13,6 +13,7 @@ import {
 } from '@/lib/processos';
 import KpiCard from '@/components/KpiCard';
 import ProcessosTable from '@/components/ProcessosTable';
+import AlertCarousel from '@/components/AlertCarousel';
 import {
   DistribuicaoRiscoChart,
   ExposicaoFinanceiraChart,
@@ -161,8 +162,8 @@ export default function HomePage() {
 
       {/* Main Content */}
       <main className="relative z-10 mx-auto -mt-12 max-w-7xl px-4 pb-16 sm:px-6 lg:px-8">
-        <div className="rounded-[32px] border border-white/60 bg-white/80 p-6 shadow-[0_50px_120px_-60px_rgba(15,23,42,0.45)] backdrop-blur-2xl sm:p-10">
-          <div className="space-y-12">
+        <div className="rounded-[32px] border border-white/60 bg-white/80 p-8 shadow-[0_50px_120px_-60px_rgba(15,23,42,0.45)] backdrop-blur-2xl sm:p-12">
+          <div className="space-y-16">
             {/* KPIs Principais */}
             <section className="space-y-6">
               <div className="flex items-center gap-3">
@@ -308,7 +309,7 @@ export default function HomePage() {
                   Alertas e Insights
                 </h2>
               </div>
-              <div className="grid grid-cols-1 gap-6 lg:grid-cols-3">
+              <AlertCarousel>
                 {/* Processos com prazos críticos */}
                 <div className="rounded-2xl border border-red-200 bg-gradient-to-br from-red-50 to-red-100 p-6 shadow-lg transition-all duration-300 hover:scale-[1.02] hover:shadow-xl">
                   <h3 className="mb-4 flex items-center gap-2 text-lg font-bold text-red-900">
@@ -319,9 +320,9 @@ export default function HomePage() {
                   </h3>
                   <div className="space-y-3">
                     {processosPrazosCriticos.slice(0, 5).map(p => (
-                      <div key={p.processo.numero} className="rounded-lg border border-red-200 bg-white/70 p-3 backdrop-blur-sm">
-                        <p className="mb-1 text-sm font-bold text-red-900">
-                          {p.processo.numero.slice(-10)}
+                      <div key={p.processo.numero} className="rounded-lg border border-red-200 bg-white/70 p-4 backdrop-blur-sm">
+                        <p className="mb-1.5 text-sm font-bold text-red-900 break-words">
+                          {p.processo.numero}
                         </p>
                         <p className="text-xs font-semibold text-red-700">
                           {p.processo.prazo_proximo.tipo}: {p.processo.prazo_proximo.dias_restantes} dias
@@ -341,9 +342,9 @@ export default function HomePage() {
                   </h3>
                   <div className="space-y-3">
                     {processos.slice(0, 5).map(p => (
-                      <div key={p.processo.numero} className="rounded-lg border border-yellow-200 bg-white/70 p-3 backdrop-blur-sm">
-                        <p className="mb-1 text-sm font-bold text-yellow-900">
-                          {p.processo.numero.slice(-10)}
+                      <div key={p.processo.numero} className="rounded-lg border border-yellow-200 bg-white/70 p-4 backdrop-blur-sm">
+                        <p className="mb-1.5 text-sm font-bold text-yellow-900 break-words">
+                          {p.processo.numero}
                         </p>
                         <p className="text-xs font-semibold text-yellow-700">
                           {formatCurrency(p.analise_financeira.exposicao_total.realista)}
@@ -366,9 +367,9 @@ export default function HomePage() {
                       .filter(p => p.recomendacoes_estrategicas.estrategia_principal === 'acordo_judicial')
                       .slice(0, 5)
                       .map(p => (
-                        <div key={p.processo.numero} className="rounded-lg border border-blue-200 bg-white/70 p-3 backdrop-blur-sm">
-                          <p className="mb-1 text-sm font-bold text-blue-900">
-                            {p.processo.numero.slice(-10)}
+                        <div key={p.processo.numero} className="rounded-lg border border-blue-200 bg-white/70 p-4 backdrop-blur-sm">
+                          <p className="mb-1.5 text-sm font-bold text-blue-900 break-words">
+                            {p.processo.numero}
                           </p>
                           <p className="text-xs font-semibold text-blue-700">
                             Score: {p.analise_risco.score_risco} | {p.analise_risco.classificacao.toUpperCase()}
@@ -377,7 +378,7 @@ export default function HomePage() {
                       ))}
                   </div>
                 </div>
-              </div>
+              </AlertCarousel>
             </section>
           </div>
         </div>
