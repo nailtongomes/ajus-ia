@@ -77,7 +77,9 @@ export default function KpiCard({
   const colors = colorMap[color];
 
   return (
-    <div className={`${colors.bg} border ${colors.border} rounded-xl p-6 transition-all duration-300 hover:shadow-xl ${colors.hoverShadow} hover:scale-[1.02] relative overflow-hidden group`}>
+    <div
+      className={`${colors.bg} border ${colors.border} relative overflow-hidden rounded-xl p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl ${colors.hoverShadow}`}
+    >
       {/* Efeito de brilho no hover */}
       <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-1000"></div>
 
@@ -99,7 +101,7 @@ export default function KpiCard({
             </div>
           )}
         </div>
-        <div className={`${colors.iconBg} p-4 rounded-xl shadow-lg transform transition-transform duration-300 group-hover:scale-110 group-hover:rotate-6`}>
+        <div className={`${colors.iconBg} rounded-xl p-4 shadow-lg transition-transform duration-300 group-hover:-translate-y-0.5`}>
           <Icon className={`w-7 h-7 ${colors.iconColor}`} />
         </div>
       </div>
