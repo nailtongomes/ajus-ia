@@ -107,7 +107,7 @@ export default function HomePage() {
             <div className="space-y-6">
               <span className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-sm font-semibold text-indigo-100">
                 <BarChart3 className="h-4 w-4" />
-                Interface redesenhada com Tailwind 3.4
+                Companhia Docas do Rio de Janeiro
               </span>
               <div className="space-y-3">
                 <h1 className="text-3xl font-semibold tracking-tight sm:text-4xl">Dashboard jurídico orientado por dados</h1>
