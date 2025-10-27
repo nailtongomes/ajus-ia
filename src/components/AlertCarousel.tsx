@@ -25,8 +25,8 @@ export default function AlertCarousel({ children }: AlertCarouselProps) {
 
   return (
     <div className="relative">
-      {/* Desktop: Grid layout (3 columns) */}
-      <div className="hidden lg:grid lg:grid-cols-3 lg:gap-6">
+      {/* Desktop: Grid layout */}
+      <div className="hidden lg:grid lg:grid-cols-1 lg:gap-6">
         {children}
       </div>
 

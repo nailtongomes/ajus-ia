@@ -56,8 +56,11 @@ export default function HomePage() {
     { name: 'Risco Baixo', value: processosPorRisco.baixo },
   ];
 
-  const exposicaoData = processos
-    .sort((a, b) => b.analise_financeira.exposicao_total.realista - a.analise_financeira.exposicao_total.realista)
+  const processosOrdenadosPorExposicao = [...processos].sort(
+    (a, b) => b.analise_financeira.exposicao_total.realista - a.analise_financeira.exposicao_total.realista,
+  );
+
+  const exposicaoData = processosOrdenadosPorExposicao
     .slice(0, 10)
     .map(p => ({
       name: p.processo.numero.split('.')[0].slice(-4),
@@ -86,6 +89,11 @@ export default function HomePage() {
     score: p.analise_risco.score_risco,
     exposicao: p.analise_financeira.exposicao_total.realista,
   }));
+
+  const percentualAltoRisco = (processosPorRisco.alto / totalProcessos) * 100;
+  const percentualPrazosCriticos = (processosPrazosCriticos.length / totalProcessos) * 100;
+  const temaMaisRecorrente = getTemasRecorrentes(processos)[0];
+  const processoMaiorExposicao = processosOrdenadosPorExposicao[0];
 
   return (
     <div className="relative min-h-screen overflow-hidden">
@@ -173,7 +181,7 @@ export default function HomePage() {
                   Visão Geral
                 </h2>
               </div>
-              <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
+              <div className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-4">
                 <KpiCard
                   title="Total de Processos Ativos"
                   value={totalProcessos}
@@ -200,186 +208,233 @@ export default function HomePage() {
                   value={processosPorRisco.alto}
                   icon={AlertTriangle}
                   color="red"
-                  trend={`${formatPercent((processosPorRisco.alto / totalProcessos) * 100)} do total`}
+                  trend={`${formatPercent(percentualAltoRisco)} do total`}
                 />
               </div>
             </section>
 
-            {/* KPIs Secundários */}
-            <section className="space-y-4">
-              <div className="flex items-center gap-2 text-sm font-semibold text-slate-500">
-                <span className="h-2 w-2 rounded-full bg-slate-400" />
-                Indicadores complementares
-              </div>
-              <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
-                <KpiCard
-                  title="Score Médio de Risco"
-                  value={scoreMediaRisco.toFixed(1)}
-                  icon={Shield}
-                  color="yellow"
-                  subtitle="Média ponderada (0-100)"
-                />
-                <KpiCard
-                  title="Prob. Média de Perda Parcial"
-                  value={formatPercent(probMediaPerda)}
-                  icon={TrendingUp}
-                  color="yellow"
-                  subtitle="Média de todos os processos"
-                />
-                <KpiCard
-                  title="Prazos Críticos"
-                  value={processosPrazosCriticos.length}
-                  icon={Clock}
-                  color="red"
-                  trend="15 dias ou menos"
-                />
-                <KpiCard
-                  title="Exposição Média/Processo"
-                  value={formatCurrency(exposicaoTotal / totalProcessos)}
-                  icon={DollarSign}
-                  color="indigo"
-                  subtitle="Cenário realista"
-                />
-              </div>
-            </section>
+            <div className="space-y-16 xl:grid xl:grid-cols-[2fr_1fr] xl:items-start xl:gap-10">
+              <div className="space-y-16">
+                {/* Gráficos - Linha 1 */}
+                <section className="space-y-6">
+                  <div className="flex items-center gap-3">
+                    <div className="h-10 w-1.5 rounded-full bg-gradient-to-b from-red-600 to-orange-500" />
+                    <h2 className="flex items-center gap-3 text-3xl font-extrabold text-slate-900">
+                      <AlertTriangle className="h-8 w-8 text-red-600" />
+                      Análise de Riscos
+                    </h2>
+                  </div>
+                  <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
+                    <DistribuicaoRiscoChart data={riscoData} />
+                    <ProbabilidadePerdaChart data={probabilidadeData} />
+                  </div>
+                </section>
 
-            {/* Gráficos - Linha 1 */}
-            <section className="space-y-6">
-              <div className="flex items-center gap-3">
-                <div className="h-10 w-1.5 rounded-full bg-gradient-to-b from-red-600 to-orange-500" />
-                <h2 className="flex items-center gap-3 text-3xl font-extrabold text-slate-900">
-                  <AlertTriangle className="h-8 w-8 text-red-600" />
-                  Análise de Riscos
-                </h2>
-              </div>
-              <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
-                <DistribuicaoRiscoChart data={riscoData} />
-                <ProbabilidadePerdaChart data={probabilidadeData} />
-              </div>
-            </section>
+                {/* Gráficos - Linha 2 */}
+                <section className="space-y-6">
+                  <div className="flex items-center gap-3">
+                    <div className="h-10 w-1.5 rounded-full bg-gradient-to-b from-green-600 to-emerald-500" />
+                    <h2 className="flex items-center gap-3 text-3xl font-extrabold text-slate-900">
+                      <DollarSign className="h-8 w-8 text-green-600" />
+                      Análise Financeira
+                    </h2>
+                  </div>
+                  <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
+                    <ExposicaoFinanceiraChart data={exposicaoData} />
+                    <RiscoExposicaoChart data={riscoExposicaoData} />
+                  </div>
+                </section>
 
-            {/* Gráficos - Linha 2 */}
-            <section className="space-y-6">
-              <div className="flex items-center gap-3">
-                <div className="h-10 w-1.5 rounded-full bg-gradient-to-b from-green-600 to-emerald-500" />
-                <h2 className="flex items-center gap-3 text-3xl font-extrabold text-slate-900">
-                  <DollarSign className="h-8 w-8 text-green-600" />
-                  Análise Financeira
-                </h2>
-              </div>
-              <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
-                <ExposicaoFinanceiraChart data={exposicaoData} />
-                <RiscoExposicaoChart data={riscoExposicaoData} />
-              </div>
-            </section>
+                {/* Gráficos - Linha 3 */}
+                <section className="space-y-6">
+                  <div className="flex items-center gap-3">
+                    <div className="h-10 w-1.5 rounded-full bg-gradient-to-b from-indigo-600 to-purple-500" />
+                    <h2 className="flex items-center gap-3 text-3xl font-extrabold text-slate-900">
+                      <FileText className="h-8 w-8 text-indigo-600" />
+                      Análise Operacional
+                    </h2>
+                  </div>
+                  <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
+                    <TemasRecorrentesChart data={temasData} />
+                    <AreasAfetadasChart data={areasData} />
+                  </div>
+                </section>
 
-            {/* Gráficos - Linha 3 */}
-            <section className="space-y-6">
-              <div className="flex items-center gap-3">
-                <div className="h-10 w-1.5 rounded-full bg-gradient-to-b from-indigo-600 to-purple-500" />
-                <h2 className="flex items-center gap-3 text-3xl font-extrabold text-slate-900">
-                  <FileText className="h-8 w-8 text-indigo-600" />
-                  Análise Operacional
-                </h2>
+                {/* Tabela de Processos */}
+                <section className="space-y-6">
+                  <div className="flex items-center gap-3">
+                    <div className="h-10 w-1.5 rounded-full bg-gradient-to-b from-slate-700 to-slate-500" />
+                    <h2 className="flex items-center gap-3 text-3xl font-extrabold text-slate-900">
+                      <FileText className="h-8 w-8 text-slate-700" />
+                      Todos os Processos
+                    </h2>
+                  </div>
+                  <ProcessosTable processos={processos} />
+                </section>
               </div>
-              <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
-                <TemasRecorrentesChart data={temasData} />
-                <AreasAfetadasChart data={areasData} />
-              </div>
-            </section>
 
-            {/* Tabela de Processos */}
-            <section className="space-y-6">
-              <div className="flex items-center gap-3">
-                <div className="h-10 w-1.5 rounded-full bg-gradient-to-b from-slate-700 to-slate-500" />
-                <h2 className="flex items-center gap-3 text-3xl font-extrabold text-slate-900">
-                  <FileText className="h-8 w-8 text-slate-700" />
-                  Todos os Processos
-                </h2>
-              </div>
-              <ProcessosTable processos={processos} />
-            </section>
-
-            {/* Insights e Alertas */}
-            <section className="space-y-6">
-              <div className="flex items-center gap-3">
-                <div className="h-10 w-1.5 rounded-full bg-gradient-to-b from-yellow-600 to-red-500" />
-                <h2 className="flex items-center gap-3 text-3xl font-extrabold text-slate-900">
-                  <AlertTriangle className="h-8 w-8 text-yellow-600" />
-                  Alertas e Insights
-                </h2>
-              </div>
-              <AlertCarousel>
-                {/* Processos com prazos críticos */}
-                <div className="rounded-2xl border border-red-200 bg-gradient-to-br from-red-50 to-red-100 p-6 shadow-lg transition-all duration-300 hover:scale-[1.02] hover:shadow-xl">
-                  <h3 className="mb-4 flex items-center gap-2 text-lg font-bold text-red-900">
-                    <div className="rounded-lg bg-red-500 p-2">
-                      <Clock className="h-5 w-5 text-white" />
+              <aside className="space-y-12">
+                {/* Resumo Executivo */}
+                <section className="space-y-4 rounded-3xl border border-blue-200/70 bg-white/70 p-6 shadow-lg shadow-blue-900/10 backdrop-blur">
+                  <div className="flex items-center gap-3">
+                    <div className="h-12 w-1 rounded-full bg-gradient-to-b from-blue-600 to-indigo-500" />
+                    <div>
+                      <p className="text-xs font-semibold uppercase tracking-[0.3em] text-blue-500">Resumo Executivo</p>
+                      <h3 className="text-2xl font-bold text-slate-900">Prioridades Imediatas</h3>
                     </div>
-                    Atenção: Prazos Urgentes
-                  </h3>
-                  <div className="space-y-3">
-                    {processosPrazosCriticos.slice(0, 5).map(p => (
-                      <div key={p.processo.numero} className="rounded-lg border border-red-200 bg-white/70 p-4 backdrop-blur-sm">
-                        <p className="mb-1.5 text-sm font-bold text-red-900 break-words">
-                          {p.processo.numero}
+                  </div>
+                  <div className="space-y-4 text-sm text-slate-600">
+                    <div className="rounded-2xl bg-blue-50/80 p-4">
+                      <p className="font-semibold text-blue-900">
+                        {percentualAltoRisco.toFixed(1)}% dos casos estão classificados como alto risco.
+                      </p>
+                      <p className="mt-1 text-xs text-blue-700">
+                        Recomenda-se reunião semanal com as áreas responsáveis para mitigar perdas.
+                      </p>
+                    </div>
+                    {processoMaiorExposicao && (
+                      <div className="rounded-2xl bg-indigo-50/80 p-4">
+                        <p className="font-semibold text-indigo-900">
+                          Maior exposição: processo {processoMaiorExposicao.processo.numero}.
                         </p>
-                        <p className="text-xs font-semibold text-red-700">
-                          {p.processo.prazo_proximo.tipo}: {p.processo.prazo_proximo.dias_restantes} dias
+                        <p className="mt-1 text-xs text-indigo-700">
+                          Valor potencial de {formatCurrency(processoMaiorExposicao.analise_financeira.exposicao_total.realista)}.
                         </p>
                       </div>
-                    ))}
-                  </div>
-                </div>
-
-                {/* Maiores exposições */}
-                <div className="rounded-2xl border border-yellow-200 bg-gradient-to-br from-yellow-50 to-yellow-100 p-6 shadow-lg transition-all duration-300 hover:scale-[1.02] hover:shadow-xl">
-                  <h3 className="mb-4 flex items-center gap-2 text-lg font-bold text-yellow-900">
-                    <div className="rounded-lg bg-yellow-500 p-2">
-                      <DollarSign className="h-5 w-5 text-white" />
-                    </div>
-                    Maiores Exposições
-                  </h3>
-                  <div className="space-y-3">
-                    {processos.slice(0, 5).map(p => (
-                      <div key={p.processo.numero} className="rounded-lg border border-yellow-200 bg-white/70 p-4 backdrop-blur-sm">
-                        <p className="mb-1.5 text-sm font-bold text-yellow-900 break-words">
-                          {p.processo.numero}
+                    )}
+                    {temaMaisRecorrente && (
+                      <div className="rounded-2xl bg-slate-50/90 p-4">
+                        <p className="font-semibold text-slate-900">
+                          Tema recorrente: {temaMaisRecorrente.tema}.
                         </p>
-                        <p className="text-xs font-semibold text-yellow-700">
-                          {formatCurrency(p.analise_financeira.exposicao_total.realista)}
+                        <p className="mt-1 text-xs text-slate-600">
+                          {temaMaisRecorrente.count} processos relacionados exigem padronização de defesa.
                         </p>
                       </div>
-                    ))}
+                    )}
                   </div>
-                </div>
+                </section>
 
-                {/* Recomendações de acordo */}
-                <div className="rounded-2xl border border-blue-200 bg-gradient-to-br from-blue-50 to-blue-100 p-6 shadow-lg transition-all duration-300 hover:scale-[1.02] hover:shadow-xl">
-                  <h3 className="mb-4 flex items-center gap-2 text-lg font-bold text-blue-900">
-                    <div className="rounded-lg bg-blue-500 p-2">
-                      <Target className="h-5 w-5 text-white" />
-                    </div>
-                    Recomendações de Acordo
-                  </h3>
-                  <div className="space-y-3">
-                    {processos
-                      .filter(p => p.recomendacoes_estrategicas.estrategia_principal === 'acordo_judicial')
-                      .slice(0, 5)
-                      .map(p => (
-                        <div key={p.processo.numero} className="rounded-lg border border-blue-200 bg-white/70 p-4 backdrop-blur-sm">
-                          <p className="mb-1.5 text-sm font-bold text-blue-900 break-words">
-                            {p.processo.numero}
-                          </p>
-                          <p className="text-xs font-semibold text-blue-700">
-                            Score: {p.analise_risco.score_risco} | {p.analise_risco.classificacao.toUpperCase()}
-                          </p>
+                {/* KPIs Secundários */}
+                <section className="space-y-4">
+                  <div className="flex items-center gap-2 text-sm font-semibold text-slate-500">
+                    <span className="h-2 w-2 rounded-full bg-slate-400" />
+                    Indicadores complementares
+                  </div>
+                  <div className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-1">
+                    <KpiCard
+                      title="Score Médio de Risco"
+                      value={scoreMediaRisco.toFixed(1)}
+                      icon={Shield}
+                      color="yellow"
+                      subtitle="Média ponderada (0-100)"
+                    />
+                    <KpiCard
+                      title="Prob. Média de Perda Parcial"
+                      value={formatPercent(probMediaPerda)}
+                      icon={TrendingUp}
+                      color="yellow"
+                      subtitle="Média de todos os processos"
+                    />
+                    <KpiCard
+                      title="Prazos Críticos"
+                      value={processosPrazosCriticos.length}
+                      icon={Clock}
+                      color="red"
+                      trend={`${formatPercent(percentualPrazosCriticos)} do total`}
+                    />
+                    <KpiCard
+                      title="Exposição Média/Processo"
+                      value={formatCurrency(exposicaoTotal / totalProcessos)}
+                      icon={DollarSign}
+                      color="indigo"
+                      subtitle="Cenário realista"
+                    />
+                  </div>
+                </section>
+
+                {/* Insights e Alertas */}
+                <section className="space-y-6">
+                  <div className="flex items-center gap-3">
+                    <div className="h-10 w-1.5 rounded-full bg-gradient-to-b from-yellow-600 to-red-500" />
+                    <h2 className="flex items-center gap-3 text-2xl font-extrabold text-slate-900">
+                      <AlertTriangle className="h-7 w-7 text-yellow-600" />
+                      Alertas e Insights
+                    </h2>
+                  </div>
+                  <AlertCarousel>
+                    {/* Processos com prazos críticos */}
+                    <div className="rounded-2xl border border-red-200 bg-gradient-to-br from-red-50 to-red-100 p-6 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
+                      <h3 className="mb-4 flex items-center gap-2 text-lg font-bold text-red-900">
+                        <div className="rounded-lg bg-red-500 p-2">
+                          <Clock className="h-5 w-5 text-white" />
                         </div>
-                      ))}
-                  </div>
-                </div>
-              </AlertCarousel>
-            </section>
+                        Atenção: Prazos Urgentes
+                      </h3>
+                      <div className="space-y-3">
+                        {processosPrazosCriticos.slice(0, 5).map(p => (
+                          <div key={p.processo.numero} className="rounded-lg border border-red-200 bg-white/70 p-4 backdrop-blur-sm">
+                            <p className="mb-1.5 break-words text-sm font-bold text-red-900">
+                              {p.processo.numero}
+                            </p>
+                            <p className="text-xs font-semibold text-red-700">
+                              {p.processo.prazo_proximo.tipo}: {p.processo.prazo_proximo.dias_restantes} dias
+                            </p>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+
+                    {/* Maiores exposições */}
+                    <div className="rounded-2xl border border-yellow-200 bg-gradient-to-br from-yellow-50 to-yellow-100 p-6 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
+                      <h3 className="mb-4 flex items-center gap-2 text-lg font-bold text-yellow-900">
+                        <div className="rounded-lg bg-yellow-500 p-2">
+                          <DollarSign className="h-5 w-5 text-white" />
+                        </div>
+                        Maiores Exposições
+                      </h3>
+                      <div className="space-y-3">
+                        {processosOrdenadosPorExposicao.slice(0, 5).map(p => (
+                          <div key={p.processo.numero} className="rounded-lg border border-yellow-200 bg-white/70 p-4 backdrop-blur-sm">
+                            <p className="mb-1.5 break-words text-sm font-bold text-yellow-900">
+                              {p.processo.numero}
+                            </p>
+                            <p className="text-xs font-semibold text-yellow-700">
+                              {formatCurrency(p.analise_financeira.exposicao_total.realista)}
+                            </p>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+
+                    {/* Recomendações de acordo */}
+                    <div className="rounded-2xl border border-blue-200 bg-gradient-to-br from-blue-50 to-blue-100 p-6 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
+                      <h3 className="mb-4 flex items-center gap-2 text-lg font-bold text-blue-900">
+                        <div className="rounded-lg bg-blue-500 p-2">
+                          <Target className="h-5 w-5 text-white" />
+                        </div>
+                        Recomendações de Acordo
+                      </h3>
+                      <div className="space-y-3">
+                        {processos
+                          .filter(p => p.recomendacoes_estrategicas.estrategia_principal === 'acordo_judicial')
+                          .slice(0, 5)
+                          .map(p => (
+                            <div key={p.processo.numero} className="rounded-lg border border-blue-200 bg-white/70 p-4 backdrop-blur-sm">
+                              <p className="mb-1.5 break-words text-sm font-bold text-blue-900">
+                                {p.processo.numero}
+                              </p>
+                              <p className="text-xs font-semibold text-blue-700">
+                                Score: {p.analise_risco.score_risco} | {p.analise_risco.classificacao.toUpperCase()}
+                              </p>
+                            </div>
+                          ))}
+                      </div>
+                    </div>
+                  </AlertCarousel>
+                </section>
+              </aside>
+            </div>
           </div>
         </div>
       </main>
