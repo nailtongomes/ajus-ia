@@ -2,6 +2,7 @@ import 'server-only';
 import fs from 'fs';
 import path from 'path';
 import { Processo } from '@/types/processo';
+import { toSafeNumber } from './utils';
 
 const DATA_DIR = path.join(process.cwd(), 'data');
 
@@ -42,28 +43,35 @@ export function getProcessoByNumero(numero: string): Processo | null {
 
 // Funções utilitárias de análise
 export function getTotalExposicaoFinanceira(processos: Processo[]): number {
-  return processos.reduce((acc, p) => acc + p.analise_financeira.exposicao_total.realista, 0);
+  return processos.reduce((acc, p) => acc + toSafeNumber(p.analise_financeira.exposicao_total.realista), 0);
 }
 
 export function getTotalProvisaoRecomendada(processos: Processo[]): number {
-  return processos.reduce((acc, p) => acc + p.analise_financeira.provisao_recomendada.valor, 0);
+  return processos.reduce((acc, p) => acc + toSafeNumber(p.analise_financeira.provisao_recomendada.valor), 0);
 }
 
 export function getProcessosPorRisco(processos: Processo[]) {
+  const normalizeClassificacao = (classificacao: string) => {
+    if (classificacao === 'muito_alto') return 'alto';
+    if (classificacao === 'muito_baixo') return 'baixo';
+    if (classificacao === 'alto' || classificacao === 'medio' || classificacao === 'baixo') return classificacao;
+    return 'medio';
+  };
+
   return {
-    alto: processos.filter(p => p.analise_risco.classificacao === 'alto').length,
-    medio: processos.filter(p => p.analise_risco.classificacao === 'medio').length,
-    baixo: processos.filter(p => p.analise_risco.classificacao === 'baixo').length,
+    alto: processos.filter(p => normalizeClassificacao(p.analise_risco.classificacao) === 'alto').length,
+    medio: processos.filter(p => normalizeClassificacao(p.analise_risco.classificacao) === 'medio').length,
+    baixo: processos.filter(p => normalizeClassificacao(p.analise_risco.classificacao) === 'baixo').length,
   };
 }
 
 export function getProcessosComPrazosCriticos(processos: Processo[]): Processo[] {
-  return processos.filter(p => p.processo.prazo_proximo.dias_restantes <= 15);
+  return processos.filter(p => toSafeNumber(p.processo.prazo_proximo.dias_restantes, Number.MAX_SAFE_INTEGER) <= 15);
 }
 
 export function getAreasComMaisProcessos(processos: Processo[]): { area: string; count: number }[] {
   const areasCount = processos.reduce((acc, p) => {
-    const area = p.partes.autor.area;
+    const area = p.partes.autor.area?.trim() || 'Não informado';
     acc[area] = (acc[area] || 0) + 1;
     return acc;
   }, {} as Record<string, number>);
@@ -95,6 +103,7 @@ export {
   formatDate,
   formatNumber,
   formatPercent,
+  toSafeNumber,
   getRiscoColor,
   getCriticidadeColor,
   getDiasRestantesColor,

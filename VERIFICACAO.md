@@ -31,14 +31,10 @@
 - [x] `src/lib/utils.ts` - Funções utilitárias
 - [x] `src/types/processo.ts` - Tipos TypeScript
 
-#### Dados (5 arquivos)
-- [x] `data/0101330-43.2025.5.01.0056.json` - Processo 1 (VPNI)
-- [x] `data/0102456-78.2025.5.02.0034.json` - Processo 2 (Acidente)
-- [x] `data/0103567-89.2025.5.03.0012.json` - Processo 3 (Rescisórias)
-- [x] `data/0104678-90.2025.5.04.0023.json` - Processo 4 (Assédio)
-- [x] `data/0105789-01.2025.5.05.0045.json` - Processo 5 (Equiparação)
+#### Dados (16 arquivos)
+- [x] `data/exemplo01.json` até `data/exemplo16.json` - Base completa para demonstrações de jurimetria e IA
 
-**Total: 26 arquivos**
+**Total: arquivos atualizados com 16 exemplos**
 
 ---
 

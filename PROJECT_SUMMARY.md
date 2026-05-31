@@ -55,7 +55,7 @@ O dashboard de análise jurídica foi desenvolvido com sucesso e está pronto pa
 
 ```
 dashboard-juridico/
-├── data/                    # 5 arquivos JSON de processos
+├── data/                    # 16 arquivos JSON de processos
 ├── src/
 │   ├── app/
 │   │   ├── page.tsx        # Dashboard principal (Server Component)
