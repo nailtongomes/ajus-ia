@@ -21,15 +21,13 @@ import {
   ComposedChart,
   Area,
 } from 'recharts';
-import { formatCurrency } from '@/lib/utils';
+import { formatCurrency, toSafeNumber } from '@/lib/utils';
 
 interface ChartData {
   name: string;
   value: number;
   [key: string]: string | number;
 }
-
-const asNumber = (value: unknown): number => (typeof value === 'number' && Number.isFinite(value) ? value : 0);
 
 // Gráfico de distribuição de risco
 interface DistribuicaoRiscoProps {
@@ -88,7 +86,7 @@ export function ExposicaoFinanceiraChart({ data }: ExposicaoFinanceiraProps) {
           <XAxis type="number" tickFormatter={(value) => formatCurrency(value)} stroke="#6b7280" />
           <YAxis dataKey="name" type="category" width={100} fontSize={11} stroke="#6b7280" />
           <Tooltip
-            formatter={(value) => formatCurrency(asNumber(value))}
+            formatter={(value) => formatCurrency(toSafeNumber(value))}
             contentStyle={{ borderRadius: '8px', border: 'none', boxShadow: '0 4px 12px rgba(0,0,0,0.1)' }}
           />
           <Legend />
@@ -199,7 +197,7 @@ export function ProbabilidadePerdaChart({ data }: ProbabilidadePerdaProps) {
           <XAxis dataKey="processo" angle={-30} textAnchor="end" height={100} fontSize={10} stroke="#6b7280" />
           <YAxis label={{ value: '%', angle: -90, position: 'insideLeft' }} stroke="#6b7280" />
           <Tooltip
-            formatter={(value) => `${asNumber(value).toFixed(1)}%`}
+            formatter={(value) => `${toSafeNumber(value).toFixed(1)}%`}
             contentStyle={{ borderRadius: '8px', border: 'none', boxShadow: '0 4px 12px rgba(0,0,0,0.1)' }}
           />
           <Legend />
@@ -235,8 +233,8 @@ export function RiscoExposicaoChart({ data }: RiscoExposicaoProps) {
           <YAxis yAxisId="right" orientation="right" tickFormatter={(value) => formatCurrency(value)} stroke="#6b7280" />
           <Tooltip
             formatter={(value, name) => {
-              if (name === 'Exposição (R$)') return formatCurrency(asNumber(value));
-              return asNumber(value);
+              if (name === 'Exposição (R$)') return formatCurrency(toSafeNumber(value));
+              return toSafeNumber(value);
             }}
             contentStyle={{ borderRadius: '8px', border: 'none', boxShadow: '0 4px 12px rgba(0,0,0,0.1)' }}
           />

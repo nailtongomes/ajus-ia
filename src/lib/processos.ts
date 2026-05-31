@@ -51,6 +51,10 @@ export function getTotalProvisaoRecomendada(processos: Processo[]): number {
 }
 
 export function getProcessosPorRisco(processos: Processo[]) {
+  /**
+   * Consolida classificações estendidas em 3 faixas para manter consistência dos
+   * indicadores comparativos do dashboard (alto/médio/baixo).
+   */
   const normalizeClassificacao = (classificacao: string) => {
     if (classificacao === 'muito_alto') return 'alto';
     if (classificacao === 'muito_baixo') return 'baixo';

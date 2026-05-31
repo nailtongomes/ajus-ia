@@ -263,7 +263,9 @@ export default function HomePage() {
                   <div className="mt-4 space-y-3 text-sm">
                     {processos
                       .filter(p =>
-                        ['acordo_judicial', 'acordo_imediato'].includes(p.recomendacoes_estrategicas.estrategia_principal),
+                        ['acordo_judicial', 'acordo_imediato'].includes(
+                          p.recomendacoes_estrategicas?.estrategia_principal ?? '',
+                        ),
                       )
                       .slice(0, 5)
                       .map(p => (

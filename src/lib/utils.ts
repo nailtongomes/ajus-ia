@@ -1,4 +1,5 @@
 import { ClassificacaoRisco, CriticidadePrazo } from '@/types/processo';
+type ExtendedClassificacaoRisco = ClassificacaoRisco | 'muito_alto' | 'muito_baixo';
 
 function isValidNumber(value: unknown): value is number {
   return typeof value === 'number' && Number.isFinite(value);
@@ -43,7 +44,7 @@ export function formatPercent(value: number | null | undefined): string {
   return `${value.toFixed(1)}%`;
 }
 
-export function getRiscoColor(classificacao: ClassificacaoRisco | string): string {
+export function getRiscoColor(classificacao: ExtendedClassificacaoRisco): string {
   switch (classificacao) {
     case 'muito_alto':
     case 'alto':
