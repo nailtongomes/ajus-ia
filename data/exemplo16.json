@@ -1,0 +1,207 @@
+{
+  "processo": {
+    "numero": "0010202-57.2015.5.01.0034",
+    "tipo": "trabalhista",
+    "subtipo": "Cumprimento de sentença",
+    "fase_atual": "arquivado",
+    "data_distribuicao": "2015-02-26",
+    "prazo_proximo": {
+      "tipo": "",
+      "data_limite": null,
+      "dias_restantes": null,
+      "criticidade": "indeterminada"
+    },
+    "vara": {
+      "codigo": "",
+      "nome": "TRT1",
+      "juiz": "LIVIA DOS SANTOS VARDIERO CRESPO"
+    }
+  },
+  "partes": {
+    "autor": {
+      "nome": "Nome da parte ocultada nos termos da Res. 121/2010 do CNJ",
+      "cpf_cnpj": "",
+      "tipo": "indeterminado",
+      "tempo_casa": null,
+      "cargo": "",
+      "area": "",
+      "historico_processos": null,
+      "advogados": []
+    },
+    "reu": {
+      "nome": "Nome da parte ocultada nos termos da Res. 121/2010 do CNJ",
+      "cnpj": "",
+      "advogados": []
+    }
+  },
+  "analise_risco": {
+    "score_risco": 0,
+    "classificacao": "muito_baixo",
+    "probabilidade_perda": {
+      "total": 0,
+      "parcial": 0,
+      "procedencia": 0
+    },
+    "confianca_predicao": 95,
+    "fatores_risco": [
+      {
+        "fator": "Processo arquivado por satisfação da obrigação",
+        "impacto": "baixo",
+        "peso": 1,
+        "evidencias": [
+          "Arquivados os autos definitivamente em 2022-08-17",
+          "Extinta a execução ou o cumprimento da sentença por satisfação da obrigação em 2022-08-17",
+          "Efetuado o pagamento de Crédito do demandante por cumprimento espontâneo (R$ 237.378,30) em 2022-08-17"
+        ]
+      }
+    ],
+    "jurisprudencia": {
+      "casos_similares_analisados": null,
+      "taxa_procedencia": null,
+      "tribunal": "",
+      "periodo_analise": "",
+      "casos_referencia": []
+    }
+  },
+  "analise_financeira": {
+    "valor_causa": 159542.96,
+    "moeda": "BRL",
+    "exposicao_total": {
+      "pessimista": 0,
+      "realista": 0,
+      "otimista": 0
+    },
+    "provisao_recomendada": {
+      "valor": 0,
+      "percentual_causa": 0,
+      "justificativa": "O processo foi arquivado por satisfação da obrigação, indicando que o valor devido já foi pago e não há mais exposição financeira.",
+      "revisao_proxima": null
+    },
+    "breakdown_pedidos": [],
+    "custos_defesa": {
+      "honorarios_internos": null,
+      "honorarios_externos": null,
+      "custas_processuais": null,
+      "pericia": null,
+      "outros": null,
+      "total": null
+    },
+    "impacto_orcamento": {
+      "centro_custo": "",
+      "percentual_orcamento_anual": null,
+      "necessita_aprovacao_especial": false
+    }
+  },
+  "recomendacoes_estrategicas": {
+    "estrategia_principal": "monitoramento",
+    "justificativa_estrategia": "O processo foi arquivado por satisfação da obrigação, não havendo mais risco ativo. A estratégia deve ser de monitoramento para garantir que não haja reabertura ou novas demandas relacionadas.",
+    "acoes_imediatas": [
+      {
+        "acao": "Confirmar o arquivamento definitivo do processo no sistema do tribunal.",
+        "prazo": "7 dias",
+        "responsavel_sugerido": "Equipe Jurídica",
+        "prioridade": "baixa",
+        "complexidade": "simples",
+        "tempo_estimado": "1 hora"
+      },
+      {
+        "acao": "Atualizar o status do processo nos sistemas internos para 'Arquivado' e 'Encerrado'.",
+        "prazo": "7 dias",
+        "responsavel_sugerido": "Equipe Jurídica/Controladoria",
+        "prioridade": "baixa",
+        "complexidade": "simples",
+        "tempo_estimado": "1 hora"
+      }
+    ],
+    "acordo": {
+      "recomenda": false,
+      "momento_ideal": "",
+      "faixa_valor": {
+        "minimo": null,
+        "maximo": null,
+        "ideal": null
+      },
+      "condicoes_sugeridas": [],
+      "vantagens": [],
+      "desvantagens": []
+    },
+    "defesa": {
+      "teses_principais": [],
+      "provas_necessarias": []
+    },
+    "preventivas": {
+      "recomendacoes": []
+    }
+  },
+  "analise_operacional": {
+    "areas_envolvidas": [
+      "Jurídico",
+      "Financeiro"
+    ],
+    "impacto_reputacional": "baixo",
+    "risco_precedente": {
+      "nivel": "baixo",
+      "casos_similares_potenciais": 0,
+      "exposicao_estimada": 0
+    },
+    "necessita_comunicacao": {
+      "diretoria": false,
+      "rh": false,
+      "comunicacao": false,
+      "auditoria": false
+    }
+  },
+  "timeline_predicoes": {
+    "duracao_estimada": {
+      "minima_meses": null,
+      "media_meses": null,
+      "maxima_meses": null
+    },
+    "marcos_futuros": []
+  },
+  "tags_inteligentes": [
+    {
+      "categoria": "fase",
+      "valor": "Arquivado",
+      "cor": "#28A745"
+    },
+    {
+      "categoria": "tipo_risco",
+      "valor": "Risco Baixo",
+      "cor": "#28A745"
+    },
+    {
+      "categoria": "urgencia",
+      "valor": "Nenhuma",
+      "cor": "#28A745"
+    },
+    {
+      "categoria": "tema",
+      "valor": "Cumprimento de Sentença",
+      "cor": "#17A2B8"
+    },
+    {
+      "categoria": "estrategia",
+      "valor": "Monitoramento",
+      "cor": "#6C757D"
+    }
+  ],
+  "metadata": {
+    "versao_analise": "1.0.0",
+    "data_analise": "",
+    "modelo_ia": {
+      "nome": "Legal Risk Analyzer",
+      "versao": "1.0",
+      "acuracia_geral": null
+    },
+    "analista_responsavel": "IA",
+    "revisao_humana": {
+      "realizada": false,
+      "data": null,
+      "aprovador": "",
+      "ajustes": ""
+    },
+    "hash_documento": ""
+  },
+  "custo_llm": "cache_tokens_details=None cached_content_token_count=None candidates_token_count=1933 candidates_tokens_details=None prompt_token_count=6077 prompt_tokens_details=[ModalityTokenCount(\n  modality=<MediaModality.TEXT: 'TEXT'>,\n  token_count=6077\n)] thoughts_token_count=None tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=8010 traffic_type=None"
+}

@@ -1,0 +1,239 @@
+{
+  "processo": {
+    "numero": "0101324-76.2019.5.01.0046",
+    "tipo": "trabalhista",
+    "subtipo": "Rito Ordinário",
+    "fase_atual": "arquivado",
+    "data_distribuicao": "2019-12-04",
+    "prazo_proximo": {
+      "tipo": "indeterminado",
+      "data_limite": null,
+      "dias_restantes": null,
+      "criticidade": "indeterminada"
+    },
+    "vara": {
+      "codigo": "0046",
+      "nome": "46ª Vara do Trabalho do Rio de Janeiro",
+      "juiz": "LILA CAROLINA MOTA PESSOA IGREJAS LOPES"
+    }
+  },
+  "partes": {
+    "autor": {
+      "nome": "MARCIA CONCEICAO DA ROCHA",
+      "cpf_cnpj": "",
+      "tipo": "Pessoa Física",
+      "tempo_casa": null,
+      "cargo": "",
+      "area": "",
+      "historico_processos": null,
+      "advogados": [
+        {
+          "nome": "VERONICA DE ARAUJO TRIANI",
+          "oab": "186247/RJ",
+          "taxa_sucesso_historica": null
+        }
+      ]
+    },
+    "reu": {
+      "nome": "COMPANHIA DOCAS DO RIO DE JANEIRO",
+      "cnpj": "",
+      "advogados": [
+        {
+          "nome": "ISADORA LEAO SILVA PINHEIRO",
+          "oab": "42139/BA",
+          "taxa_sucesso_historica": null
+        },
+        {
+          "nome": "VITOR TERRA DE CARVALHO",
+          "oab": "204998/RJ",
+          "taxa_sucesso_historica": null
+        }
+      ]
+    }
+  },
+  "analise_risco": {
+    "score_risco": 0,
+    "classificacao": "muito_baixo",
+    "probabilidade_perda": {
+      "total": 0,
+      "parcial": 0,
+      "procedencia": 100
+    },
+    "confianca_predicao": 95,
+    "fatores_risco": [
+      {
+        "fator": "Processo arquivado e em fase de cumprimento de sentença em autos apartados",
+        "impacto": "baixo",
+        "peso": 1,
+        "evidencias": [
+          "Processo principal arquivado definitivamente em 30/09/2025.",
+          "Trânsito em julgado em 12/09/2025.",
+          "Liquidação e execução prosseguem em Cumprimento Provisório de Sentença (0100333-90.2025.5.01.0046)."
+        ]
+      }
+    ],
+    "jurisprudencia": {
+      "casos_similares_analisados": null,
+      "taxa_procedencia": null,
+      "tribunal": "",
+      "periodo_analise": "",
+      "casos_referencia": []
+    }
+  },
+  "analise_financeira": {
+    "valor_causa": 40000.0,
+    "moeda": "BRL",
+    "exposicao_total": {
+      "pessimista": 0,
+      "realista": 0,
+      "otimista": 0
+    },
+    "provisao_recomendada": {
+      "valor": 0,
+      "percentual_causa": 0,
+      "justificativa": "O processo principal foi arquivado e a execução está em andamento em autos apartados, com cálculos já homologados e depósitos recursais transferidos. A exposição financeira para este processo específico é nula, pois a fase de conhecimento e recurso foi encerrada com decisão desfavorável à ré e a fase de execução está sendo tratada em outro processo.",
+      "revisao_proxima": null
+    },
+    "breakdown_pedidos": [],
+    "custos_defesa": {
+      "honorarios_internos": null,
+      "honorarios_externos": null,
+      "custas_processuais": 800.0,
+      "pericia": null,
+      "outros": null,
+      "total": 800.0
+    },
+    "impacto_orcamento": {
+      "centro_custo": "",
+      "percentual_orcamento_anual": null,
+      "necessita_aprovacao_especial": false
+    }
+  },
+  "recomendacoes_estrategicas": {
+    "estrategia_principal": "monitoramento",
+    "justificativa_estrategia": "O processo principal foi arquivado definitivamente após trânsito em julgado e a execução prossegue em autos apartados. A estratégia deve focar no monitoramento do processo de cumprimento de sentença (0100333-90.2025.5.01.0046) e na gestão dos valores já depositados.",
+    "acoes_imediatas": [
+      {
+        "acao": "Confirmar o status do processo de Cumprimento de Sentença (0100333-90.2025.5.01.0046)",
+        "prazo": "Imediato",
+        "responsavel_sugerido": "Equipe Jurídica",
+        "prioridade": "alta",
+        "complexidade": "simples",
+        "tempo_estimado": "1 dia"
+      },
+      {
+        "acao": "Verificar a efetiva transferência dos depósitos recursais para o processo de Cumprimento de Sentença",
+        "prazo": "3 dias",
+        "responsavel_sugerido": "Equipe Financeira/Jurídica",
+        "prioridade": "media",
+        "complexidade": "simples",
+        "tempo_estimado": "1 dia"
+      },
+      {
+        "acao": "Orientar as partes a não peticionar nos autos principais arquivados",
+        "prazo": "Imediato",
+        "responsavel_sugerido": "Equipe Jurídica",
+        "prioridade": "alta",
+        "complexidade": "simples",
+        "tempo_estimado": "1 dia"
+      }
+    ],
+    "acordo": {
+      "recomenda": false,
+      "momento_ideal": "indeterminado",
+      "faixa_valor": {
+        "minimo": null,
+        "maximo": null,
+        "ideal": null
+      },
+      "condicoes_sugeridas": [],
+      "vantagens": [],
+      "desvantagens": []
+    },
+    "defesa": {
+      "teses_principais": [],
+      "provas_necessarias": []
+    },
+    "preventivas": {
+      "recomendacoes": []
+    }
+  },
+  "analise_operacional": {
+    "areas_envolvidas": [
+      "Jurídico",
+      "Financeiro"
+    ],
+    "impacto_reputacional": "baixo",
+    "risco_precedente": {
+      "nivel": "baixo",
+      "casos_similares_potenciais": null,
+      "exposicao_estimada": null
+    },
+    "necessita_comunicacao": {
+      "diretoria": false,
+      "rh": false,
+      "comunicacao": false,
+      "auditoria": false
+    }
+  },
+  "timeline_predicoes": {
+    "duracao_estimada": {
+      "minima_meses": null,
+      "media_meses": null,
+      "maxima_meses": null
+    },
+    "marcos_futuros": [
+      {
+        "evento": "Monitoramento do Cumprimento de Sentença",
+        "data_prevista": null,
+        "probabilidade": 100,
+        "impacto_estrategia": "Acompanhamento da execução da condenação já transitada em julgado."
+      }
+    ]
+  },
+  "tags_inteligentes": [
+    {
+      "categoria": "fase",
+      "valor": "Arquivado",
+      "cor": "#28A745"
+    },
+    {
+      "categoria": "urgencia",
+      "valor": "Baixa",
+      "cor": "#28A745"
+    },
+    {
+      "categoria": "tipo_risco",
+      "valor": "Risco Financeiro Mitigado",
+      "cor": "#28A745"
+    },
+    {
+      "categoria": "estrategia",
+      "valor": "Monitoramento",
+      "cor": "#17A2B8"
+    },
+    {
+      "categoria": "tema",
+      "valor": "Trabalhista",
+      "cor": "#6C757D"
+    }
+  ],
+  "metadata": {
+    "versao_analise": "1.0.0",
+    "data_analise": "2025-09-30",
+    "modelo_ia": {
+      "nome": "Legal Risk Analyzer",
+      "versao": "1.0",
+      "acuracia_geral": null
+    },
+    "analista_responsavel": "IA",
+    "revisao_humana": {
+      "realizada": false,
+      "data": null,
+      "aprovador": "",
+      "ajustes": ""
+    },
+    "hash_documento": ""
+  },
+  "custo_llm": "cache_tokens_details=None cached_content_token_count=None candidates_token_count=2368 candidates_tokens_details=None prompt_token_count=7999 prompt_tokens_details=[ModalityTokenCount(\n  modality=<MediaModality.TEXT: 'TEXT'>,\n  token_count=7999\n)] thoughts_token_count=None tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=10367 traffic_type=None"
+}

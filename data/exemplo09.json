@@ -1,0 +1,363 @@
+{
+  "processo": {
+    "numero": "5003498-73.2025.4.02.5101",
+    "tipo": "civel",
+    "subtipo": "Execução de Título Extrajudicial",
+    "fase_atual": "suspensao",
+    "data_distribuicao": "2025-01-21",
+    "prazo_proximo": {
+      "tipo": "manifestacao_julgamento_monitoria",
+      "data_limite": null,
+      "dias_restantes": null,
+      "criticidade": "media"
+    },
+    "vara": {
+      "codigo": "",
+      "nome": "21ª Vara Federal do Rio de Janeiro",
+      "juiz": ""
+    }
+  },
+  "partes": {
+    "autor": {
+      "nome": "COMPANHIA DOCAS DO RIO DE JANEIRO",
+      "cpf_cnpj": "",
+      "tipo": "Pessoa Jurídica",
+      "tempo_casa": null,
+      "cargo": "",
+      "area": "",
+      "historico_processos": null,
+      "advogados": [
+        {
+          "nome": "NINA MANELA TUCHERMAN",
+          "oab": "140288/RJ",
+          "taxa_sucesso_historica": null
+        },
+        {
+          "nome": "FLAVIA COUFAL RAED",
+          "oab": "158361/RJ",
+          "taxa_sucesso_historica": null
+        },
+        {
+          "nome": "VIVIAN NIGRI QUEIROGA DINIZ DA PAIXAO",
+          "oab": "184111/RJ",
+          "taxa_sucesso_historica": null
+        },
+        {
+          "nome": "JOSE ESQUENAZI NETO",
+          "oab": "114029/RJ",
+          "taxa_sucesso_historica": null
+        }
+      ]
+    },
+    "reu": {
+      "nome": "PRESTOMAR SERVICOS MARITIMOS LTDA",
+      "cnpj": "",
+      "advogados": [
+        {
+          "nome": "MURILO MATUCH DE CARVALHO",
+          "oab": "137860/RJ",
+          "taxa_sucesso_historica": null
+        }
+      ]
+    }
+  },
+  "analise_risco": {
+    "score_risco": 65,
+    "classificacao": "alto",
+    "probabilidade_perda": {
+      "total": 60,
+      "parcial": 20,
+      "procedencia": 80
+    },
+    "confianca_predicao": 75,
+    "fatores_risco": [
+      {
+        "fator": "Dependência de Ação Monitória Conexa",
+        "impacto": "alto",
+        "peso": 0.4,
+        "evidencias": [
+          "A execução está suspensa aguardando o julgamento definitivo da Ação Monitória nº 5048003-86.2024.4.02.5101.",
+          "A Ação Monitória já teve sentença de procedência parcial, declarando válida a confissão de dívida, mas está em fase de recurso."
+        ]
+      },
+      {
+        "fator": "Contradição de Entendimento Judicial",
+        "impacto": "medio",
+        "peso": 0.3,
+        "evidencias": [
+          "A exequente alega que a Ação Monitória utilizou a confissão de dívida apenas como prova para valores não contemplados nela, enquanto o Juízo da monitória entendeu que a confissão era o objeto principal.",
+          "Embargos de declaração foram rejeitados, mantendo a suspensão e a necessidade de aguardar a decisão definitiva da monitória."
+        ]
+      },
+      {
+        "fator": "Exceção de Pré-Executividade Pendente",
+        "impacto": "medio",
+        "peso": 0.2,
+        "evidencias": [
+          "A decisão sobre a exceção de pré-executividade apresentada na execução está condicionada ao julgamento definitivo da ação monitória."
+        ]
+      },
+      {
+        "fator": "Valores Envolvidos",
+        "impacto": "alto",
+        "peso": 0.1,
+        "evidencias": [
+          "O valor da causa é de R$ 177.568,10, e a confissão de dívida em discussão é de R$ 2.685.191,05."
+        ]
+      }
+    ],
+    "jurisprudencia": {
+      "casos_similares_analisados": null,
+      "taxa_procedencia": null,
+      "tribunal": "",
+      "periodo_analise": "",
+      "casos_referencia": []
+    }
+  },
+  "analise_financeira": {
+    "valor_causa": 177568.1,
+    "moeda": "BRL",
+    "exposicao_total": {
+      "pessimista": 2685191.05,
+      "realista": 1611114.63,
+      "otimista": 0
+    },
+    "provisao_recomendada": {
+      "valor": 1611114.63,
+      "percentual_causa": 907.83,
+      "justificativa": "A provisão é baseada no valor da confissão de dívida (R$ 2.685.191,05) com uma probabilidade de perda de 60%, considerando a sentença de procedência parcial na ação monitória conexa e a incerteza do recurso. O valor da causa na execução é significativamente menor que o valor da confissão de dívida em discussão.",
+      "revisao_proxima": "Após julgamento definitivo da Ação Monitória nº 5048003-86.2024.4.02.5101"
+    },
+    "breakdown_pedidos": [
+      {
+        "item": "Confissão de Dívida (período maio/2015 a fev/2021)",
+        "valor_pedido": 2685191.05,
+        "probabilidade_procedencia": 60,
+        "valor_esperado": 1611114.63,
+        "categoria": "principal",
+        "fundamentacao": "Valor da confissão de dívida declarado existente e válida em sentença de 1ª instância na ação monitória conexa, que está em fase de recurso."
+      },
+      {
+        "item": "Faturas em aberto (posteriores a fev/2021)",
+        "valor_pedido": 3088641.62,
+        "probabilidade_procedencia": 20,
+        "valor_esperado": 617728.32,
+        "categoria": "principal",
+        "fundamentacao": "Valores cobrados na ação monitória, mas que a exequente alega não estarem contemplados na confissão de dívida. A probabilidade de procedência é menor devido à distinção de objeto e à necessidade de comprovação específica."
+      }
+    ],
+    "custos_defesa": {
+      "honorarios_internos": null,
+      "honorarios_externos": null,
+      "custas_processuais": null,
+      "pericia": null,
+      "outros": null,
+      "total": null
+    },
+    "impacto_orcamento": {
+      "centro_custo": "",
+      "percentual_orcamento_anual": null,
+      "necessita_aprovacao_especial": true
+    }
+  },
+  "recomendacoes_estrategicas": {
+    "estrategia_principal": "monitoramento",
+    "justificativa_estrategia": "A estratégia principal é o monitoramento ativo da Ação Monitória conexa, pois o prosseguimento desta execução depende diretamente do seu julgamento definitivo. Qualquer ação na execução, como a análise da exceção de pré-executividade, está suspensa. É crucial entender o desfecho da monitória para definir os próximos passos na execução.",
+    "acoes_imediatas": [
+      {
+        "acao": "Monitorar ativamente o andamento da Ação Monitória nº 5048003-86.2024.4.02.5101",
+        "prazo": "Contínuo",
+        "responsavel_sugerido": "Advogado responsável pelo caso",
+        "prioridade": "urgente",
+        "complexidade": "simples",
+        "tempo_estimado": "1 hora/semana"
+      },
+      {
+        "acao": "Preparar análise de impacto da decisão da Ação Monitória na presente execução",
+        "prazo": "30 dias após julgamento definitivo da monitória",
+        "responsavel_sugerido": "Advogado responsável pelo caso",
+        "prioridade": "alta",
+        "complexidade": "media",
+        "tempo_estimado": "8 horas"
+      },
+      {
+        "acao": "Avaliar a exceção de pré-executividade apresentada, considerando o desfecho da monitória",
+        "prazo": "Após reativação da lide",
+        "responsavel_sugerido": "Advogado responsável pelo caso",
+        "prioridade": "alta",
+        "complexidade": "media",
+        "tempo_estimado": "16 horas"
+      }
+    ],
+    "acordo": {
+      "recomenda": false,
+      "momento_ideal": "indeterminado",
+      "faixa_valor": {
+        "minimo": null,
+        "maximo": null,
+        "ideal": null
+      },
+      "condicoes_sugeridas": [],
+      "vantagens": [],
+      "desvantagens": []
+    },
+    "defesa": {
+      "teses_principais": [
+        {
+          "tese": "Inexistência de título executivo extrajudicial para valores não contemplados na confissão de dívida",
+          "fundamentacao_legal": "Art. 784 do CPC (rol taxativo de títulos executivos extrajudiciais)",
+          "probabilidade_sucesso": 40,
+          "precedentes": []
+        },
+        {
+          "tese": "Litispendência ou coisa julgada em relação à confissão de dívida já discutida na ação monitória",
+          "fundamentacao_legal": "Art. 337, §§ 1º, 2º e 3º do CPC",
+          "probabilidade_sucesso": 60,
+          "precedentes": []
+        }
+      ],
+      "provas_necessarias": [
+        {
+          "tipo": "Documental",
+          "descricao": "Documentos da Ação Monitória nº 5048003-86.2024.4.02.5101, incluindo sentença e recursos",
+          "disponibilidade": "disponivel",
+          "criticidade": "essencial"
+        },
+        {
+          "tipo": "Documental",
+          "descricao": "Confissão de Dívida original e faturas mencionadas",
+          "disponibilidade": "disponivel",
+          "criticidade": "essencial"
+        }
+      ]
+    },
+    "preventivas": {
+      "recomendacoes": [
+        {
+          "area_afetada": "Financeiro",
+          "medida": "Revisar e padronizar a emissão e gestão de títulos de dívida e confissões, garantindo clareza sobre o objeto e a abrangência de cada documento.",
+          "prazo_implementacao": "90 dias",
+          "custo_estimado": null,
+          "roi_esperado": "Redução de litígios e maior segurança jurídica"
+        },
+        {
+          "area_afetada": "Jurídico",
+          "medida": "Estabelecer protocolo para evitar a duplicidade de cobrança ou discussão do mesmo objeto em ações judiciais distintas (execução e monitória).",
+          "prazo_implementacao": "60 dias",
+          "custo_estimado": null,
+          "roi_esperado": "Otimização de recursos jurídicos e redução de riscos processuais"
+        }
+      ]
+    }
+  },
+  "analise_operacional": {
+    "areas_envolvidas": [
+      "Jurídico",
+      "Financeiro"
+    ],
+    "impacto_reputacional": "baixo",
+    "risco_precedente": {
+      "nivel": "medio",
+      "casos_similares_potenciais": null,
+      "exposicao_estimada": null
+    },
+    "necessita_comunicacao": {
+      "diretoria": true,
+      "rh": false,
+      "comunicacao": false,
+      "auditoria": false
+    }
+  },
+  "timeline_predicoes": {
+    "duracao_estimada": {
+      "minima_meses": 12,
+      "media_meses": 24,
+      "maxima_meses": 36
+    },
+    "marcos_futuros": [
+      {
+        "evento": "Julgamento definitivo da Ação Monitória nº 5048003-86.2024.4.02.5101",
+        "data_prevista": null,
+        "probabilidade": 70,
+        "impacto_estrategia": "Definirá o prosseguimento da execução e a validade da confissão de dívida."
+      },
+      {
+        "evento": "Decisão sobre a exceção de pré-executividade",
+        "data_prevista": null,
+        "probabilidade": 60,
+        "impacto_estrategia": "Pode extinguir a execução ou parte dela, dependendo do resultado da monitória."
+      },
+      {
+        "evento": "Início da fase de penhora/expropriação (se a execução prosseguir)",
+        "data_prevista": null,
+        "probabilidade": 50,
+        "impacto_estrategia": "Aumentará a pressão sobre o executado e poderá gerar custos adicionais."
+      }
+    ]
+  },
+  "tags_inteligentes": [
+    {
+      "categoria": "tema",
+      "valor": "Execução de Título Extrajudicial",
+      "cor": "#17A2B8"
+    },
+    {
+      "categoria": "urgencia",
+      "valor": "Média",
+      "cor": "#FFC107"
+    },
+    {
+      "categoria": "complexidade",
+      "valor": "Complexa",
+      "cor": "#DC3545"
+    },
+    {
+      "categoria": "area_impactada",
+      "valor": "Financeiro",
+      "cor": "#DC3545"
+    },
+    {
+      "categoria": "tipo_risco",
+      "valor": "Risco de Perda",
+      "cor": "#DC3545"
+    },
+    {
+      "categoria": "fase",
+      "valor": "Suspenso",
+      "cor": "#6C757D"
+    },
+    {
+      "categoria": "valor",
+      "valor": "Alto",
+      "cor": "#DC3545"
+    },
+    {
+      "categoria": "estrategia",
+      "valor": "Monitoramento",
+      "cor": "#17A2B8"
+    },
+    {
+      "categoria": "documento_pendente",
+      "valor": "Julgamento Monitória",
+      "cor": "#FFC107"
+    }
+  ],
+  "metadata": {
+    "versao_analise": "1.0.0",
+    "data_analise": "2025-10-15",
+    "modelo_ia": {
+      "nome": "Legal Risk Analyzer",
+      "versao": "1.0",
+      "acuracia_geral": null
+    },
+    "analista_responsavel": "IA",
+    "revisao_humana": {
+      "realizada": false,
+      "data": null,
+      "aprovador": "",
+      "ajustes": ""
+    },
+    "hash_documento": ""
+  },
+  "custo_llm": "cache_tokens_details=None cached_content_token_count=None candidates_token_count=4027 candidates_tokens_details=None prompt_token_count=7785 prompt_tokens_details=[ModalityTokenCount(\n  modality=<MediaModality.TEXT: 'TEXT'>,\n  token_count=7785\n)] thoughts_token_count=None tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=11812 traffic_type=None"
+}

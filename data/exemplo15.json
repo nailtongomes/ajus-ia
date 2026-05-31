@@ -1,0 +1,251 @@
+{
+  "processo": {
+    "numero": "01016874020255010018",
+    "tipo": "trabalhista",
+    "subtipo": "RITO ORDINÁRIO",
+    "fase_atual": "sentenca",
+    "data_distribuicao": null,
+    "prazo_proximo": {
+      "tipo": "prolação de sentença",
+      "data_limite": null,
+      "dias_restantes": null,
+      "criticidade": "alta"
+    },
+    "vara": {
+      "codigo": "",
+      "nome": "51ª Vara do Trabalho do Rio de Janeiro",
+      "juiz": "FLAVIA BUAES RODRIGUES"
+    }
+  },
+  "partes": {
+    "autor": {
+      "nome": "JOAO VITOR DE AZEVEDO BASTOS",
+      "cpf_cnpj": "",
+      "tipo": "Pessoa Física",
+      "tempo_casa": null,
+      "cargo": "",
+      "area": "",
+      "historico_processos": null,
+      "advogados": [
+        {
+          "nome": "RONALDO FERREIRA TOLENTINO",
+          "oab": "17384/DF",
+          "taxa_sucesso_historica": null
+        }
+      ]
+    },
+    "reu": {
+      "nome": "COMPANHIA DOCAS DO RIO DE JANEIRO",
+      "cnpj": "",
+      "advogados": [
+        {
+          "nome": "MAURO ABDON GABRIEL",
+          "oab": "82725/RJ",
+          "taxa_sucesso_historica": null
+        },
+        {
+          "nome": "MARINA BORDALLO CASTRO",
+          "oab": "225823/RJ",
+          "taxa_sucesso_historica": null
+        }
+      ]
+    }
+  },
+  "analise_risco": {
+    "score_risco": 65,
+    "classificacao": "alto",
+    "probabilidade_perda": {
+      "total": null,
+      "parcial": null,
+      "procedencia": null
+    },
+    "confianca_predicao": 50,
+    "fatores_risco": [
+      {
+        "fator": "Fase Processual Avançada",
+        "impacto": "alto",
+        "peso": 0.4,
+        "evidencias": [
+          "Autos conclusos para prolação de sentença, indicando fase decisória iminente."
+        ]
+      },
+      {
+        "fator": "Incerteza do Resultado da Sentença",
+        "impacto": "medio",
+        "peso": 0.3,
+        "evidencias": [
+          "Não há informações sobre o teor do despacho que levou à conclusão para sentença, nem sobre o andamento da instrução processual."
+        ]
+      },
+      {
+        "fator": "Participação Remota do Reclamante",
+        "impacto": "baixo",
+        "peso": 0.1,
+        "evidencias": [
+          "A autorização para participação do reclamante por videoconferência pode indicar alguma particularidade, mas não necessariamente um risco direto."
+        ]
+      }
+    ],
+    "jurisprudencia": {
+      "casos_similares_analisados": null,
+      "taxa_procedencia": null,
+      "tribunal": "",
+      "periodo_analise": "",
+      "casos_referencia": []
+    }
+  },
+  "analise_financeira": {
+    "valor_causa": null,
+    "moeda": "BRL",
+    "exposicao_total": {
+      "pessimista": null,
+      "realista": null,
+      "otimista": null
+    },
+    "provisao_recomendada": {
+      "valor": null,
+      "percentual_causa": null,
+      "justificativa": "Não há informações sobre o valor da causa ou pedidos específicos para estimar a provisão.",
+      "revisao_proxima": "Após prolação da sentença"
+    },
+    "breakdown_pedidos": [],
+    "custos_defesa": {
+      "honorarios_internos": null,
+      "honorarios_externos": null,
+      "custas_processuais": null,
+      "pericia": null,
+      "outros": null,
+      "total": null
+    },
+    "impacto_orcamento": {
+      "centro_custo": "",
+      "percentual_orcamento_anual": null,
+      "necessita_aprovacao_especial": false
+    }
+  },
+  "recomendacoes_estrategicas": {
+    "estrategia_principal": "monitoramento",
+    "justificativa_estrategia": "O processo está concluso para sentença, tornando o monitoramento do resultado a ação mais imediata e crucial. Ações defensivas ou de acordo dependerão do teor da decisão.",
+    "acoes_imediatas": [
+      {
+        "acao": "Monitorar diariamente as publicações do processo para ciência da sentença.",
+        "prazo": "Imediato e contínuo",
+        "responsavel_sugerido": "Equipe Jurídica Interna",
+        "prioridade": "urgente",
+        "complexidade": "simples",
+        "tempo_estimado": "1 hora/dia"
+      },
+      {
+        "acao": "Preparar minuta de recurso (Recurso Ordinário) caso a sentença seja desfavorável.",
+        "prazo": "Após ciência da sentença",
+        "responsavel_sugerido": "Advogados Externos",
+        "prioridade": "alta",
+        "complexidade": "complexa",
+        "tempo_estimado": "5 dias"
+      }
+    ],
+    "acordo": {
+      "recomenda": false,
+      "momento_ideal": "indeterminado",
+      "faixa_valor": {
+        "minimo": null,
+        "maximo": null,
+        "ideal": null
+      },
+      "condicoes_sugeridas": [],
+      "vantagens": [],
+      "desvantagens": []
+    },
+    "defesa": {
+      "teses_principais": [],
+      "provas_necessarias": []
+    },
+    "preventivas": {
+      "recomendacoes": []
+    }
+  },
+  "analise_operacional": {
+    "areas_envolvidas": [
+      "Jurídico"
+    ],
+    "impacto_reputacional": "baixo",
+    "risco_precedente": {
+      "nivel": "indeterminado",
+      "casos_similares_potenciais": null,
+      "exposicao_estimada": null
+    },
+    "necessita_comunicacao": {
+      "diretoria": false,
+      "rh": false,
+      "comunicacao": false,
+      "auditoria": false
+    }
+  },
+  "timeline_predicoes": {
+    "duracao_estimada": {
+      "minima_meses": null,
+      "media_meses": null,
+      "maxima_meses": null
+    },
+    "marcos_futuros": [
+      {
+        "evento": "Prolação da Sentença",
+        "data_prevista": null,
+        "probabilidade": 95,
+        "impacto_estrategia": "Definirá o próximo passo estratégico (recurso, cumprimento ou arquivamento)."
+      },
+      {
+        "evento": "Publicação da Sentença",
+        "data_prevista": null,
+        "probabilidade": 95,
+        "impacto_estrategia": "Início da contagem de prazo para eventual recurso."
+      },
+      {
+        "evento": "Recurso Ordinário (se houver)",
+        "data_prevista": null,
+        "probabilidade": null,
+        "impacto_estrategia": "Prolongamento do processo e análise em segunda instância."
+      }
+    ]
+  },
+  "tags_inteligentes": [
+    {
+      "categoria": "fase",
+      "valor": "Sentença Iminente",
+      "cor": "#DC3545"
+    },
+    {
+      "categoria": "urgencia",
+      "valor": "Urgente: Monitoramento",
+      "cor": "#DC3545"
+    },
+    {
+      "categoria": "tipo_risco",
+      "valor": "Risco de Condenação",
+      "cor": "#FFC107"
+    },
+    {
+      "categoria": "area_impactada",
+      "valor": "Jurídico",
+      "cor": "#17A2B8"
+    }
+  ],
+  "metadata": {
+    "versao_analise": "1.0.0",
+    "data_analise": "2026-04-14",
+    "modelo_ia": {
+      "nome": "Legal Risk Analyzer",
+      "versao": "1.0",
+      "acuracia_geral": null
+    },
+    "analista_responsavel": "IA",
+    "revisao_humana": {
+      "realizada": false,
+      "data": null,
+      "aprovador": "",
+      "ajustes": ""
+    },
+    "hash_documento": ""
+  },
+  "custo_llm": "cache_tokens_details=None cached_content_token_count=None candidates_token_count=2288 candidates_tokens_details=None prompt_token_count=5816 prompt_tokens_details=[ModalityTokenCount(\n  modality=<MediaModality.TEXT: 'TEXT'>,\n  token_count=5816\n)] thoughts_token_count=None tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=8104 traffic_type=None"
+}

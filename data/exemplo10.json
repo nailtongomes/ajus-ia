@@ -1,0 +1,350 @@
+{
+  "processo": {
+    "numero": "0101662-29.2025.5.01.0082",
+    "tipo": "trabalhista",
+    "subtipo": "Rito Ordinário",
+    "fase_atual": "inicial",
+    "data_distribuicao": "2025-12-23",
+    "prazo_proximo": {
+      "tipo": "Audiência Inicial",
+      "data_limite": "2026-05-04",
+      "dias_restantes": null,
+      "criticidade": "alta"
+    },
+    "vara": {
+      "codigo": "63ª Vara do Trabalho",
+      "nome": "63ª Vara do Trabalho do Rio de Janeiro",
+      "juiz": "ERIKA CRISTINA FERREIRA GOMES"
+    }
+  },
+  "partes": {
+    "autor": {
+      "nome": "DENILSON DE JESUS",
+      "cpf_cnpj": "",
+      "tipo": "Empregado",
+      "tempo_casa": null,
+      "cargo": "indeterminado",
+      "area": "indeterminado",
+      "historico_processos": null,
+      "advogados": []
+    },
+    "reu": {
+      "nome": "COMPANHIA DOCAS DO RIO DE JANEIRO",
+      "cnpj": "",
+      "advogados": [
+        {
+          "nome": "MARIA DA CONCEICAO MOTA FERREIRA CRUZ",
+          "oab": "252520/RJ",
+          "taxa_sucesso_historica": null
+        }
+      ]
+    }
+  },
+  "analise_risco": {
+    "score_risco": 65,
+    "classificacao": "alto",
+    "probabilidade_perda": {
+      "total": null,
+      "parcial": null,
+      "procedencia": 60
+    },
+    "confianca_predicao": 75,
+    "fatores_risco": [
+      {
+        "fator": "Natureza da Reclamação (Adicional de Risco, Empregados Portuários)",
+        "impacto": "alto",
+        "peso": 0.4,
+        "evidencias": [
+          "O assunto do processo inclui 'Adicional de Risco' e 'Empregados Portuários', que são temas com histórico de litígios e decisões favoráveis aos trabalhadores em certas condições."
+        ]
+      },
+      {
+        "fator": "Fase Processual Inicial e Audiência Designada",
+        "impacto": "medio",
+        "peso": 0.2,
+        "evidencias": [
+          "O processo está em fase inicial, com audiência inaugural designada, o que abre espaço para conciliação, mas também para o prosseguimento da instrução e potencial condenação."
+        ]
+      },
+      {
+        "fator": "Risco de Revelia e Confissão Ficta",
+        "impacto": "alto",
+        "peso": 0.3,
+        "evidencias": [
+          "A intimação expressamente alerta que a ausência da parte ré importará em revelia e aplicação de pena de confissão ficta, o que pode agravar significativamente o risco de perda."
+        ]
+      },
+      {
+        "fator": "Valor da Causa",
+        "impacto": "medio",
+        "peso": 0.1,
+        "evidencias": [
+          "O valor da causa é de R$ 199.861,70, representando uma exposição financeira considerável."
+        ]
+      }
+    ],
+    "jurisprudencia": {
+      "casos_similares_analisados": null,
+      "taxa_procedencia": null,
+      "tribunal": "",
+      "periodo_analise": "",
+      "casos_referencia": []
+    }
+  },
+  "analise_financeira": {
+    "valor_causa": 199861.7,
+    "moeda": "BRL",
+    "exposicao_total": {
+      "pessimista": 199861.7,
+      "realista": 119917.02,
+      "otimista": 0
+    },
+    "provisao_recomendada": {
+      "valor": 119917.02,
+      "percentual_causa": 60,
+      "justificativa": "Provisão baseada na probabilidade de procedência de 60% do valor da causa, considerando os riscos de revelia e a natureza dos pedidos (Adicional de Risco para Portuários).",
+      "revisao_proxima": "2026-05-04"
+    },
+    "breakdown_pedidos": [
+      {
+        "item": "Adicional de Risco",
+        "valor_pedido": null,
+        "probabilidade_procedencia": 60,
+        "valor_esperado": null,
+        "categoria": "principal",
+        "fundamentacao": "Pedido principal inferido pelo assunto do processo."
+      },
+      {
+        "item": "Empregados Portuários (Direitos correlatos)",
+        "valor_pedido": null,
+        "probabilidade_procedencia": 60,
+        "valor_esperado": null,
+        "categoria": "principal",
+        "fundamentacao": "Pedido principal inferido pelo assunto do processo."
+      }
+    ],
+    "custos_defesa": {
+      "honorarios_internos": null,
+      "honorarios_externos": null,
+      "custas_processuais": null,
+      "pericia": null,
+      "outros": null,
+      "total": null
+    },
+    "impacto_orcamento": {
+      "centro_custo": "",
+      "percentual_orcamento_anual": null,
+      "necessita_aprovacao_especial": false
+    }
+  },
+  "recomendacoes_estrategicas": {
+    "estrategia_principal": "acordo_judicial",
+    "justificativa_estrategia": "Considerando o alto risco de revelia e confissão ficta, a natureza dos pedidos (Adicional de Risco para Portuários) e o valor da causa, a busca por um acordo judicial na fase inicial pode mitigar a exposição e evitar custos e riscos maiores no futuro.",
+    "acoes_imediatas": [
+      {
+        "acao": "Confirmar recebimento da citação e presença na audiência inicial",
+        "prazo": "Imediato",
+        "responsavel_sugerido": "Advogado Externo",
+        "prioridade": "urgente",
+        "complexidade": "simples",
+        "tempo_estimado": "1 dia"
+      },
+      {
+        "acao": "Analisar detalhadamente a petição inicial e documentos do autor",
+        "prazo": "Até 2026-04-20",
+        "responsavel_sugerido": "Advogado Externo",
+        "prioridade": "alta",
+        "complexidade": "media",
+        "tempo_estimado": "3 dias"
+      },
+      {
+        "acao": "Levantar histórico de pagamentos e condições de trabalho do autor",
+        "prazo": "Até 2026-04-20",
+        "responsavel_sugerido": "RH / Financeiro",
+        "prioridade": "alta",
+        "complexidade": "media",
+        "tempo_estimado": "5 dias"
+      },
+      {
+        "acao": "Preparar proposta de acordo para audiência inicial",
+        "prazo": "Até 2026-04-28",
+        "responsavel_sugerido": "Advogado Externo / Jurídico Interno",
+        "prioridade": "alta",
+        "complexidade": "media",
+        "tempo_estimado": "2 dias"
+      }
+    ],
+    "acordo": {
+      "recomenda": true,
+      "momento_ideal": "Audiência Inicial (04/05/2026)",
+      "faixa_valor": {
+        "minimo": 60000.0,
+        "maximo": 100000.0,
+        "ideal": 80000.0
+      },
+      "condicoes_sugeridas": [
+        "Quitação plena do contrato de trabalho",
+        "Confidencialidade dos termos do acordo",
+        "Pagamento em parcela única ou poucas parcelas"
+      ],
+      "vantagens": [
+        "Redução da exposição financeira",
+        "Evita custos adicionais com instrução e recursos",
+        "Elimina o risco de revelia e confissão ficta",
+        "Encerramento rápido do litígio"
+      ],
+      "desvantagens": [
+        "Pagamento de valor sem reconhecimento de culpa",
+        "Pode ser visto como incentivo a novas ações"
+      ]
+    },
+    "defesa": {
+      "teses_principais": [
+        {
+          "tese": "Inexistência de direito ao adicional de risco",
+          "fundamentacao_legal": "Análise das condições específicas de trabalho do autor e da legislação aplicável aos empregados portuários para verificar se os requisitos para o adicional são preenchidos.",
+          "probabilidade_sucesso": 40,
+          "precedentes": []
+        }
+      ],
+      "provas_necessarias": [
+        {
+          "tipo": "Documental",
+          "descricao": "Contrato de trabalho, holerites, fichas de EPI, PPRA, PCMSO, laudos de insalubridade/periculosidade, normas internas.",
+          "disponibilidade": "disponivel",
+          "criticidade": "essencial"
+        },
+        {
+          "tipo": "Testemunhal",
+          "descricao": "Testemunhas que possam atestar as reais condições de trabalho do autor.",
+          "disponibilidade": "parcial",
+          "criticidade": "alta"
+        }
+      ]
+    },
+    "preventivas": {
+      "recomendacoes": [
+        {
+          "area_afetada": "RH / Operações",
+          "medida": "Revisão das condições de trabalho e pagamento de adicionais para empregados portuários",
+          "prazo_implementacao": "6 meses",
+          "custo_estimado": null,
+          "roi_esperado": "Redução de litígios futuros"
+        },
+        {
+          "area_afetada": "Jurídico / Compliance",
+          "medida": "Treinamento sobre a importância do comparecimento em audiências e prazos processuais",
+          "prazo_implementacao": "3 meses",
+          "custo_estimado": null,
+          "roi_esperado": "Mitigação do risco de revelia"
+        }
+      ]
+    }
+  },
+  "analise_operacional": {
+    "areas_envolvidas": [
+      "Jurídico",
+      "RH",
+      "Financeiro"
+    ],
+    "impacto_reputacional": "medio",
+    "risco_precedente": {
+      "nivel": "medio",
+      "casos_similares_potenciais": null,
+      "exposicao_estimada": null
+    },
+    "necessita_comunicacao": {
+      "diretoria": true,
+      "rh": true,
+      "comunicacao": false,
+      "auditoria": false
+    }
+  },
+  "timeline_predicoes": {
+    "duracao_estimada": {
+      "minima_meses": 6,
+      "media_meses": 18,
+      "maxima_meses": 36
+    },
+    "marcos_futuros": [
+      {
+        "evento": "Audiência Inicial (Conciliação/Instrução)",
+        "data_prevista": "2026-05-04",
+        "probabilidade": 95,
+        "impacto_estrategia": "Momento crucial para tentativa de acordo ou definição do rito processual."
+      },
+      {
+        "evento": "Apresentação de Contestação",
+        "data_prevista": "2026-05-04",
+        "probabilidade": 90,
+        "impacto_estrategia": "Definição das teses de defesa e impugnação dos pedidos do autor."
+      },
+      {
+        "evento": "Sentença de 1º Grau",
+        "data_prevista": "2026-11-04",
+        "probabilidade": 70,
+        "impacto_estrategia": "Decisão que definirá a procedência ou improcedência dos pedidos, com impacto direto na provisão."
+      }
+    ]
+  },
+  "tags_inteligentes": [
+    {
+      "categoria": "tema",
+      "valor": "Adicional de Risco",
+      "cor": "#DC3545"
+    },
+    {
+      "categoria": "urgencia",
+      "valor": "Audiência Próxima",
+      "cor": "#DC3545"
+    },
+    {
+      "categoria": "complexidade",
+      "valor": "Média",
+      "cor": "#FFC107"
+    },
+    {
+      "categoria": "area_impactada",
+      "valor": "RH",
+      "cor": "#17A2B8"
+    },
+    {
+      "categoria": "tipo_risco",
+      "valor": "Financeiro",
+      "cor": "#DC3545"
+    },
+    {
+      "categoria": "fase",
+      "valor": "Inicial",
+      "cor": "#28A745"
+    },
+    {
+      "categoria": "valor",
+      "valor": "Alto",
+      "cor": "#DC3545"
+    },
+    {
+      "categoria": "estrategia",
+      "valor": "Acordo",
+      "cor": "#28A745"
+    }
+  ],
+  "metadata": {
+    "versao_analise": "1.0.0",
+    "data_analise": "",
+    "modelo_ia": {
+      "nome": "Legal Risk Analyzer",
+      "versao": "1.0",
+      "acuracia_geral": null
+    },
+    "analista_responsavel": "IA",
+    "revisao_humana": {
+      "realizada": false,
+      "data": null,
+      "aprovador": "",
+      "ajustes": ""
+    },
+    "hash_documento": ""
+  },
+  "custo_llm": "cache_tokens_details=None cached_content_token_count=None candidates_token_count=3563 candidates_tokens_details=None prompt_token_count=6530 prompt_tokens_details=[ModalityTokenCount(\n  modality=<MediaModality.TEXT: 'TEXT'>,\n  token_count=6530\n)] thoughts_token_count=None tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=10093 traffic_type=None"
+}

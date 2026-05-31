@@ -1,0 +1,368 @@
+{
+  "processo": {
+    "numero": "0101687-04.2025.5.01.0030",
+    "tipo": "trabalhista",
+    "subtipo": "Rito Ordinário",
+    "fase_atual": "instrucao",
+    "data_distribuicao": "2025-12-17",
+    "prazo_proximo": {
+      "tipo": "Audiência UNA Telepresencial",
+      "data_limite": "2026-06-23",
+      "dias_restantes": null,
+      "criticidade": "alta"
+    },
+    "vara": {
+      "codigo": "30ª VT",
+      "nome": "30ª Vara do Trabalho do Rio de Janeiro",
+      "juiz": "ANDRESSA CAMPANA TEDESCO VALENTIM"
+    }
+  },
+  "partes": {
+    "autor": {
+      "nome": "ANTONIO AGUIAR DE ALVARENGA",
+      "cpf_cnpj": "",
+      "tipo": "Pessoa Física",
+      "tempo_casa": null,
+      "cargo": "",
+      "area": "",
+      "historico_processos": null,
+      "advogados": [
+        {
+          "nome": "FELIPE PIRES QUEIROZ",
+          "oab": "183368/RJ",
+          "taxa_sucesso_historica": null
+        }
+      ]
+    },
+    "reu": {
+      "nome": "PLANO B TRANSPORTES EIRELI - ME",
+      "cnpj": "",
+      "advogados": [
+        {
+          "nome": "RONALDO FERREIRA TOLENTINO",
+          "oab": "17384/DF",
+          "taxa_sucesso_historica": null
+        },
+        {
+          "nome": "JOSE CARLOS FONSECA DOS SANTOS",
+          "oab": "147698/RJ",
+          "taxa_sucesso_historica": null
+        }
+      ]
+    }
+  },
+  "analise_risco": {
+    "score_risco": 65,
+    "classificacao": "alto",
+    "probabilidade_perda": {
+      "total": null,
+      "parcial": null,
+      "procedencia": 60
+    },
+    "confianca_predicao": 75,
+    "fatores_risco": [
+      {
+        "fator": "Pedidos de Adicional de Periculosidade",
+        "impacto": "alto",
+        "peso": 0.4,
+        "evidencias": [
+          "Assunto principal do processo é Adicional de Periculosidade.",
+          "A ausência de PPRA, PCMSO, LTCAT e demais documentos pertinentes atrai o ônus da prova pericial para o réu."
+        ]
+      },
+      {
+        "fator": "Responsabilidade Subsidiária da Companhia Docas",
+        "impacto": "medio",
+        "peso": 0.3,
+        "evidencias": [
+          "A análise da responsabilidade subsidiária dependerá da análise de diversos elementos, incluindo contrato de prestação de serviços e fiscalização.",
+          "Tutela de urgência para exibição de documentos indeferida, indicando ausência de prova da probabilidade do direito em cognição sumária."
+        ]
+      },
+      {
+        "fator": "Fase Processual (Audiência UNA)",
+        "impacto": "medio",
+        "peso": 0.2,
+        "evidencias": [
+          "Designação de Audiência UNA telepresencial com depoimentos pessoais recíprocos sob pena de confissão.",
+          "Necessidade de as partes juntarem documentos como PPRA, PCMSO, LTCAT."
+        ]
+      },
+      {
+        "fator": "Valor da Causa Elevado",
+        "impacto": "alto",
+        "peso": 0.1,
+        "evidencias": [
+          "Valor da causa de R$ 650.369,59, indicando alta exposição financeira."
+        ]
+      }
+    ],
+    "jurisprudencia": {
+      "casos_similares_analisados": null,
+      "taxa_procedencia": null,
+      "tribunal": "",
+      "periodo_analise": "",
+      "casos_referencia": []
+    }
+  },
+  "analise_financeira": {
+    "valor_causa": 650369.59,
+    "moeda": "BRL",
+    "exposicao_total": {
+      "pessimista": 650369.59,
+      "realista": 390221.75,
+      "otimista": 130073.92
+    },
+    "provisao_recomendada": {
+      "valor": 390221.75,
+      "percentual_causa": 60,
+      "justificativa": "Baseado na probabilidade de procedência estimada em 60% para os pedidos principais, considerando o valor da causa e a necessidade de produção de prova pericial pelo réu.",
+      "revisao_proxima": "Após audiência UNA e produção de provas"
+    },
+    "breakdown_pedidos": [
+      {
+        "item": "Adicional de Periculosidade",
+        "valor_pedido": null,
+        "probabilidade_procedencia": 60,
+        "valor_esperado": null,
+        "categoria": "principal",
+        "fundamentacao": "Pedido principal, com ônus da prova pericial para o réu caso não apresente documentos."
+      },
+      {
+        "item": "Verbas Remuneratórias, Indenizatórias e Benefícios",
+        "valor_pedido": null,
+        "probabilidade_procedencia": 50,
+        "valor_esperado": null,
+        "categoria": "principal",
+        "fundamentacao": "Pedidos acessórios ao principal, com probabilidade de procedência média."
+      }
+    ],
+    "custos_defesa": {
+      "honorarios_internos": null,
+      "honorarios_externos": null,
+      "custas_processuais": null,
+      "pericia": null,
+      "outros": null,
+      "total": null
+    },
+    "impacto_orcamento": {
+      "centro_custo": "",
+      "percentual_orcamento_anual": null,
+      "necessita_aprovacao_especial": true
+    }
+  },
+  "recomendacoes_estrategicas": {
+    "estrategia_principal": "defesa_tecnica",
+    "justificativa_estrategia": "Apesar do alto valor da causa e da complexidade dos pedidos, a fase processual inicial (audiência UNA) permite uma defesa técnica robusta, especialmente na produção de provas e na contestação da responsabilidade subsidiária. A ausência de concessão de tutela provisória de urgência para exibição de documentos indica que o autor ainda não demonstrou a probabilidade do direito de forma sumária.",
+    "acoes_imediatas": [
+      {
+        "acao": "Preparar defesa para Audiência UNA",
+        "prazo": "2026-06-22",
+        "responsavel_sugerido": "Advogado Externo",
+        "prioridade": "urgente",
+        "complexidade": "complexa",
+        "tempo_estimado": "2 semanas"
+      },
+      {
+        "acao": "Levantar e organizar documentos (PPRA, PCMSO, LTCAT, contrato de prestação de serviços, fiscalização)",
+        "prazo": "2026-06-15",
+        "responsavel_sugerido": "RH/Jurídico Interno",
+        "prioridade": "alta",
+        "complexidade": "media",
+        "tempo_estimado": "1 semana"
+      },
+      {
+        "acao": "Preparar prepostos e testemunhas para depoimento pessoal",
+        "prazo": "2026-06-20",
+        "responsavel_sugerido": "Advogado Externo/RH",
+        "prioridade": "alta",
+        "complexidade": "media",
+        "tempo_estimado": "3 dias"
+      }
+    ],
+    "acordo": {
+      "recomenda": false,
+      "momento_ideal": "indeterminado",
+      "faixa_valor": {
+        "minimo": null,
+        "maximo": null,
+        "ideal": null
+      },
+      "condicoes_sugeridas": [],
+      "vantagens": [],
+      "desvantagens": []
+    },
+    "defesa": {
+      "teses_principais": [
+        {
+          "tese": "Inexistência de condições de periculosidade",
+          "fundamentacao_legal": "Art. 193 da CLT e NR-16 do MTE",
+          "probabilidade_sucesso": 40,
+          "precedentes": []
+        },
+        {
+          "tese": "Ausência de responsabilidade subsidiária da Companhia Docas",
+          "fundamentacao_legal": "Art. 71, § 1º, da Lei nº 8.666/93 e Súmula 331 do TST (necessidade de comprovação de culpa in vigilando)",
+          "probabilidade_sucesso": 50,
+          "precedentes": []
+        }
+      ],
+      "provas_necessarias": [
+        {
+          "tipo": "Documental",
+          "descricao": "PPRA, PCMSO, LTCAT, contrato de prestação de serviços, comprovantes de fiscalização do contrato",
+          "disponibilidade": "indeterminado",
+          "criticidade": "essencial"
+        },
+        {
+          "tipo": "Pericial",
+          "descricao": "Perícia técnica para avaliação das condições de periculosidade no ambiente de trabalho",
+          "disponibilidade": "indisponivel",
+          "criticidade": "essencial"
+        },
+        {
+          "tipo": "Testemunhal",
+          "descricao": "Testemunhas que possam atestar as condições de trabalho e a fiscalização do contrato",
+          "disponibilidade": "indeterminado",
+          "criticidade": "alta"
+        }
+      ]
+    },
+    "preventivas": {
+      "recomendacoes": [
+        {
+          "area_afetada": "Operações/Segurança do Trabalho",
+          "medida": "Revisão e atualização de PPRA, PCMSO e LTCAT, garantindo sua conformidade e disponibilidade",
+          "prazo_implementacao": "6 meses",
+          "custo_estimado": null,
+          "roi_esperado": "Redução de litígios por periculosidade"
+        },
+        {
+          "area_afetada": "Contratos/Jurídico",
+          "medida": "Fortalecimento dos mecanismos de fiscalização de contratos com terceiros para mitigar risco de responsabilidade subsidiária",
+          "prazo_implementacao": "3 meses",
+          "custo_estimado": null,
+          "roi_esperado": "Diminuição de condenações subsidiárias"
+        }
+      ]
+    }
+  },
+  "analise_operacional": {
+    "areas_envolvidas": [
+      "Jurídico",
+      "RH",
+      "Financeiro",
+      "Operações",
+      "Segurança do Trabalho"
+    ],
+    "impacto_reputacional": "medio",
+    "risco_precedente": {
+      "nivel": "medio",
+      "casos_similares_potenciais": null,
+      "exposicao_estimada": null
+    },
+    "necessita_comunicacao": {
+      "diretoria": true,
+      "rh": true,
+      "comunicacao": false,
+      "auditoria": false
+    }
+  },
+  "timeline_predicoes": {
+    "duracao_estimada": {
+      "minima_meses": 18,
+      "media_meses": 36,
+      "maxima_meses": 60
+    },
+    "marcos_futuros": [
+      {
+        "evento": "Audiência UNA (Instrução e Tentativa de Conciliação)",
+        "data_prevista": "2026-06-23",
+        "probabilidade": 95,
+        "impacto_estrategia": "Momento crucial para produção de provas e avaliação de acordo. A ausência pode gerar confissão."
+      },
+      {
+        "evento": "Realização de Perícia Técnica (se deferida)",
+        "data_prevista": null,
+        "probabilidade": 70,
+        "impacto_estrategia": "Fundamental para a tese de periculosidade. O resultado pode alterar significativamente o risco."
+      },
+      {
+        "evento": "Sentença de 1º Grau",
+        "data_prevista": null,
+        "probabilidade": 80,
+        "impacto_estrategia": "Definirá o resultado inicial e a necessidade de recurso."
+      }
+    ]
+  },
+  "tags_inteligentes": [
+    {
+      "categoria": "tema",
+      "valor": "Adicional de Periculosidade",
+      "cor": "#DC3545"
+    },
+    {
+      "categoria": "urgencia",
+      "valor": "Audiência UNA Próxima",
+      "cor": "#DC3545"
+    },
+    {
+      "categoria": "complexidade",
+      "valor": "Alta Complexidade",
+      "cor": "#DC3545"
+    },
+    {
+      "categoria": "area_impactada",
+      "valor": "RH",
+      "cor": "#FFC107"
+    },
+    {
+      "categoria": "area_impactada",
+      "valor": "Segurança do Trabalho",
+      "cor": "#FFC107"
+    },
+    {
+      "categoria": "tipo_risco",
+      "valor": "Risco Financeiro Elevado",
+      "cor": "#DC3545"
+    },
+    {
+      "categoria": "fase",
+      "valor": "Instrução",
+      "cor": "#17A2B8"
+    },
+    {
+      "categoria": "valor",
+      "valor": "Acima de 500k",
+      "cor": "#DC3545"
+    },
+    {
+      "categoria": "estrategia",
+      "valor": "Defesa Técnica",
+      "cor": "#28A745"
+    },
+    {
+      "categoria": "documento_pendente",
+      "valor": "PPRA/PCMSO/LTCAT",
+      "cor": "#FFC107"
+    }
+  ],
+  "metadata": {
+    "versao_analise": "1.0.0",
+    "data_analise": "2024-05-15",
+    "modelo_ia": {
+      "nome": "Legal Risk Analyzer",
+      "versao": "1.0",
+      "acuracia_geral": null
+    },
+    "analista_responsavel": "IA",
+    "revisao_humana": {
+      "realizada": false,
+      "data": null,
+      "aprovador": "",
+      "ajustes": ""
+    },
+    "hash_documento": ""
+  },
+  "custo_llm": "cache_tokens_details=None cached_content_token_count=None candidates_token_count=3745 candidates_tokens_details=None prompt_token_count=8158 prompt_tokens_details=[ModalityTokenCount(\n  modality=<MediaModality.TEXT: 'TEXT'>,\n  token_count=8158\n)] thoughts_token_count=None tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=11903 traffic_type=None"
+}

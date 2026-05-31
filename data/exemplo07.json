@@ -1,0 +1,325 @@
+{
+  "processo": {
+    "numero": "5093689-67.2025.4.02.5101",
+    "tipo": "civel",
+    "subtipo": "EXECUÇÃO DE TÍTULO EXTRAJUDICIAL",
+    "fase_atual": "execucao",
+    "data_distribuicao": null,
+    "prazo_proximo": {
+      "tipo": "Manifestação sobre proposta de acordo",
+      "data_limite": "2026-06-09",
+      "dias_restantes": null,
+      "criticidade": "alta"
+    },
+    "vara": {
+      "codigo": "",
+      "nome": "22ª Vara Federal do Rio de Janeiro",
+      "juiz": ""
+    }
+  },
+  "partes": {
+    "autor": {
+      "nome": "COMPANHIA DOCAS DO RIO DE JANEIRO",
+      "cpf_cnpj": "",
+      "tipo": "Pessoa Jurídica",
+      "tempo_casa": null,
+      "cargo": "",
+      "area": "",
+      "historico_processos": null,
+      "advogados": [
+        {
+          "nome": "JOSE ESQUENAZI NETO",
+          "oab": "114029/RJ",
+          "taxa_sucesso_historica": null
+        },
+        {
+          "nome": "NINA MANELA TUCHERMAN",
+          "oab": "140288/RJ",
+          "taxa_sucesso_historica": null
+        },
+        {
+          "nome": "VIVIAN NIGRI QUEIROGA DINIZ DA PAIXAO",
+          "oab": "184111/RJ",
+          "taxa_sucesso_historica": null
+        },
+        {
+          "nome": "FLAVIA COUFAL RAED",
+          "oab": "158361/RJ",
+          "taxa_sucesso_historica": null
+        }
+      ]
+    },
+    "reu": {
+      "nome": "",
+      "cnpj": "",
+      "advogados": []
+    }
+  },
+  "analise_risco": {
+    "score_risco": 60,
+    "classificacao": "medio",
+    "probabilidade_perda": {
+      "total": null,
+      "parcial": null,
+      "procedencia": null
+    },
+    "confianca_predicao": 75,
+    "fatores_risco": [
+      {
+        "fator": "Risco de Cancelamento da Distribuição",
+        "impacto": "alto",
+        "peso": 0.4,
+        "evidencias": [
+          "A parte exequente foi intimada duas vezes para comprovar o recolhimento das custas iniciais, sob pena de cancelamento da distribuição (art. 290 do CPC).",
+          "Na primeira intimação, juntou apenas as guias sem comprovante de pagamento.",
+          "Na segunda intimação, alegou pagamento, mas a guia foi considerada irregular."
+        ]
+      },
+      {
+        "fator": "Proposta de Acordo Pendente",
+        "impacto": "medio",
+        "peso": 0.3,
+        "evidencias": [
+          "Existe uma proposta de acordo apresentada no evento 28 (PROACORDO1).",
+          "A parte exequente foi intimada para se manifestar sobre a proposta."
+        ]
+      },
+      {
+        "fator": "Fase Processual (Execução)",
+        "impacto": "baixo",
+        "peso": 0.3,
+        "evidencias": [
+          "O processo está na fase de execução de título extrajudicial, indicando a existência de um título executivo."
+        ]
+      }
+    ],
+    "jurisprudencia": {
+      "casos_similares_analisados": null,
+      "taxa_procedencia": null,
+      "tribunal": "",
+      "periodo_analise": "",
+      "casos_referencia": []
+    }
+  },
+  "analise_financeira": {
+    "valor_causa": null,
+    "moeda": "BRL",
+    "exposicao_total": {
+      "pessimista": null,
+      "realista": null,
+      "otimista": null
+    },
+    "provisao_recomendada": {
+      "valor": null,
+      "percentual_causa": null,
+      "justificativa": "Não há informações sobre o valor do título executivo ou da proposta de acordo para estimar a provisão.",
+      "revisao_proxima": null
+    },
+    "breakdown_pedidos": [],
+    "custos_defesa": {
+      "honorarios_internos": null,
+      "honorarios_externos": null,
+      "custas_processuais": null,
+      "pericia": null,
+      "outros": null,
+      "total": null
+    },
+    "impacto_orcamento": {
+      "centro_custo": "",
+      "percentual_orcamento_anual": null,
+      "necessita_aprovacao_especial": false
+    }
+  },
+  "recomendacoes_estrategicas": {
+    "estrategia_principal": "acordo_judicial",
+    "justificativa_estrategia": "A existência de uma proposta de acordo e o risco de cancelamento da distribuição sugerem que a negociação pode ser a via mais eficiente para resolver o litígio e evitar a perda do processo por questões formais.",
+    "acoes_imediatas": [
+      {
+        "acao": "Analisar a proposta de acordo (PROACORDO1 - evento 28) e preparar manifestação.",
+        "prazo": "2026-06-09",
+        "responsavel_sugerido": "Advogado Líder",
+        "prioridade": "urgente",
+        "complexidade": "media",
+        "tempo_estimado": "3 dias"
+      },
+      {
+        "acao": "Verificar o status do recolhimento das custas iniciais e a regularidade da guia de pagamento.",
+        "prazo": "Imediato",
+        "responsavel_sugerido": "Paralegal/Financeiro",
+        "prioridade": "alta",
+        "complexidade": "simples",
+        "tempo_estimado": "1 dia"
+      },
+      {
+        "acao": "Caso as custas não estejam regulares, providenciar o pagamento correto e juntada do comprovante.",
+        "prazo": "Imediato",
+        "responsavel_sugerido": "Paralegal/Financeiro",
+        "prioridade": "alta",
+        "complexidade": "simples",
+        "tempo_estimado": "2 dias"
+      }
+    ],
+    "acordo": {
+      "recomenda": true,
+      "momento_ideal": "Imediato, antes da manifestação sobre a proposta existente.",
+      "faixa_valor": {
+        "minimo": null,
+        "maximo": null,
+        "ideal": null
+      },
+      "condicoes_sugeridas": [
+        "Verificar se a proposta de acordo abrange a totalidade do débito e encargos.",
+        "Avaliar a possibilidade de inclusão de cláusulas de quitação ampla e irrevogável.",
+        "Considerar a inclusão de cláusulas de confidencialidade, se aplicável."
+      ],
+      "vantagens": [
+        "Evita o risco de cancelamento da distribuição por falta de recolhimento de custas.",
+        "Reduz custos e tempo processual.",
+        "Garante a satisfação do crédito de forma mais célere.",
+        "Minimiza a exposição a riscos futuros e incertezas da execução."
+      ],
+      "desvantagens": [
+        "Pode implicar em concessões financeiras.",
+        "Requer análise cuidadosa da proposta para garantir que os termos sejam favoráveis."
+      ]
+    },
+    "defesa": {
+      "teses_principais": [],
+      "provas_necessarias": [
+        {
+          "tipo": "Documental",
+          "descricao": "Comprovante de pagamento/GRU quitada das custas iniciais.",
+          "disponibilidade": "indeterminado",
+          "criticidade": "essencial"
+        },
+        {
+          "tipo": "Documental",
+          "descricao": "Título executivo extrajudicial que fundamenta a execução.",
+          "disponibilidade": "disponivel",
+          "criticidade": "essencial"
+        }
+      ]
+    },
+    "preventivas": {
+      "recomendacoes": [
+        {
+          "area_afetada": "Financeiro/Jurídico",
+          "medida": "Revisar e padronizar o processo de recolhimento e comprovação de custas judiciais para evitar cancelamentos de distribuição.",
+          "prazo_implementacao": "30 dias",
+          "custo_estimado": null,
+          "roi_esperado": "Redução de riscos processuais e retrabalho."
+        }
+      ]
+    }
+  },
+  "analise_operacional": {
+    "areas_envolvidas": [
+      "Jurídico",
+      "Financeiro"
+    ],
+    "impacto_reputacional": "baixo",
+    "risco_precedente": {
+      "nivel": "baixo",
+      "casos_similares_potenciais": null,
+      "exposicao_estimada": null
+    },
+    "necessita_comunicacao": {
+      "diretoria": false,
+      "rh": false,
+      "comunicacao": false,
+      "auditoria": false
+    }
+  },
+  "timeline_predicoes": {
+    "duracao_estimada": {
+      "minima_meses": 1,
+      "media_meses": 3,
+      "maxima_meses": 6
+    },
+    "marcos_futuros": [
+      {
+        "evento": "Manifestação sobre proposta de acordo",
+        "data_prevista": "2026-06-09",
+        "probabilidade": 95,
+        "impacto_estrategia": "Definição da continuidade da execução ou encerramento por acordo."
+      },
+      {
+        "evento": "Decisão sobre o acordo ou prosseguimento da execução",
+        "data_prevista": null,
+        "probabilidade": 80,
+        "impacto_estrategia": "Pode levar à homologação de acordo ou à retomada dos atos executórios."
+      },
+      {
+        "evento": "Cancelamento da distribuição (se custas não forem regularizadas)",
+        "data_prevista": null,
+        "probabilidade": 30,
+        "impacto_estrategia": "Perda do processo e necessidade de nova distribuição, com perda de tempo e custos."
+      }
+    ]
+  },
+  "tags_inteligentes": [
+    {
+      "categoria": "tema",
+      "valor": "Execução de Título Extrajudicial",
+      "cor": "#17A2B8"
+    },
+    {
+      "categoria": "urgencia",
+      "valor": "Prazo para Acordo",
+      "cor": "#FFC107"
+    },
+    {
+      "categoria": "complexidade",
+      "valor": "Média",
+      "cor": "#6C757D"
+    },
+    {
+      "categoria": "area_impactada",
+      "valor": "Jurídico",
+      "cor": "#17A2B8"
+    },
+    {
+      "categoria": "area_impactada",
+      "valor": "Financeiro",
+      "cor": "#17A2B8"
+    },
+    {
+      "categoria": "tipo_risco",
+      "valor": "Risco de Cancelamento",
+      "cor": "#DC3545"
+    },
+    {
+      "categoria": "fase",
+      "valor": "Execução",
+      "cor": "#17A2B8"
+    },
+    {
+      "categoria": "estrategia",
+      "valor": "Acordo Judicial",
+      "cor": "#28A745"
+    },
+    {
+      "categoria": "documento_pendente",
+      "valor": "Comprovante de Custas",
+      "cor": "#DC3545"
+    }
+  ],
+  "metadata": {
+    "versao_analise": "1.0.0",
+    "data_analise": "2026-05-25",
+    "modelo_ia": {
+      "nome": "Legal Risk Analyzer",
+      "versao": "1.0",
+      "acuracia_geral": null
+    },
+    "analista_responsavel": "IA",
+    "revisao_humana": {
+      "realizada": false,
+      "data": null,
+      "aprovador": "",
+      "ajustes": ""
+    },
+    "hash_documento": ""
+  },
+  "custo_llm": "cache_tokens_details=None cached_content_token_count=None candidates_token_count=3159 candidates_tokens_details=None prompt_token_count=6830 prompt_tokens_details=[ModalityTokenCount(\n  modality=<MediaModality.TEXT: 'TEXT'>,\n  token_count=6830\n)] thoughts_token_count=None tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=9989 traffic_type=None"
+}

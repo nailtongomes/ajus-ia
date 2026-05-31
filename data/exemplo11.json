@@ -1,0 +1,284 @@
+{
+  "processo": {
+    "numero": "0101720-70.2025.5.01.0037",
+    "tipo": "trabalhista",
+    "subtipo": "RITO ORDINÁRIO",
+    "fase_atual": "instrucao",
+    "data_distribuicao": null,
+    "prazo_proximo": {
+      "tipo": "Audiência Una",
+      "data_limite": "2026-05-21",
+      "dias_restantes": null,
+      "criticidade": "urgente"
+    },
+    "vara": {
+      "codigo": "68ª Vara do Trabalho",
+      "nome": "68ª Vara do Trabalho do Rio de Janeiro",
+      "juiz": "LETICIA PRIMAVERA MARINHO CAVALCANTI"
+    }
+  },
+  "partes": {
+    "autor": {
+      "nome": "MONICA DUARCHA VIANNA",
+      "cpf_cnpj": "",
+      "tipo": "Pessoa Física",
+      "tempo_casa": null,
+      "cargo": "",
+      "area": "",
+      "historico_processos": null,
+      "advogados": [
+        {
+          "nome": "MARIA DA CONCEICAO MOTA FERREIRA CRUZ",
+          "oab": "252520/RJ",
+          "taxa_sucesso_historica": null
+        }
+      ]
+    },
+    "reu": {
+      "nome": "COMPANHIA DOCAS DO RIO DE JANEIRO",
+      "cnpj": "",
+      "advogados": [
+        {
+          "nome": "RONALDO FERREIRA TOLENTINO",
+          "oab": "17384/DF",
+          "taxa_sucesso_historica": null
+        }
+      ]
+    }
+  },
+  "analise_risco": {
+    "score_risco": 65,
+    "classificacao": "alto",
+    "probabilidade_perda": {
+      "total": null,
+      "parcial": null,
+      "procedencia": null
+    },
+    "confianca_predicao": 75,
+    "fatores_risco": [
+      {
+        "fator": "Risco de revelia/confissão",
+        "impacto": "alto",
+        "peso": 0.4,
+        "evidencias": [
+          "Não comparecimento do Réu à audiência Una implica em revelia e pena de confissão.",
+          "A reclamada DEVERÁ cadastrar seus patronos e habilitá-los no processo para fins de notificações futuras."
+        ]
+      },
+      {
+        "fator": "Prazo para defesa e documentos",
+        "impacto": "medio",
+        "peso": 0.3,
+        "evidencias": [
+          "Advogado do Réu deve apresentar defesa e documentos eletronicamente em até uma hora antes da audiência.",
+          "O Réu deverá apresentar controles de frequência e recibos salariais sob as penas do art. 400 do CPC/2015."
+        ]
+      },
+      {
+        "fator": "Risco de não cumprimento de requisitos processuais",
+        "impacto": "medio",
+        "peso": 0.3,
+        "evidencias": [
+          "Ré pessoa jurídica deve ser representada por sócio, diretor ou empregado registrado, anexando carta de preposto e atos constitutivos.",
+          "Pessoa jurídica deve informar CNPJ, CEI e cópia do contrato social com CPF(s) do proprietário e sócio(s)."
+        ]
+      }
+    ],
+    "jurisprudencia": {
+      "casos_similares_analisados": null,
+      "taxa_procedencia": null,
+      "tribunal": "",
+      "periodo_analise": "",
+      "casos_referencia": []
+    }
+  },
+  "analise_financeira": {
+    "valor_causa": null,
+    "moeda": "BRL",
+    "exposicao_total": {
+      "pessimista": null,
+      "realista": null,
+      "otimista": null
+    },
+    "provisao_recomendada": {
+      "valor": null,
+      "percentual_causa": null,
+      "justificativa": "Não há informações suficientes sobre os pedidos ou valores para estimar uma provisão.",
+      "revisao_proxima": null
+    },
+    "breakdown_pedidos": [],
+    "custos_defesa": {
+      "honorarios_internos": null,
+      "honorarios_externos": null,
+      "custas_processuais": null,
+      "pericia": null,
+      "outros": null,
+      "total": null
+    },
+    "impacto_orcamento": {
+      "centro_custo": "",
+      "percentual_orcamento_anual": null,
+      "necessita_aprovacao_especial": false
+    }
+  },
+  "recomendacoes_estrategicas": {
+    "estrategia_principal": "defesa_tecnica",
+    "justificativa_estrategia": "A prioridade é garantir o comparecimento e a apresentação da defesa e documentos no prazo, evitando a revelia e a confissão, que podem levar a uma condenação automática. A fase atual é de instrução, com audiência una designada, exigindo preparação imediata.",
+    "acoes_imediatas": [
+      {
+        "acao": "Confirmar comparecimento do preposto e advogado à audiência Una",
+        "prazo": "Imediato (antes de 21/05/2026)",
+        "responsavel_sugerido": "Jurídico Interno / Advogado Externo",
+        "prioridade": "urgente",
+        "complexidade": "simples",
+        "tempo_estimado": "1 dia"
+      },
+      {
+        "acao": "Preparar e anexar eletronicamente carta de preposto e atos constitutivos da empresa",
+        "prazo": "Imediato (antes de 21/05/2026)",
+        "responsavel_sugerido": "Jurídico Interno / RH",
+        "prioridade": "urgente",
+        "complexidade": "media",
+        "tempo_estimado": "2 dias"
+      },
+      {
+        "acao": "Elaborar e protocolar defesa e documentos (controles de frequência, recibos salariais)",
+        "prazo": "Até 1 hora antes da audiência (21/05/2026 09:20)",
+        "responsavel_sugerido": "Advogado Externo / Jurídico Interno",
+        "prioridade": "urgente",
+        "complexidade": "complexa",
+        "tempo_estimado": "5 dias"
+      },
+      {
+        "acao": "Cadastrar e habilitar patronos da reclamada no PJe para futuras notificações",
+        "prazo": "Imediato",
+        "responsavel_sugerido": "Advogado Externo / Jurídico Interno",
+        "prioridade": "alta",
+        "complexidade": "simples",
+        "tempo_estimado": "1 dia"
+      }
+    ],
+    "acordo": {
+      "recomenda": false,
+      "momento_ideal": "indeterminado",
+      "faixa_valor": {
+        "minimo": null,
+        "maximo": null,
+        "ideal": null
+      },
+      "condicoes_sugeridas": [],
+      "vantagens": [],
+      "desvantagens": []
+    },
+    "defesa": {
+      "teses_principais": [],
+      "provas_necessarias": [
+        {
+          "tipo": "Documental",
+          "descricao": "Controles de frequência e recibos salariais do período trabalhado",
+          "disponibilidade": "indeterminado",
+          "criticidade": "essencial"
+        },
+        {
+          "tipo": "Documental",
+          "descricao": "Carta de preposto, cópia do contrato social ou atos constitutivos da empresa com CNPJ, CEI e CPF(s) dos sócios/proprietário",
+          "disponibilidade": "disponivel",
+          "criticidade": "essencial"
+        }
+      ]
+    },
+    "preventivas": {
+      "recomendacoes": []
+    }
+  },
+  "analise_operacional": {
+    "areas_envolvidas": [
+      "Jurídico",
+      "RH",
+      "Diretoria"
+    ],
+    "impacto_reputacional": "medio",
+    "risco_precedente": {
+      "nivel": "baixo",
+      "casos_similares_potenciais": null,
+      "exposicao_estimada": null
+    },
+    "necessita_comunicacao": {
+      "diretoria": true,
+      "rh": true,
+      "comunicacao": false,
+      "auditoria": false
+    }
+  },
+  "timeline_predicoes": {
+    "duracao_estimada": {
+      "minima_meses": null,
+      "media_meses": null,
+      "maxima_meses": null
+    },
+    "marcos_futuros": [
+      {
+        "evento": "Audiência Una",
+        "data_prevista": "2026-05-21",
+        "probabilidade": 100,
+        "impacto_estrategia": "Momento crucial para apresentação de defesa e provas, evitando revelia e confissão. Possibilidade de conciliação."
+      },
+      {
+        "evento": "Sentença",
+        "data_prevista": null,
+        "probabilidade": null,
+        "impacto_estrategia": "Definirá o resultado em primeira instância, com potencial impacto financeiro e estratégico."
+      }
+    ]
+  },
+  "tags_inteligentes": [
+    {
+      "categoria": "urgencia",
+      "valor": "Audiência Próxima",
+      "cor": "#DC3545"
+    },
+    {
+      "categoria": "fase",
+      "valor": "Instrução",
+      "cor": "#FFC107"
+    },
+    {
+      "categoria": "tipo_risco",
+      "valor": "Revelia",
+      "cor": "#DC3545"
+    },
+    {
+      "categoria": "documento_pendente",
+      "valor": "Defesa e Provas",
+      "cor": "#FFC107"
+    },
+    {
+      "categoria": "area_impactada",
+      "valor": "RH",
+      "cor": "#17A2B8"
+    },
+    {
+      "categoria": "area_impactada",
+      "valor": "Jurídico",
+      "cor": "#17A2B8"
+    }
+  ],
+  "metadata": {
+    "versao_analise": "1.0.0",
+    "data_analise": "2026-05-19",
+    "modelo_ia": {
+      "nome": "Legal Risk Analyzer",
+      "versao": "1.0",
+      "acuracia_geral": null
+    },
+    "analista_responsavel": "IA",
+    "revisao_humana": {
+      "realizada": false,
+      "data": null,
+      "aprovador": "",
+      "ajustes": ""
+    },
+    "hash_documento": ""
+  },
+  "custo_llm": "cache_tokens_details=None cached_content_token_count=None candidates_token_count=2796 candidates_tokens_details=None prompt_token_count=6485 prompt_tokens_details=[ModalityTokenCount(\n  modality=<MediaModality.TEXT: 'TEXT'>,\n  token_count=6485\n)] thoughts_token_count=None tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=9281 traffic_type=None"
+}

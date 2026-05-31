@@ -1,0 +1,347 @@
+{
+  "processo": {
+    "numero": "0101717-13.2025.5.01.0071",
+    "tipo": "trabalhista",
+    "subtipo": "Rito Ordinário",
+    "fase_atual": "instrucao",
+    "data_distribuicao": "2025-12-23T22:23:56.738204",
+    "prazo_proximo": {
+      "tipo": "Audiência Una",
+      "data_limite": "2026-05-14",
+      "dias_restantes": null,
+      "criticidade": "alta"
+    },
+    "vara": {
+      "codigo": "79ª VT/RJ",
+      "nome": "79ª Vara do Trabalho do Rio de Janeiro",
+      "juiz": "HELENA KRET BRUNET COELHO"
+    }
+  },
+  "partes": {
+    "autor": {
+      "nome": "Nome da parte ocultada nos termos da Res. 121/2010 do CNJ",
+      "cpf_cnpj": "",
+      "tipo": "Pessoa Física",
+      "tempo_casa": null,
+      "cargo": "",
+      "area": "",
+      "historico_processos": null,
+      "advogados": [
+        {
+          "nome": "MARIA DA CONCEICAO MOTA FERREIRA CRUZ",
+          "oab": "252520/RJ",
+          "taxa_sucesso_historica": null
+        }
+      ]
+    },
+    "reu": {
+      "nome": "Nome da parte ocultada nos termos da Res. 121/2010 do CNJ",
+      "cnpj": "",
+      "advogados": [
+        {
+          "nome": "RONALDO FERREIRA TOLENTINO",
+          "oab": "17384/DF",
+          "taxa_sucesso_historica": null
+        }
+      ]
+    }
+  },
+  "analise_risco": {
+    "score_risco": 65,
+    "classificacao": "alto",
+    "probabilidade_perda": {
+      "total": null,
+      "parcial": null,
+      "procedencia": 60
+    },
+    "confianca_predicao": 75,
+    "fatores_risco": [
+      {
+        "fator": "Complexidade da Prova",
+        "impacto": "alto",
+        "peso": 0.3,
+        "evidencias": [
+          "Juíza determinou audiência presencial por inviabilidade de produção de prova virtual, especialmente em razão da complexidade do processo."
+        ]
+      },
+      {
+        "fator": "Audiência Presencial",
+        "impacto": "medio",
+        "peso": 0.2,
+        "evidencias": [
+          "Conversão da audiência para modalidade presencial, mantida a mesma data e horário, com necessidade de comparecimento para depoimento pessoal e intimação de testemunhas."
+        ]
+      },
+      {
+        "fator": "Tema da Ação",
+        "impacto": "medio",
+        "peso": 0.25,
+        "evidencias": [
+          "Assuntos incluem Adicional de Risco, Empregados Portuários, Categoria Profissional Especial, Direito Individual do Trabalho."
+        ]
+      },
+      {
+        "fator": "Valor da Causa",
+        "impacto": "alto",
+        "peso": 0.25,
+        "evidencias": [
+          "Valor da causa de R$ 157.717,24, indicando uma exposição financeira relevante."
+        ]
+      }
+    ],
+    "jurisprudencia": {
+      "casos_similares_analisados": null,
+      "taxa_procedencia": null,
+      "tribunal": "",
+      "periodo_analise": "",
+      "casos_referencia": []
+    }
+  },
+  "analise_financeira": {
+    "valor_causa": 157717.24,
+    "moeda": "BRL",
+    "exposicao_total": {
+      "pessimista": 157717.24,
+      "realista": 94630.34,
+      "otimista": 31543.45
+    },
+    "provisao_recomendada": {
+      "valor": 94630.34,
+      "percentual_causa": 60,
+      "justificativa": "Baseado na probabilidade de procedência estimada em 60% e no valor da causa, considerando a complexidade da prova e a fase de instrução.",
+      "revisao_proxima": "Após audiência de instrução"
+    },
+    "breakdown_pedidos": [],
+    "custos_defesa": {
+      "honorarios_internos": null,
+      "honorarios_externos": null,
+      "custas_processuais": null,
+      "pericia": null,
+      "outros": null,
+      "total": null
+    },
+    "impacto_orcamento": {
+      "centro_custo": "",
+      "percentual_orcamento_anual": null,
+      "necessita_aprovacao_especial": false
+    }
+  },
+  "recomendacoes_estrategicas": {
+    "estrategia_principal": "defesa_tecnica",
+    "justificativa_estrategia": "O processo está em fase de instrução com audiência presencial marcada, indicando a necessidade de uma defesa técnica robusta e preparação para a produção de provas. A complexidade do processo e a relevância dos temas (Adicional de Risco, Empregados Portuários) exigem atenção à tese defensiva.",
+    "acoes_imediatas": [
+      {
+        "acao": "Preparar depoimento pessoal da parte ré",
+        "prazo": "Antes de 2026-05-14",
+        "responsavel_sugerido": "Advogado Externo",
+        "prioridade": "urgente",
+        "complexidade": "media",
+        "tempo_estimado": "3 dias"
+      },
+      {
+        "acao": "Orientar e intimar testemunhas para audiência presencial",
+        "prazo": "Antes de 2026-05-14",
+        "responsavel_sugerido": "Advogado Externo / RH",
+        "prioridade": "urgente",
+        "complexidade": "media",
+        "tempo_estimado": "5 dias"
+      },
+      {
+        "acao": "Revisar teses defensivas e provas documentais",
+        "prazo": "Antes de 2026-05-14",
+        "responsavel_sugerido": "Advogado Externo",
+        "prioridade": "alta",
+        "complexidade": "complexa",
+        "tempo_estimado": "7 dias"
+      }
+    ],
+    "acordo": {
+      "recomenda": true,
+      "momento_ideal": "Após audiência de instrução, dependendo do resultado da prova oral",
+      "faixa_valor": {
+        "minimo": 40000,
+        "maximo": 80000,
+        "ideal": 60000
+      },
+      "condicoes_sugeridas": [
+        "Quitação plena do contrato de trabalho",
+        "Confidencialidade",
+        "Pagamento parcelado, se possível"
+      ],
+      "vantagens": [
+        "Redução da exposição financeira",
+        "Certeza jurídica",
+        "Evitar custos adicionais de recursos"
+      ],
+      "desvantagens": [
+        "Reconhecimento implícito de algum direito",
+        "Custo imediato"
+      ]
+    },
+    "defesa": {
+      "teses_principais": [
+        {
+          "tese": "Inexistência de Adicional de Risco",
+          "fundamentacao_legal": "Legislação trabalhista e normas regulamentadoras específicas para o setor portuário, demonstrando que as condições de trabalho não se enquadram nos critérios para o adicional.",
+          "probabilidade_sucesso": 50,
+          "precedentes": []
+        },
+        {
+          "tese": "Regularidade das condições de trabalho dos empregados portuários",
+          "fundamentacao_legal": "Normas coletivas, acordos setoriais e legislação específica para a categoria, comprovando o cumprimento das obrigações legais e contratuais.",
+          "probabilidade_sucesso": 60,
+          "precedentes": []
+        }
+      ],
+      "provas_necessarias": [
+        {
+          "tipo": "Documental",
+          "descricao": "Contrato de trabalho, holerites, fichas de EPI, PPRA, PCMSO, laudos de insalubridade/periculosidade, normas internas, acordos coletivos.",
+          "disponibilidade": "disponivel",
+          "criticidade": "essencial"
+        },
+        {
+          "tipo": "Testemunhal",
+          "descricao": "Testemunhas que possam atestar as condições de trabalho e a inexistência de risco ou o cumprimento das medidas de segurança.",
+          "disponibilidade": "parcial",
+          "criticidade": "essencial"
+        },
+        {
+          "tipo": "Pericial",
+          "descricao": "Eventual perícia técnica para avaliação das condições de trabalho e ambiente, caso seja determinada pelo juízo.",
+          "disponibilidade": "indisponivel",
+          "criticidade": "alta"
+        }
+      ]
+    },
+    "preventivas": {
+      "recomendacoes": [
+        {
+          "area_afetada": "RH / Operações",
+          "medida": "Revisão e atualização dos programas de segurança e saúde no trabalho (PPRA, PCMSO) para empregados portuários.",
+          "prazo_implementacao": "6 meses",
+          "custo_estimado": null,
+          "roi_esperado": "Redução de passivos trabalhistas futuros"
+        },
+        {
+          "area_afetada": "Jurídico / Compliance",
+          "medida": "Auditoria interna sobre a aplicação de adicionais de risco e cumprimento de normas para categorias especiais.",
+          "prazo_implementacao": "3 meses",
+          "custo_estimado": null,
+          "roi_esperado": "Identificação e mitigação de riscos antes da judicialização"
+        }
+      ]
+    }
+  },
+  "analise_operacional": {
+    "areas_envolvidas": [
+      "Jurídico",
+      "RH",
+      "Operações"
+    ],
+    "impacto_reputacional": "medio",
+    "risco_precedente": {
+      "nivel": "medio",
+      "casos_similares_potenciais": null,
+      "exposicao_estimada": null
+    },
+    "necessita_comunicacao": {
+      "diretoria": false,
+      "rh": true,
+      "comunicacao": false,
+      "auditoria": false
+    }
+  },
+  "timeline_predicoes": {
+    "duracao_estimada": {
+      "minima_meses": 12,
+      "media_meses": 24,
+      "maxima_meses": 36
+    },
+    "marcos_futuros": [
+      {
+        "evento": "Audiência Una (Instrução)",
+        "data_prevista": "2026-05-14",
+        "probabilidade": 95,
+        "impacto_estrategia": "Momento crucial para produção de provas e depoimentos, definirá o rumo do processo."
+      },
+      {
+        "evento": "Sentença",
+        "data_prevista": "2026-09-14",
+        "probabilidade": 70,
+        "impacto_estrategia": "Definição da primeira instância, base para decisão de recurso ou acordo."
+      },
+      {
+        "evento": "Recurso Ordinário",
+        "data_prevista": "2027-03-14",
+        "probabilidade": 60,
+        "impacto_estrategia": "Prolongamento do processo e aumento de custos, se a sentença for desfavorável."
+      }
+    ]
+  },
+  "tags_inteligentes": [
+    {
+      "categoria": "tema",
+      "valor": "Adicional de Risco",
+      "cor": "#FFC107"
+    },
+    {
+      "categoria": "urgencia",
+      "valor": "Audiência Próxima",
+      "cor": "#DC3545"
+    },
+    {
+      "categoria": "complexidade",
+      "valor": "Alta Complexidade Probatória",
+      "cor": "#DC3545"
+    },
+    {
+      "categoria": "area_impactada",
+      "valor": "RH",
+      "cor": "#17A2B8"
+    },
+    {
+      "categoria": "tipo_risco",
+      "valor": "Risco de Condenação",
+      "cor": "#DC3545"
+    },
+    {
+      "categoria": "fase",
+      "valor": "Instrução",
+      "cor": "#FFC107"
+    },
+    {
+      "categoria": "valor",
+      "valor": "Alto Valor da Causa",
+      "cor": "#DC3545"
+    },
+    {
+      "categoria": "estrategia",
+      "valor": "Defesa Técnica",
+      "cor": "#28A745"
+    },
+    {
+      "categoria": "documento_pendente",
+      "valor": "Nenhum",
+      "cor": "#28A745"
+    }
+  ],
+  "metadata": {
+    "versao_analise": "1.0.0",
+    "data_analise": "",
+    "modelo_ia": {
+      "nome": "Legal Risk Analyzer",
+      "versao": "1.0",
+      "acuracia_geral": null
+    },
+    "analista_responsavel": "IA",
+    "revisao_humana": {
+      "realizada": false,
+      "data": null,
+      "aprovador": "",
+      "ajustes": ""
+    },
+    "hash_documento": ""
+  },
+  "custo_llm": "cache_tokens_details=None cached_content_token_count=None candidates_token_count=3531 candidates_tokens_details=None prompt_token_count=7286 prompt_tokens_details=[ModalityTokenCount(\n  modality=<MediaModality.TEXT: 'TEXT'>,\n  token_count=7286\n)] thoughts_token_count=None tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=10817 traffic_type=None"
+}

@@ -1,0 +1,308 @@
+{
+  "processo": {
+    "numero": "0100333-90.2025.5.01.0046",
+    "tipo": "trabalhista",
+    "subtipo": "CUMPRIMENTO DE SENTENÇA",
+    "fase_atual": "recurso",
+    "data_distribuicao": null,
+    "prazo_proximo": {
+      "tipo": "Contraminutar Agravo de Petição",
+      "data_limite": null,
+      "dias_restantes": null,
+      "criticidade": "alta"
+    },
+    "vara": {
+      "codigo": "46ª",
+      "nome": "46ª Vara do Trabalho do Rio de Janeiro",
+      "juiz": "LILA CAROLINA MOTA PESSOA IGREJAS LOPES"
+    }
+  },
+  "partes": {
+    "autor": {
+      "nome": "MARCIA CONCEICAO DA ROCHA",
+      "cpf_cnpj": "",
+      "tipo": "Pessoa Física",
+      "tempo_casa": null,
+      "cargo": "",
+      "area": "",
+      "historico_processos": null,
+      "advogados": [
+        {
+          "nome": "MACHADO SILVA & PALMISCIANO ADVOGADOS",
+          "oab": "",
+          "taxa_sucesso_historica": null
+        },
+        {
+          "nome": "LARA MACHADO LUEDEMANN",
+          "oab": "206223/RJ",
+          "taxa_sucesso_historica": null
+        },
+        {
+          "nome": "VALENTINA DE BASTOS CURY",
+          "oab": "239272/RJ",
+          "taxa_sucesso_historica": null
+        }
+      ]
+    },
+    "reu": {
+      "nome": "COMPANHIA DOCAS DO RIO DE JANEIRO",
+      "cnpj": "",
+      "advogados": [
+        {
+          "nome": "SERGIO CARNEIRO ROSI",
+          "oab": "71639/MG",
+          "taxa_sucesso_historica": null
+        }
+      ]
+    }
+  },
+  "analise_risco": {
+    "score_risco": 65,
+    "classificacao": "alto",
+    "probabilidade_perda": {
+      "total": null,
+      "parcial": null,
+      "procedencia": null
+    },
+    "confianca_predicao": 75,
+    "fatores_risco": [
+      {
+        "fator": "Fase Processual Avançada (Recurso)",
+        "impacto": "alto",
+        "peso": 0.4,
+        "evidencias": [
+          "Processo está em fase de Agravo de Petição, indicando que a sentença de mérito já foi proferida e há discussão sobre a execução.",
+          "A Reclamante interpôs Agravo de Petição, buscando reverter decisão anterior."
+        ]
+      },
+      {
+        "fator": "Rejeição de Embargos de Declaração da Autora",
+        "impacto": "medio",
+        "peso": 0.3,
+        "evidencias": [
+          "Os Embargos de Declaração da Autora foram não conhecidos por não preencherem requisitos de admissibilidade.",
+          "Isso pode indicar fragilidade na argumentação da Autora ou tentativa de protelação."
+        ]
+      },
+      {
+        "fator": "Necessidade de RPV",
+        "impacto": "medio",
+        "peso": 0.3,
+        "evidencias": [
+          "A Autora foi intimada a apresentar dados bancários para expedição de RPV, indicando que há um valor a ser pago pela Reclamada."
+        ]
+      }
+    ],
+    "jurisprudencia": {
+      "casos_similares_analisados": null,
+      "taxa_procedencia": null,
+      "tribunal": "",
+      "periodo_analise": "",
+      "casos_referencia": []
+    }
+  },
+  "analise_financeira": {
+    "valor_causa": null,
+    "moeda": "BRL",
+    "exposicao_total": {
+      "pessimista": null,
+      "realista": null,
+      "otimista": null
+    },
+    "provisao_recomendada": {
+      "valor": null,
+      "percentual_causa": null,
+      "justificativa": "Não há informações suficientes sobre o valor da condenação ou dos pedidos para estimar uma provisão.",
+      "revisao_proxima": null
+    },
+    "breakdown_pedidos": [],
+    "custos_defesa": {
+      "honorarios_internos": null,
+      "honorarios_externos": null,
+      "custas_processuais": null,
+      "pericia": null,
+      "outros": null,
+      "total": null
+    },
+    "impacto_orcamento": {
+      "centro_custo": "",
+      "percentual_orcamento_anual": null,
+      "necessita_aprovacao_especial": false
+    }
+  },
+  "recomendacoes_estrategicas": {
+    "estrategia_principal": "defesa_tecnica",
+    "justificativa_estrategia": "O processo está em fase de recurso (Agravo de Petição) interposto pela Reclamante. A estratégia deve focar na contraminuta do agravo, buscando manter a decisão favorável à Reclamada ou mitigar os riscos de reversão. A rejeição dos Embargos de Declaração da Autora pode ser um ponto a ser explorado na defesa.",
+    "acoes_imediatas": [
+      {
+        "acao": "Elaborar e protocolar contraminuta ao Agravo de Petição da Reclamante.",
+        "prazo": "Curto (conforme intimação)",
+        "responsavel_sugerido": "Advogado Externo",
+        "prioridade": "urgente",
+        "complexidade": "media",
+        "tempo_estimado": "3-5 dias"
+      },
+      {
+        "acao": "Analisar o teor do Agravo de Petição e da decisão agravada (ID 70dd84d) para identificar os pontos de insurgência da Reclamante.",
+        "prazo": "Imediato",
+        "responsavel_sugerido": "Advogado Externo",
+        "prioridade": "alta",
+        "complexidade": "media",
+        "tempo_estimado": "1-2 dias"
+      },
+      {
+        "acao": "Avaliar o impacto da rejeição dos Embargos de Declaração da Autora na estratégia recursal.",
+        "prazo": "Curto",
+        "responsavel_sugerido": "Advogado Externo",
+        "prioridade": "media",
+        "complexidade": "simples",
+        "tempo_estimado": "1 dia"
+      }
+    ],
+    "acordo": {
+      "recomenda": false,
+      "momento_ideal": "indeterminado",
+      "faixa_valor": {
+        "minimo": null,
+        "maximo": null,
+        "ideal": null
+      },
+      "condicoes_sugeridas": [],
+      "vantagens": [],
+      "desvantagens": []
+    },
+    "defesa": {
+      "teses_principais": [
+        {
+          "tese": "Manutenção da decisão agravada e improcedência do Agravo de Petição da Reclamante.",
+          "fundamentacao_legal": "Art. 897, § 1º da CLT e jurisprudência consolidada sobre os requisitos de admissibilidade do Agravo de Petição e a correção da decisão de origem.",
+          "probabilidade_sucesso": null,
+          "precedentes": []
+        },
+        {
+          "tese": "Irrecorribilidade de despacho e manutenção da decisão que não conheceu os Embargos de Declaração da Autora.",
+          "fundamentacao_legal": "Art. 893, § 1º da CLT e Súmula 214 do TST.",
+          "probabilidade_sucesso": null,
+          "precedentes": []
+        }
+      ],
+      "provas_necessarias": [
+        {
+          "tipo": "Documental",
+          "descricao": "Decisão ID 70dd84d (agravada) e Agravo de Petição da Reclamante.",
+          "disponibilidade": "disponivel",
+          "criticidade": "essencial"
+        },
+        {
+          "tipo": "Documental",
+          "descricao": "Sentença ID 713966f (que não conheceu os Embargos de Declaração).",
+          "disponibilidade": "disponivel",
+          "criticidade": "essencial"
+        }
+      ]
+    },
+    "preventivas": {
+      "recomendacoes": []
+    }
+  },
+  "analise_operacional": {
+    "areas_envolvidas": [
+      "Jurídico",
+      "Financeiro"
+    ],
+    "impacto_reputacional": "baixo",
+    "risco_precedente": {
+      "nivel": "baixo",
+      "casos_similares_potenciais": null,
+      "exposicao_estimada": null
+    },
+    "necessita_comunicacao": {
+      "diretoria": false,
+      "rh": false,
+      "comunicacao": false,
+      "auditoria": false
+    }
+  },
+  "timeline_predicoes": {
+    "duracao_estimada": {
+      "minima_meses": 6,
+      "media_meses": 12,
+      "maxima_meses": 24
+    },
+    "marcos_futuros": [
+      {
+        "evento": "Protocolo da Contraminuta ao Agravo de Petição",
+        "data_prevista": null,
+        "probabilidade": 95,
+        "impacto_estrategia": "Ato essencial para a defesa da Reclamada no recurso."
+      },
+      {
+        "evento": "Julgamento do Agravo de Petição pelo TRT",
+        "data_prevista": null,
+        "probabilidade": 80,
+        "impacto_estrategia": "Definirá a manutenção ou reforma da decisão agravada, impactando diretamente o valor da execução."
+      },
+      {
+        "evento": "Expedição de RPV",
+        "data_prevista": null,
+        "probabilidade": 70,
+        "impacto_estrategia": "Confirmação do valor devido e início do procedimento de pagamento."
+      }
+    ]
+  },
+  "tags_inteligentes": [
+    {
+      "categoria": "tema",
+      "valor": "Trabalhista",
+      "cor": "#17A2B8"
+    },
+    {
+      "categoria": "urgencia",
+      "valor": "Agravo de Petição",
+      "cor": "#DC3545"
+    },
+    {
+      "categoria": "complexidade",
+      "valor": "Média",
+      "cor": "#FFC107"
+    },
+    {
+      "categoria": "area_impactada",
+      "valor": "Jurídico",
+      "cor": "#17A2B8"
+    },
+    {
+      "categoria": "tipo_risco",
+      "valor": "Financeiro",
+      "cor": "#FFC107"
+    },
+    {
+      "categoria": "fase",
+      "valor": "Recurso",
+      "cor": "#FFC107"
+    },
+    {
+      "categoria": "estrategia",
+      "valor": "Defesa Técnica",
+      "cor": "#28A745"
+    }
+  ],
+  "metadata": {
+    "versao_analise": "1.0.0",
+    "data_analise": "2026-05-25",
+    "modelo_ia": {
+      "nome": "Legal Risk Analyzer",
+      "versao": "1.0",
+      "acuracia_geral": null
+    },
+    "analista_responsavel": "IA",
+    "revisao_humana": {
+      "realizada": false,
+      "data": null,
+      "aprovador": "",
+      "ajustes": ""
+    },
+    "hash_documento": ""
+  },
+  "custo_llm": "cache_tokens_details=None cached_content_token_count=None candidates_token_count=3053 candidates_tokens_details=None prompt_token_count=5920 prompt_tokens_details=[ModalityTokenCount(\n  modality=<MediaModality.TEXT: 'TEXT'>,\n  token_count=5920\n)] thoughts_token_count=None tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=8973 traffic_type=None"
+}
