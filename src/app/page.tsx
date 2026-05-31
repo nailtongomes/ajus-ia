@@ -10,6 +10,7 @@ import {
   getProcessosComPrazosCriticos,
   getAreasComMaisProcessos,
   getTemasRecorrentes,
+  toSafeNumber,
 } from '@/lib/processos';
 import KpiCard from '@/components/KpiCard';
 import ProcessosTable from '@/components/ProcessosTable';
@@ -44,11 +45,11 @@ export default function HomePage() {
 
   const probMediaPerda =
     totalProcessos > 0
-      ? processos.reduce((acc, p) => acc + p.analise_risco.probabilidade_perda.parcial, 0) / totalProcessos
+      ? processos.reduce((acc, p) => acc + toSafeNumber(p.analise_risco.probabilidade_perda.parcial), 0) / totalProcessos
       : 0;
 
   const scoreMediaRisco =
-    totalProcessos > 0 ? processos.reduce((acc, p) => acc + p.analise_risco.score_risco, 0) / totalProcessos : 0;
+    totalProcessos > 0 ? processos.reduce((acc, p) => acc + toSafeNumber(p.analise_risco.score_risco), 0) / totalProcessos : 0;
 
   const riscoData = [
     { name: 'Risco Alto', value: processosPorRisco.alto },
@@ -57,12 +58,13 @@ export default function HomePage() {
   ];
 
   const processosOrdenadosPorExposicao = [...processos].sort(
-    (a, b) => b.analise_financeira.exposicao_total.realista - a.analise_financeira.exposicao_total.realista,
+    (a, b) =>
+      toSafeNumber(b.analise_financeira.exposicao_total.realista) - toSafeNumber(a.analise_financeira.exposicao_total.realista),
   );
 
   const exposicaoData = processosOrdenadosPorExposicao.slice(0, 10).map(p => ({
     name: p.processo.numero.split('.')[0].slice(-4),
-    value: p.analise_financeira.exposicao_total.realista,
+    value: toSafeNumber(p.analise_financeira.exposicao_total.realista),
   }));
 
   const temasRecorrentes = getTemasRecorrentes(processos);
@@ -81,15 +83,15 @@ export default function HomePage() {
 
   const probabilidadeData = processos.slice(0, 6).map(p => ({
     processo: p.processo.numero.split('.')[0].slice(-4),
-    total: p.analise_risco.probabilidade_perda.total,
-    parcial: p.analise_risco.probabilidade_perda.parcial,
-    procedencia: p.analise_risco.probabilidade_perda.procedencia,
+    total: toSafeNumber(p.analise_risco.probabilidade_perda.total),
+    parcial: toSafeNumber(p.analise_risco.probabilidade_perda.parcial),
+    procedencia: toSafeNumber(p.analise_risco.probabilidade_perda.procedencia),
   }));
 
   const riscoExposicaoData = processos.map(p => ({
     name: p.processo.numero.split('.')[0].slice(-4),
-    score: p.analise_risco.score_risco,
-    exposicao: p.analise_financeira.exposicao_total.realista,
+    score: toSafeNumber(p.analise_risco.score_risco),
+    exposicao: toSafeNumber(p.analise_financeira.exposicao_total.realista),
   }));
 
   const percentualAltoRisco = totalProcessos > 0 ? (processosPorRisco.alto / totalProcessos) * 100 : 0;
@@ -260,7 +262,11 @@ export default function HomePage() {
                   </h3>
                   <div className="mt-4 space-y-3 text-sm">
                     {processos
-                      .filter(p => p.recomendacoes_estrategicas.estrategia_principal === 'acordo_judicial')
+                      .filter(p =>
+                        ['acordo_judicial', 'acordo_imediato'].includes(
+                          p.recomendacoes_estrategicas?.estrategia_principal ?? '',
+                        ),
+                      )
                       .slice(0, 5)
                       .map(p => (
                         <div key={p.processo.numero} className="rounded-xl border border-indigo-100 bg-white/70 p-3">

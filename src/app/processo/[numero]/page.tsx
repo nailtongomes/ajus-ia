@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { getProcessoByNumero, getAllProcessos, formatCurrency, formatDate, formatPercent, getRiscoColor, calcularTempoEmAnos } from '@/lib/processos';
+import { getProcessoByNumero, getAllProcessos, formatCurrency, formatDate, formatPercent, getRiscoColor, calcularTempoEmAnos, toSafeNumber } from '@/lib/processos';
 import { ArrowLeft, AlertCircle, Users, FileText, DollarSign, AlertTriangle, Shield, Target, Calendar, Clock, Lightbulb, CheckCircle, XCircle, Info } from 'lucide-react';
 import { notFound } from 'next/navigation';
 
@@ -26,6 +26,13 @@ export default async function ProcessoDetailPage({ params }: PageProps) {
   }
 
   const tempoEmAnos = calcularTempoEmAnos(processo.partes.autor.tempo_casa);
+  const diasRestantesPrazo = toSafeNumber(processo.processo.prazo_proximo.dias_restantes, Number.MAX_SAFE_INTEGER);
+  const autorNome = processo.partes.autor.nome || 'Não informado';
+  const autorCpf = processo.partes.autor.cpf_cnpj || 'Não informado';
+  const autorCargo = processo.partes.autor.cargo || 'Não informado';
+  const autorArea = processo.partes.autor.area || 'Não informado';
+  const reuNome = processo.partes.reu.nome || 'Não informado';
+  const reuCnpj = processo.partes.reu.cnpj || 'Não informado';
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
@@ -57,14 +64,14 @@ export default async function ProcessoDetailPage({ params }: PageProps) {
       {/* Main Content */}
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Alerta de Prazo Crítico */}
-        {processo.processo.prazo_proximo.dias_restantes <= 7 && (
+        {diasRestantesPrazo <= 7 && (
           <div className="mb-6 bg-red-50 border-l-4 border-red-500 p-4 rounded-r-lg">
             <div className="flex items-start">
               <AlertTriangle className="w-6 h-6 text-red-600 mr-3 flex-shrink-0 mt-0.5" />
               <div>
                 <h3 className="text-red-900 font-semibold">Prazo Crítico!</h3>
                 <p className="text-red-700 mt-1">
-                  {processo.processo.prazo_proximo.tipo} vence em {processo.processo.prazo_proximo.dias_restantes} dia(s) - {formatDate(processo.processo.prazo_proximo.data_limite)}
+                  {processo.processo.prazo_proximo.tipo || 'Prazo processual'} vence em {diasRestantesPrazo} dia(s) - {formatDate(processo.processo.prazo_proximo.data_limite)}
                 </p>
               </div>
             </div>
@@ -134,25 +141,25 @@ export default async function ProcessoDetailPage({ params }: PageProps) {
             <div className="space-y-3">
               <div>
                 <p className="text-sm text-gray-600">Nome</p>
-                <p className="font-semibold text-gray-900">{processo.partes.autor.nome}</p>
+                <p className="font-semibold text-gray-900">{autorNome}</p>
               </div>
               <div className="grid grid-cols-2 gap-3">
                 <div>
                   <p className="text-sm text-gray-600">CPF</p>
-                  <p className="font-medium text-gray-900">{processo.partes.autor.cpf_cnpj}</p>
+                  <p className="font-medium text-gray-900">{autorCpf}</p>
                 </div>
                 <div>
                   <p className="text-sm text-gray-600">Tempo de Casa</p>
-                  <p className="font-medium text-gray-900">{tempoEmAnos} anos</p>
+                  <p className="font-medium text-gray-900">{tempoEmAnos > 0 ? `${tempoEmAnos} anos` : 'Não informado'}</p>
                 </div>
               </div>
               <div>
                 <p className="text-sm text-gray-600">Cargo</p>
-                <p className="font-medium text-gray-900">{processo.partes.autor.cargo}</p>
+                <p className="font-medium text-gray-900">{autorCargo}</p>
               </div>
               <div>
                 <p className="text-sm text-gray-600">Área</p>
-                <p className="font-medium text-gray-900">{processo.partes.autor.area}</p>
+                <p className="font-medium text-gray-900">{autorArea}</p>
               </div>
             </div>
           </div>
@@ -165,11 +172,11 @@ export default async function ProcessoDetailPage({ params }: PageProps) {
             <div className="space-y-3">
               <div>
                 <p className="text-sm text-gray-600">Nome</p>
-                <p className="font-semibold text-gray-900">{processo.partes.reu.nome}</p>
+                <p className="font-semibold text-gray-900">{reuNome}</p>
               </div>
               <div>
                 <p className="text-sm text-gray-600">CNPJ</p>
-                <p className="font-medium text-gray-900">{processo.partes.reu.cnpj}</p>
+                <p className="font-medium text-gray-900">{reuCnpj}</p>
               </div>
             </div>
           </div>
@@ -189,7 +196,7 @@ export default async function ProcessoDetailPage({ params }: PageProps) {
             </div>
             <div>
               <p className="text-gray-600">Próximo Prazo</p>
-              <p className="font-medium text-gray-900">{processo.processo.prazo_proximo.tipo} - {formatDate(processo.processo.prazo_proximo.data_limite)}</p>
+              <p className="font-medium text-gray-900">{processo.processo.prazo_proximo.tipo || 'Não informado'} - {formatDate(processo.processo.prazo_proximo.data_limite)}</p>
             </div>
           </div>
         </div>

@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { Processo } from '@/types/processo';
-import { formatCurrency, formatDate, getRiscoColor, getDiasRestantesColor, formatDiasRestantes } from '@/lib/utils';
+import { formatCurrency, formatDate, formatPercent, getRiscoColor, getDiasRestantesColor, formatDiasRestantes, toSafeNumber } from '@/lib/utils';
 import { Eye, ArrowUpDown, AlertTriangle, Clock, TrendingUp } from 'lucide-react';
 
 interface ProcessosTableProps {
@@ -52,16 +52,16 @@ export default function ProcessosTable({ processos }: ProcessosTableProps) {
         bValue = b.partes.autor.nome;
         break;
       case 'score':
-        aValue = a.analise_risco.score_risco;
-        bValue = b.analise_risco.score_risco;
+        aValue = toSafeNumber(a.analise_risco.score_risco);
+        bValue = toSafeNumber(b.analise_risco.score_risco);
         break;
       case 'exposicao':
-        aValue = a.analise_financeira.exposicao_total.realista;
-        bValue = b.analise_financeira.exposicao_total.realista;
+        aValue = toSafeNumber(a.analise_financeira.exposicao_total.realista);
+        bValue = toSafeNumber(b.analise_financeira.exposicao_total.realista);
         break;
       case 'prazo':
-        aValue = a.processo.prazo_proximo.dias_restantes;
-        bValue = b.processo.prazo_proximo.dias_restantes;
+        aValue = toSafeNumber(a.processo.prazo_proximo.dias_restantes, Number.MAX_SAFE_INTEGER);
+        bValue = toSafeNumber(b.processo.prazo_proximo.dias_restantes, Number.MAX_SAFE_INTEGER);
         break;
       case 'fase':
         aValue = a.processo.fase_atual;
@@ -95,6 +95,8 @@ export default function ProcessosTable({ processos }: ProcessosTableProps) {
             <option value="alto">Risco Alto</option>
             <option value="medio">Risco Médio</option>
             <option value="baixo">Risco Baixo</option>
+            <option value="muito_alto">Risco Muito Alto</option>
+            <option value="muito_baixo">Risco Muito Baixo</option>
           </select>
         </div>
         <div className="flex items-center justify-between">
@@ -191,7 +193,7 @@ export default function ProcessosTable({ processos }: ProcessosTableProps) {
                     <span className={`px-4 py-1.5 rounded-full text-xs font-bold border-2 ${getRiscoColor(processo.analise_risco.classificacao)} shadow-sm`}>
                       {processo.analise_risco.score_risco}
                     </span>
-                    {processo.analise_risco.score_risco >= 80 && (
+                    {toSafeNumber(processo.analise_risco.score_risco) >= 80 && (
                       <AlertTriangle className="w-4 h-4 text-red-500 animate-pulse" />
                     )}
                   </div>
@@ -208,11 +210,11 @@ export default function ProcessosTable({ processos }: ProcessosTableProps) {
                   <div className="space-y-1.5">
                     <div className="flex items-center gap-1.5">
                       <span className="text-xs font-medium text-slate-600">Total:</span>
-                      <span className="text-xs font-bold text-red-700 bg-red-50 px-2 py-0.5 rounded">{processo.analise_risco.probabilidade_perda.total.toFixed(1)}%</span>
+                      <span className="text-xs font-bold text-red-700 bg-red-50 px-2 py-0.5 rounded">{formatPercent(processo.analise_risco.probabilidade_perda.total)}</span>
                     </div>
                     <div className="flex items-center gap-1.5">
                       <span className="text-xs font-medium text-slate-600">Parcial:</span>
-                      <span className="text-xs font-bold text-yellow-700 bg-yellow-50 px-2 py-0.5 rounded">{processo.analise_risco.probabilidade_perda.parcial.toFixed(1)}%</span>
+                      <span className="text-xs font-bold text-yellow-700 bg-yellow-50 px-2 py-0.5 rounded">{formatPercent(processo.analise_risco.probabilidade_perda.parcial)}</span>
                     </div>
                   </div>
                 </td>
